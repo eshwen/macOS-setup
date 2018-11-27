@@ -11,6 +11,7 @@ Host soolin_proxy
      ForwardAgent yes
      ProxyCommand ssh -XY -q eb16003@seis.bris.ac.uk nc %h 22
      User eb16003
+     IdentityFile ~/.ssh/soolin_rsa
 
 Host lxplus
      Hostname lxplus.cern.ch
