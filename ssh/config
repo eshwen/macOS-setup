@@ -36,4 +36,4 @@ Host imperial01
      #ForwardX11Trusted yes
 
 Host *
-     ServerAliveInterval 120
+     ServerAliveInterval 60
