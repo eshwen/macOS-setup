@@ -13,4 +13,4 @@ alias pipupdate="pip list --outdated --format columns | cut -d' ' -f1 | xargs pi
 # The original version is saved in .profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
-alias soolin_proxy_key="ssh-add -K -t 1500000 ~/.ssh/soolin_proxy_rsa"
+alias soolin_proxy_key="ssh-add -K ~/.ssh/soolin_proxy_rsa"
