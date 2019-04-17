@@ -1,39 +1,40 @@
 Host soolin
-     Hostname soolin.dice.priv
-     IdentityFile ~/.ssh/soolin_rsa
-     User eb16003
-    # ForwardAgent yes
-    # ForwardX11 yes
-    # ForwardX11Trusted yes
+    Hostname soolin.dice.priv
+    IdentityFile ~/.ssh/soolin_rsa
+    User eb16003
+    #ForwardAgent yes
+    #ForwardX11 yes
+    #ForwardX11Trusted yes
 
 Host soolin_proxy
-     Hostname soolin.dice.priv
-     ForwardAgent yes
-     ProxyCommand ssh -XY -q eb16003@seis.bris.ac.uk nc %h 22
-     User eb16003
-     IdentityFile ~/.ssh/soolin_rsa
+    Hostname soolin.dice.priv
+    ForwardAgent yes
+    ProxyCommand ssh -XY -q eb16003@seis.bris.ac.uk nc %h 22
+    User eb16003
+    IdentityFile ~/.ssh/soolin_rsa
 
 Host lxplus
-     Hostname lxplus.cern.ch
-     IdentityFile ~/.ssh/lxplus_rsa
-     User ebhal
-    # ForwardAgent yes
-    # ForwardX11 yes
-    # ForwardX11Trusted yes
+    Hostname lxplus.cern.ch
+    IdentityFile ~/.ssh/lxplus_rsa
+    User ebhal
+    #ForwardAgent yes
+    #ForwardX11 yes
+    #ForwardX11Trusted yes
 
 Host imperial00
-     User ebhal
-     Hostname lx00.hep.ph.ic.ac.uk
-     ForwardAgent yes
-     #ForwardX11 yes
-     #ForwardX11Trusted yes
+    User ebhal
+    Hostname lx00.hep.ph.ic.ac.uk
+    ForwardAgent yes
+    #ForwardX11 yes
+    #ForwardX11Trusted yes
 
 Host imperial01
-     User ebhal
-     Hostname lx01.hep.ph.ic.ac.uk
-     ForwardAgent yes
-     #ForwardX11 yes
-     #ForwardX11Trusted yes
+    User ebhal
+    Hostname lx01.hep.ph.ic.ac.uk
+    ForwardAgent yes
+    #ForwardX11 yes
+    #ForwardX11Trusted yes
 
 Host *
-     ServerAliveInterval 60
+    ServerAliveInterval 60
+    UseKeychain yes
