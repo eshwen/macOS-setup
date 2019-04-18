@@ -38,3 +38,4 @@ Host imperial01
 Host *
     ServerAliveInterval 60
     UseKeychain yes
+    AddKeysToAgent yes
