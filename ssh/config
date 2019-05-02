@@ -40,4 +40,4 @@ Host *
     UseKeychain yes
     AddKeysToAgent yes
     IdentityFile ~/.ssh/soolin_rsa
-    IdentityFile ~/.ssh/soolin_proxy_rs
+    IdentityFile ~/.ssh/soolin_proxy_rsa
