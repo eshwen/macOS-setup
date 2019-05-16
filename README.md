@@ -8,7 +8,8 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 
 - Install Homebrew (package manager for macOS): [https://brew.sh/].
 - Install pip: `sudo easy_install pip`
-- Install the latest Python3 version: [https://www.python.org/downloads/]
+- Install the latest Python2 and Python3 version: [https://www.python.org/downloads/]
+- Install FUSE (for sshfs capabilities): [https://osxfuse.github.io/]
 - Download QLVideo for thumbnails for mkv and other file formats: [https://github.com/Marginal/QLVideo]
 
 
