@@ -17,3 +17,16 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 
 - Adding ssh keys to GitHub: [https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
 - Emacs reference card: [https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf]
+
+
+# Commands
+
+- Updating all outdated `pip` packages:
+```bash
+for package in $(pip list --outdated --format freeze | cut -d= -f1); do pip install --upgrade --user $package; done
+```
+
+or
+
+```bash
+pip list --outdated --format freeze | cut -d= -f1 > pip_outdated.txt; pip install --upgrade --user -r pip_outdated.txt
