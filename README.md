@@ -29,4 +29,5 @@ for package in $(pip list --outdated --format freeze | cut -d= -f1); do pip inst
 or
 
 ```bash
-pip list --outdated --format freeze | cut -d= -f1 > pip_outdated.txt; pip install --upgrade --user -r pip_outdated.txt
+pip list --outdated --format freeze | cut -d= -f1 > pip_outdated.txt; pip install --upgrade --user -r pip_outdated.txt; rm pip_outdated.txt
+```
