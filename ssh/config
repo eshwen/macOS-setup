@@ -1,5 +1,5 @@
 Host soolin
-    Hostname soolin.dice.priv
+    Hostname sc01.dice.priv
     IdentityFile ~/.ssh/soolin_rsa
     User eb16003
     #ForwardAgent yes
@@ -7,7 +7,7 @@ Host soolin
     #ForwardX11Trusted yes
 
 Host soolin_proxy
-    Hostname soolin.dice.priv
+    Hostname sc01.dice.priv
     ForwardAgent yes
     ProxyCommand ssh -XY -q eb16003@seis.bris.ac.uk nc %h 22
     User eb16003
