@@ -11,6 +11,7 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 - Install the latest Python2 and Python3 version: [https://www.python.org/downloads/]. Though, a better way to manage Python on Mac can be found in this article: https://opensource.com/article/19/5/python-3-default-mac
 - Install FUSE (for sshfs capabilities): [https://osxfuse.github.io/]
 - Download QLVideo for thumbnails for mkv and other file formats: [https://github.com/Marginal/QLVideo]
+- Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
 
 
 # Helpful links for computing
