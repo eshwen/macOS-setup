@@ -12,6 +12,7 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 - Install FUSE (for sshfs capabilities): [https://osxfuse.github.io/]
 - Download QLVideo for thumbnails for mkv and other file formats: [https://github.com/Marginal/QLVideo]
 - Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
+- Git completion for bash (download, then `source` in `~/.profile`/`~/.bashrc`): [https://github.com/git/git/blob/master/contrib/completion/git-completion.bash]
 
 
 # Helpful links for computing
