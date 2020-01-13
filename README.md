@@ -11,7 +11,20 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 brew install wget  # for wget command like on linux
 brew cask install qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 ```
+
 - Install the latest Python2 and Python3 version using `pyenv` (comes with `pip`, and multiple versions of Python can be installed with `pyenv`): https://opensource.com/article/19/5/python-3-default-mac
+- Install following packages with pip:
+  - `colorama`
+  - `numpy`
+  - `scipy`
+  - `pandas`
+  - `matplotlib`
+  - `jupyter`
+  - `PyYAML`
+  - `fast-carpenter`
+  - `fast-curator`
+  - `fast-plotter`
+
 - Install FUSE (for sshfs capabilities): [https://osxfuse.github.io/]
 - Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
 - Git completion for bash (download, then `source` in `~/.profile`/`~/.bashrc`): [https://github.com/git/git/blob/master/contrib/completion/git-completion.bash]
