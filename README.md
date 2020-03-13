@@ -6,6 +6,11 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 
 # Other useful installs
 
+- Install XCode Command Line Tools with
+```
+xcode-select --install
+```
+
 - Install Homebrew (package manager for macOS): [https://brew.sh/]. Once installed, do
 ```
 brew install wget  # for wget command like on linux
@@ -14,7 +19,9 @@ brew cask install blackhole  # for BlackHole (audio output from screen recording
 ```
 
 - Install the latest Python2 and Python3 version using `pyenv` (comes with `pip`, and multiple versions of Python can be installed with `pyenv`): https://opensource.com/article/19/5/python-3-default-mac
+
 - Install following packages with pip:
+  - `setuptools`
   - `colorama`
   - `numpy`
   - `scipy`
