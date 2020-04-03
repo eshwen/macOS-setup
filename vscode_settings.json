@@ -1,0 +1,63 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "python.linting.pylintEnabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "key": "ctrl+t", // specify shortcut you like here
+    "command": "inserttimestamp.perform",
+    "when": "editorTextFocus",
+    "vsicons.dontShowNewVersionMessage": true,
+    "python.pythonPath": "/Users/eshwen/.pyenv/versions/3.7.6/bin/python",
+    "git.ignoreLegacyWarning": true,
+    "editor.wordWrap": "on",
+
+    "spellright.language": [
+      "en",
+      "fr"
+    ],
+    "spellright.notificationClass": "warning",
+
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.recipes": [
+        {
+          "name": "Fully compile with glossary",
+          "tools": [
+            "pdflatex",
+            "biber",
+            "makeglossaries",
+            "pdflatex",
+            "pdflatex"
+          ]
+        }
+      ],
+      "latex-workshop.latex.tools": [
+        {
+          "name": "pdflatex",
+          "command": "pdflatex",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-undump=pdflatex",
+            "%DOCFILE%"
+          ]
+        },
+        {
+          "name": "biber",
+          "command": "biber",
+          "args": [
+            "%DOC%"
+          ]
+        },
+        {
+          "name": "makeglossaries",
+          "command": "makeglossaries",
+          "args": [
+            "%DOCFILE%"
+          ]
+        }
+      ],
+      "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+      ]
+}
