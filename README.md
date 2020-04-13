@@ -39,6 +39,7 @@ brew cask install osxfuse  # for more SSHFS capabilities
   - `fast-plotter`
 
 - Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
+- The default install of git can be upgraded by downloading from <https://git-scm.com/>
 - Git completion for bash (download, then `source` in `~/.profile`/`~/.bashrc`): <https://github.com/git/git/blob/master/contrib/completion/git-completion.bash>
 - Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>
 
@@ -48,6 +49,12 @@ brew cask install osxfuse  # for more SSHFS capabilities
 - Emacs reference card: <https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf>
 
 ## Commands
+
+- `zsh` is the default shell in macOS as of Catalina. To switch it to `bash`, do
+
+```sh
+chsh -s /bin/bash
+```
 
 - Updating all outdated `pip` packages:
 
