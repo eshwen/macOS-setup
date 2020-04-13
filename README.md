@@ -4,6 +4,12 @@ Files and scripts useful for macOS. Helps keep synchronisation between my differ
 
 If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](sshfs/) to `~/.sshfs/`.
 
+- [macOS-home-files](#macos-home-files)
+  - [Other useful installs](#other-useful-installs)
+  - [Other useful commands](#other-useful-commands)
+  - [VSCode settings](#vscode-settings)
+  - [Helpful links for computing](#helpful-links-for-computing)
+
 ## Other useful installs
 
 - Install XCode Command Line Tools with
@@ -12,7 +18,7 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 xcode-select --install
 ```
 
-- Install Homebrew (package manager for macOS): [https://brew.sh/]. Once installed, do
+- Install Homebrew (package manager for macOS): <https://brew.sh/>. Once installed, do
 
 ```sh
 brew install pyenv  # best way of managing Python installs on Mac. Multiple installs supported, so can have Python 2 and Python 3 envs. Comes bundled with pip
@@ -43,12 +49,7 @@ brew cask install osxfuse  # for more SSHFS capabilities
 - Git completion for bash (download, then `source` in `~/.profile`/`~/.bashrc`): <https://github.com/git/git/blob/master/contrib/completion/git-completion.bash>
 - Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>
 
-## Helpful links for computing
-
-- Adding ssh keys to GitHub: <https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
-- Emacs reference card: <https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf>
-
-## Commands
+## Other useful commands
 
 - `zsh` is the default shell in macOS as of Catalina. To switch it to `bash`, do
 
@@ -56,16 +57,23 @@ brew cask install osxfuse  # for more SSHFS capabilities
 chsh -s /bin/bash
 ```
 
-- Updating all outdated `pip` packages:
+- Upgrade homebrew packages with
+
+```sh
+brew upgrade
+brew cask upgrade
+```
+
+- Updating all outdated `pip` packages (doesn't require `--user` when installed with `pyenv`):
 
 ```bash
-for package in $(pip list --outdated --format freeze | cut -d= -f1); do pip install --upgrade --user $package; done
+for package in $(pip list --outdated --format freeze | cut -d= -f1); do pip install --upgrade $package; done
 ```
 
 or
 
 ```bash
-pip list --outdated --format freeze | cut -d= -f1 > pip_outdated.txt; pip install --upgrade --user -r pip_outdated.txt; rm pip_outdated.txt
+pip list --outdated --format freeze | cut -d= -f1 > pip_outdated.txt; pip install --upgrade -r pip_outdated.txt; rm pip_outdated.txt
 ```
 
 - MacTeX/TeXLive installs as root (possibly to avoid large installs and conflicts for multiple users). So if not using TeX Live Utility to update packages, I can go via the command line with `sudo` privileges. Check for outdated packages with
@@ -102,3 +110,8 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 - vscode-icons
 
 and the settings file is [vscode_settings.json](vscode_settings.json)
+
+## Helpful links for computing
+
+- Adding ssh keys to GitHub: <https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
+- Emacs reference card: <https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf>
