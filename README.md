@@ -15,15 +15,15 @@ xcode-select --install
 - Install Homebrew (package manager for macOS): [https://brew.sh/]. Once installed, do
 
 ```sh
+brew install pyenv  # best way of managing Python installs on Mac. Multiple installs supported, so can have Python 2 and Python 3 envs. Comes bundled with pip
 brew install wget  # for wget command like on linux
 brew cask install qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 brew cask install blackhole  # for BlackHole (audio output from screen recording)
 brew cask install mactex  # for MacTeX distro of TeXLive with GUI applications. Potentially missing frontend apps are 'bibdesk', 'cocoaspell', and 'tex-live-utility', but these can be installed with 'brew cask install <app>'
 brew cask install emacs  # since it's not provided by default as of macOS Catalina
-brew cask install osxfuse  # for SSHFS capabilities
+brew install sshfs
+brew cask install osxfuse  # for more SSHFS capabilities
 ```
-
-- Install the latest Python2 and Python3 version using `pyenv` (comes with `pip`, and multiple versions of Python can be installed with `pyenv`): <https://opensource.com/article/19/5/python-3-default-mac>
 
 - Install following packages with pip:
   - `setuptools`
