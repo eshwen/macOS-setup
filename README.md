@@ -18,6 +18,9 @@ xcode-select --install
 brew install wget  # for wget command like on linux
 brew cask install qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 brew cask install blackhole  # for BlackHole (audio output from screen recording)
+brew cask install mactex  # for MacTeX distro of TeXLive with GUI applications. Potentially missing frontend apps are 'bibdesk', 'cocoaspell', and 'tex-live-utility', but these can be installed with 'brew cask install <app>'
+brew cask install emacs  # since it's not provided by default as of macOS Catalina
+brew cask install osxfuse  # for SSHFS capabilities
 ```
 
 - Install the latest Python2 and Python3 version using `pyenv` (comes with `pip`, and multiple versions of Python can be installed with `pyenv`): <https://opensource.com/article/19/5/python-3-default-mac>
@@ -35,11 +38,9 @@ brew cask install blackhole  # for BlackHole (audio output from screen recording
   - `fast-curator`
   - `fast-plotter`
 
-- Install FUSE (for sshfs capabilities): <https://osxfuse.github.io/>
 - Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
 - Git completion for bash (download, then `source` in `~/.profile`/`~/.bashrc`): <https://github.com/git/git/blob/master/contrib/completion/git-completion.bash>
 - Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>
-- Install emacs (not installed by default on Catalina)
 
 ## Helpful links for computing
 
@@ -58,6 +59,24 @@ or
 
 ```bash
 pip list --outdated --format freeze | cut -d= -f1 > pip_outdated.txt; pip install --upgrade --user -r pip_outdated.txt; rm pip_outdated.txt
+```
+
+- MacTeX/TeXLive installs as root (possibly to avoid large installs and conflicts for multiple users). So if not using TeX Live Utility to update packages, I can go via the command line with `sudo` privileges. Check for outdated packages with
+
+```sh
+sudo tlmgr update --list
+```
+
+Update the package manager itself with
+
+```sh
+sudo tlmgr update --self
+```
+
+and then update the packages with
+
+```sh
+sudo tlmgr update --all
 ```
 
 ## VSCode settings
