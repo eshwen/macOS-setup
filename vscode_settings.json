@@ -1,69 +1,90 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "python.linting.pylintEnabled": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "key": "ctrl+t", // specify shortcut you like here
-    "command": "inserttimestamp.perform",
-    "when": "editorTextFocus",
-    "vsicons.dontShowNewVersionMessage": true,
-    "python.pythonPath": "/Users/eshwen/.pyenv/versions/3.7.6/bin/python",
-    "git.ignoreLegacyWarning": true,
-    "editor.wordWrap": "on",
+  "python.linting.pylintEnabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "key": "ctrl+t", // specify shortcut you like here
+  "command": "inserttimestamp.perform",
+  "when": "editorTextFocus",
+  "vsicons.dontShowNewVersionMessage": true,
+  "python.pythonPath": "/Users/eshwen/.pyenv/versions/3.7.6/bin/python",
+  "git.ignoreLegacyWarning": true,
+  "editor.wordWrap": "on",
 
-    "latex-workshop.intellisense.package.enabled": true,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.recipes": [
-        {
-          "name": "Fully compile with glossary",
-          "tools": [
-            "pdflatex",
-            "biber",
-            "makeglossaries",
-            "pdflatex",
-            "pdflatex"
-          ]
-        },
-        {
-          "name": "pdflatex",
-          "tools": [
-            "pdflatex"
-          ]
-        }
-      ],
-      "latex-workshop.latex.tools": [
-        {
-          "name": "pdflatex",
-          "command": "pdflatex",
-          "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-undump=pdflatex",
-            "%DOCFILE%"
-          ]
-        },
-        {
-          "name": "biber",
-          "command": "biber",
-          "args": [
-            "%DOC%"
-          ]
-        },
-        {
-          "name": "makeglossaries",
-          "command": "makeglossaries",
-          "args": [
-            "%DOCFILE%"
-          ]
-        }
-      ],
-      "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext"
-      ],
-    "spellright.language": [
-      "en",
-      "fr"
+  "spellright.language": [
+    "en",
+    "fr"
+  ],
+  "spellright.notificationClass": "information",
+
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.recipes": [
+      {
+        "name": "Fully compile with glossary",
+        "tools": [
+          "pdflatex",
+          "biber",
+          "makeglossaries",
+          "pdflatex",
+          "pdflatex"
+        ]
+      },
+      {
+        "name": "Fully compile draft with glossary",
+        "tools": [
+          "pdflatexdraft",
+          "biber",
+          "makeglossaries",
+          "pdflatexdraft",
+          "pdflatexdraft"
+        ]
+      },
+      {
+        "name": "pdflatex",
+        "tools": [
+          "pdflatex"
+        ]
+      }
     ],
-    "spellright.notificationClass": "information"
+    "latex-workshop.latex.tools": [
+      {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-undump=pdflatex",
+          "%DOCFILE%"
+        ]
+      },
+      {
+        "name": "pdflatexdraft",
+        "command": "pdflatex",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-undump=pdflatex",
+          "\\PassOptionsToClass{draft}{memoir}\\input{%DOC%}"
+        ]
+      },
+      {
+        "name": "biber",
+        "command": "biber",
+        "args": [
+          "%DOC%"
+        ]
+      },
+      {
+        "name": "makeglossaries",
+        "command": "makeglossaries",
+        "args": [
+          "%DOCFILE%"
+        ]
+      }
+    ],
+    "spellright.documentTypes": [
+      "markdown",
+      "latex",
+      "plaintext"
+    ]
 }
