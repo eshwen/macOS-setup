@@ -2,7 +2,7 @@
 
 Files and scripts useful for macOS. Helps keep synchronisation between my different Mac computers and offers a backup
 
-If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](sshfs/) to `~/.sshfs/`.
+If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](sshfs/) to `~/.sshfs/`. The files [profile](profile) and [inputrc](inputrc) should be moved to `~/` and have a `.` prepend their filenames as well.
 
 - [macOS-home-files](#macos-home-files)
   - [Other useful installs](#other-useful-installs)
