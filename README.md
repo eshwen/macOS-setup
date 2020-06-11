@@ -48,6 +48,13 @@ brew cask install osxfuse  # for more SSHFS capabilities
 - The default install of git can be upgraded by downloading from <https://git-scm.com/>
 - Git completion for bash (download, then `source` in `~/.profile`/`~/.bashrc`): <https://github.com/git/git/blob/master/contrib/completion/git-completion.bash>
 - Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>
+- If required, I can install `ROOT` with Homebrew. Do
+
+```sh
+brew install ROOT
+```
+
+and then `. /usr/local/bin/thisroot.sh` in each session I want to use it
 
 ## Other useful commands
 
