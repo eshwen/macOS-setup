@@ -54,7 +54,7 @@ brew cask install osxfuse  # for more SSHFS capabilities
 brew install ROOT
 ```
 
-and then `. /usr/local/bin/thisroot.sh` in each session I want to use it
+and then `. /usr/local/bin/thisroot.sh` in each session I want to use it. It might also be useful to pin the version of `ROOT` installed, so that every time I update Homebrew, it doesn't go through the painstaking processes of updating `ROOT` as well. I can do this with `brew pin root`.
 
 ## Other useful commands
 
