@@ -1,43 +1,34 @@
 Host soolin
+    User eb16003
     Hostname sc01.dice.priv
     IdentityFile ~/.ssh/soolin_rsa
-    User eb16003
-    #ForwardAgent yes
+    #ForwardX11 yes
+    #ForwardX11Trusted yes
+
+Host lxplus
+    User ebhal
+    Hostname lxplus.cern.ch
+    #ForwardX11 yes
+    #ForwardX11Trusted yes
+
+Host imperial
+    User ebhal
+    Hostname lx02.hep.ph.ic.ac.uk
     #ForwardX11 yes
     #ForwardX11Trusted yes
 
 Host soolin_proxy
-    Hostname sc01.dice.priv
+    HostName sc01.dice.priv
     ForwardAgent yes
     ProxyCommand ssh -XY -q eb16003@seis.bris.ac.uk nc %h 22
     User eb16003
     IdentityFile ~/.ssh/soolin_rsa
 
-Host lxplus
-    Hostname lxplus.cern.ch
-    IdentityFile ~/.ssh/lxplus_rsa
-    User ebhal
-    #ForwardAgent yes
-    #ForwardX11 yes
-    #ForwardX11Trusted yes
-
-Host imperial00
-    User ebhal
-    Hostname lx00.hep.ph.ic.ac.uk
-    ForwardAgent yes
-    #ForwardX11 yes
-    #ForwardX11Trusted yes
-
-Host imperial01
-    User ebhal
-    Hostname lx01.hep.ph.ic.ac.uk
-    ForwardAgent yes
-    #ForwardX11 yes
-    #ForwardX11Trusted yes
-
+# Send packets to the server every 120 seconds to prevent disconnection
 Host *
     ServerAliveInterval 60
     UseKeychain yes
     AddKeysToAgent yes
     IdentityFile ~/.ssh/soolin_rsa
     IdentityFile ~/.ssh/soolin_proxy_rsa
+    IdentityFile ~/.ssh/github_id_rsa
