@@ -118,6 +118,17 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 
 and the settings file is [vscode_settings.json](vscode_settings.json)
 
+## System sounds
+
+I don't like some of the system sound effects in Big Sur. I've uploaded [Basso](./Basso_Catalina.aiff) and [Glass](./Glass_Catalina.aiff) from Catalina. To use them as system sounds, do
+
+```bash
+mkdir ~/Library/Sounds
+cp Basso_Catalina.aiff Glass_Catalina.aiff ~/Libraray/Sounds/
+```
+
+Then, in System Preferences -> Sound, they should be available.
+
 ## Helpful links for computing
 
 - Adding ssh keys to GitHub: <https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
