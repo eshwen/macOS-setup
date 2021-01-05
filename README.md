@@ -23,12 +23,10 @@ xcode-select --install
 ```sh
 brew install pyenv  # best way of managing Python installs on Mac. Multiple installs supported, so can have Python 2 and Python 3 envs. Comes bundled with pip
 brew install wget  # for wget command like on linux
-brew cask install qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
-brew cask install blackhole  # for BlackHole (audio output from screen recording)
-brew cask install mactex  # for MacTeX distro of TeXLive with GUI applications. Potentially missing frontend apps are 'bibdesk', 'cocoaspell', and 'tex-live-utility', but these can be installed with 'brew cask install <app>'
-brew cask install emacs  # since it's not provided by default as of macOS Catalina
-brew install sshfs
-brew cask install osxfuse  # for more SSHFS capabilities
+brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
+brew install --cask blackhole  # for BlackHole (audio output from screen recording)
+brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications. Potentially missing frontend apps are 'bibdesk', 'cocoaspell', and 'tex-live-utility', but these can be installed with 'brew cask install <app>'
+brew install --cask emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs
 ```
 
 - Install following packages with pip:
