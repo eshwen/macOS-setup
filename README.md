@@ -32,27 +32,16 @@ brew install --cask emacs  # since it's not provided by default as of macOS Cata
 - Install following packages with pip:
   - `setuptools`
   - `colorama`
-  - `numpy`
   - `scipy`
   - `pandas`
   - `matplotlib`
   - `jupyter`
   - `PyYAML`
-  - `fast-carpenter`
-  - `fast-curator`
-  - `fast-plotter`
 
 - Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
 - The default install of git can be upgraded by downloading from <https://git-scm.com/>
 - Git completion for bash (download, then `source` in `~/.profile`/`~/.bashrc`): <https://github.com/git/git/blob/master/contrib/completion/git-completion.bash>
 - Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>
-- If required, I can install `ROOT` with Homebrew. Do
-
-```sh
-brew install ROOT
-```
-
-and then `. /usr/local/bin/thisroot.sh` in each session I want to use it. It might also be useful to pin the version of `ROOT` installed, so that every time I update Homebrew, it doesn't go through the painstaking processes of updating `ROOT` as well. I can do this with `brew pin root`.
 
 ## Other useful commands
 
