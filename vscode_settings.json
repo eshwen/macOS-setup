@@ -1,18 +1,32 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "python.linting.pylintEnabled": false,
   "workbench.startupEditor": "newUntitledFile",
-  "key": "ctrl+t", // specify shortcut you like here
-  "command": "inserttimestamp.perform",
-  "when": "editorTextFocus",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+
   "vsicons.dontShowNewVersionMessage": true,
-  "python.pythonPath": "/Users/eshwen/.pyenv/versions/3.7.6/bin/python",
+
   "git.ignoreLegacyWarning": true,
+
+  "python.terminal.activateEnvironment": true,
+  "python.linting.pylintEnabled": false,
+  "python.defaultInterpreterPath": "/Users/eshwen/.pyenv/versions/3.9.9/bin/python",
+
   "editor.wordWrap": "on",
+  "editor.rulers": [
+    120
+  ],
 
   "spellright.language": [
     "en",
     "fr"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
   ],
   "spellright.notificationClass": "information",
 
@@ -20,7 +34,7 @@
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.recipes": [
       {
-        "name": "Fully compile with glossary",
+        "name": "pdflatex -> biber -> makeglossaries -> pdflatex x2",
         "tools": [
           "pdflatex",
           "biber",
@@ -30,7 +44,7 @@
         ]
       },
       {
-        "name": "Fully compile draft with glossary",
+        "name": "Draft: pdflatex -> biber -> makeglossaries -> pdflatex x2",
         "tools": [
           "pdflatexdraft",
           "biber",
@@ -43,6 +57,12 @@
         "name": "pdflatex",
         "tools": [
           "pdflatex"
+        ]
+      },
+      {
+        "name": "xelatex",
+        "tools": [
+          "xelatex"
         ]
       }
     ],
@@ -68,6 +88,13 @@
         ]
       },
       {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+          "%DOC%"
+        ]
+      },
+      {
         "name": "biber",
         "command": "biber",
         "args": [
@@ -81,10 +108,5 @@
           "%DOCFILE%"
         ]
       }
-    ],
-    "spellright.documentTypes": [
-      "markdown",
-      "latex",
-      "plaintext"
     ]
 }
