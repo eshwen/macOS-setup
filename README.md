@@ -35,8 +35,10 @@ brew install --cask emacs  # since it's not provided by default as of macOS Cata
   - `scipy`
   - `pandas`
   - `matplotlib`
-  - `jupyter`
   - `PyYAML`
+  - `jupyterlab`
+  - `notebook`
+  - `voila`
 
 - Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
 - The default install of git can be upgraded by downloading from <https://git-scm.com/>
