@@ -63,7 +63,7 @@ chsh -s /bin/bash
 
 ```sh
 brew upgrade
-brew cask upgrade
+brew upgrade --cask
 ```
 
 - MacTeX/TeXLive installs as root (possibly to avoid large installs and conflicts for multiple users). So if not using TeX Live Utility to update packages, I can go via the command line with `sudo` privileges. Check for outdated packages with
