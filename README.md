@@ -101,7 +101,7 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 - Spell Right
 - vscode-icons
 
-and the settings file is [vscode_settings.json](vscode_settings.json)
+and the settings file is [vscode_settings.json](vscode_settings.json). Even though it should be backed up to my GitHub account, a cold copy could be handy.
 
 ## System sounds
 
