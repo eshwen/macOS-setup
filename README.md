@@ -60,18 +60,6 @@ brew upgrade
 brew cask upgrade
 ```
 
-- Updating all outdated `pip` packages (doesn't require `--user` when installed with `pyenv`):
-
-```bash
-for package in $(pip list --outdated --format freeze | cut -d= -f1); do pip install --upgrade $package; done
-```
-
-or
-
-```bash
-pip list --outdated --format freeze | cut -d= -f1 > pip_outdated.txt; pip install --upgrade -r pip_outdated.txt; rm pip_outdated.txt
-```
-
 - MacTeX/TeXLive installs as root (possibly to avoid large installs and conflicts for multiple users). So if not using TeX Live Utility to update packages, I can go via the command line with `sudo` privileges. Check for outdated packages with
 
 ```sh
