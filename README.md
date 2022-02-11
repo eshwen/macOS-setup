@@ -29,7 +29,13 @@ brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs
 ```
 
-- Install following packages with pip:
+- Install a recent version of Python using `pyenv` with
+
+```sh
+pyenv install <version>
+```
+
+- Install following packages with pip (which will be tied to the current `pyenv` environment):
   - `setuptools`
   - `colorama`
   - `scipy`
