@@ -92,6 +92,8 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 - GitLens
 - LaTeX Workshop
 - markdownlint
+- Project Dashboard
+- Pylance
 - Python
 - Rainbow CSV
 - Remote - SSH
