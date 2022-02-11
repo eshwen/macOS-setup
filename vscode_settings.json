@@ -10,28 +10,43 @@
 
   "git.ignoreLegacyWarning": true,
 
-  "python.terminal.activateEnvironment": true,
-  "python.linting.pylintEnabled": false,
-  "python.defaultInterpreterPath": "/Users/eshwen/.pyenv/versions/3.9.9/bin/python",
+  "spellright.language": [
+    "en",
+    "fr"
+  ],
+  "spellright.notificationClass": "information",
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
 
   "editor.wordWrap": "on",
   "editor.rulers": [
     120
   ],
 
-  "spellright.language": [
-    "en",
-    "fr"
-  ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext"
-  ],
-  "spellright.notificationClass": "information",
+  "debug.console.fontSize": 14,
+
+  "terminal.integrated.fontSize": 14,
+
+  "python.terminal.activateEnvironment": true,
+  "python.linting.pylintEnabled": false,
+  "python.defaultInterpreterPath": "/Users/eshwen/.pyenv/versions/3.9.9/bin/python",
+
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+
+  "dashboard.projectData": null,
 
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.build.forceRecipeUsage": false,
   "latex-workshop.latex.recipes": [
       {
         "name": "pdflatex -> biber -> makeglossaries -> pdflatex x2",
