@@ -1,0 +1,25 @@
+# Package setup
+setuptools
+wheel
+
+# Terminal colours
+colorama
+
+# Data science
+scipy
+pandas
+
+# Machine learning
+tensorflow
+scikit-learn
+
+# Visualisation
+matplotlib
+
+# Configuration
+PyYAML
+
+# Jupyter
+jupyterlab
+notebook
+voila
