@@ -41,6 +41,14 @@ brew install --cask folx  # torrent client
 brew install --cask handbrake  # for converting videos
 brew install --cask filebot  # for batch renaming of files
 brew install --cask google-cloud-sdk  # for the Google Cloud SDK
+brew install --cask adobe-acrobat-reader
+brew install --cask alfred  # suped version of Spotlight
+brew install --cask android-file-transfer  # For copying files to Oculus Quest
+brew install --cask discord
+brew install --cask openemu  # Old video game emulation
+brew install --cask skype
+brew install --cask vlc
+brew install --cask zoom
 ```
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
