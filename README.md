@@ -131,6 +131,20 @@ pip install -r requirements.txt
 
 These will be tied to the active environment. So switching to a different Python version will require them to be installed again.
 
+#### Tensorflow
+
+If `pip install tensorflow` doesn't work, it may because it does not run natively on Apple Silicon. Run the following commands to get a usable install:
+
+```sh
+pyenv install miniforge3
+pyenv local miniforge3
+conda install -c apple tensorflow-deps -y
+
+pip install -U pip
+pip install tensorflow-macos
+pip install tensorflow-metal  # Metal plugin for GPU acceleration
+```
+
 ### VS Code
 
 In Visual Studio Code, the `settings.json` file can be edited to override some default commands. My current list of installed extensions are
