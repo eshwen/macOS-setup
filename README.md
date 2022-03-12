@@ -6,17 +6,9 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 
 ## Useful installs
 
-### XCode Command Line Tools
-
-Install XCode Command Line Tools with
-
-```sh
-xcode-select --install
-```
-
 ### Homebrew
 
-Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>
+Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>. This should also install the XCode Command Line Tools which is useful for software development.
 
 Once completed, I can use it to install and manage various programs and packages. It should keep them up to date without requiring conscious individual checks, and should install the right versions for my architecture (i.e., Intel x64 or Apple Silicon) and OS. Install the packages with
 
