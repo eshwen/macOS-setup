@@ -36,7 +36,7 @@ brew link --overwrite git  # so it's linked by default instead of the version bu
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # suped version of Spotlight
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
-brew install --cask blackhole  # for BlackHole (audio output from screen recording)
+brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
 brew install --cask discord
 brew install --cask filebot  # for batch renaming of files
 brew install --cask folx  # torrent client
