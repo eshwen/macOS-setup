@@ -27,26 +27,26 @@ Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>. T
 Once completed, I can use it to install and manage various programs and packages. It should keep them up to date without requiring conscious individual checks, and should install the right versions for my architecture (i.e., Intel x64 or Apple Silicon) and OS. Install the packages with
 
 ```sh
+brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
 brew install pyenv  # best way of managing Python installs on Mac
 brew install wget  # for wget command like on linux
 brew install git  # for a newer version than that bundled with macOS
 brew link --overwrite git  # so it's linked by default instead of the version bundled with macOS
 
-brew install --cask visual-studio-code  # the best code editor
-brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
-brew install --cask blackhole  # for BlackHole (audio output from screen recording)
-brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications (uninstall TeXShop afterward)
-brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
-brew install --cask folx  # torrent client
-brew install --cask handbrake  # for converting videos
-brew install --cask filebot  # for batch renaming of files
-brew install --cask google-cloud-sdk  # for the Google Cloud SDK
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # suped version of Spotlight
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
+brew install --cask blackhole  # for BlackHole (audio output from screen recording)
 brew install --cask discord
+brew install --cask filebot  # for batch renaming of files
+brew install --cask folx  # torrent client
+brew install --cask google-cloud-sdk  # for the Google Cloud SDK
+brew install --cask handbrake  # for converting videos
+brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications (uninstall TeXShop afterward)
 brew install --cask openemu  # Old video game emulation
+brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 brew install --cask skype
+brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
 brew install --cask zoom
 ```
