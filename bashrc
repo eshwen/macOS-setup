@@ -11,6 +11,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PYTHONPATH="$PYTHONPATH:/Users/eshwen/GitHub/ONS/prices-web-scraping/pm1"
 eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 # Shell completion for Google Cloud SDK
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
