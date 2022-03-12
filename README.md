@@ -31,6 +31,7 @@ brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file fo
 brew install --cask blackhole  # for BlackHole (audio output from screen recording)
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications (uninstall TeXShop afterward)
 brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
+brew install --cask folx  # torrent client
 brew install --cask handbrake  # for converting videos
 brew install --cask filebot  # for batch renaming of files
 brew install --cask google-cloud-sdk  # for the Google Cloud SDK
