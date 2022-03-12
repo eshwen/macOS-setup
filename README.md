@@ -58,6 +58,8 @@ brew install --cask zoom
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
+For any issues with opening these programs, see <https://support.apple.com/en-gb/guide/mac-help/mh40616/mac>.
+
 #### Updating
 
 Upgrade Homebrew packages with
