@@ -16,7 +16,7 @@ chsh -s /bin/bash
 
 Then also download Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>. If sticking with `zsh`, there is an equivalent: <https://github.com/ohmyzsh/ohmyzsh>.
 
-Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. I'm using `bash` by default, but if I want to switch to `zsh`, I just need to rename my `~/.bashrc` to `~/.zshrc`, and `~/.bash_profile` to `~/.zprofile`, and obviously update the calls to the relevant configuration files.
+Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. I'm using `bash` by default, but if I want to switch to `zsh`, I just need to rename my `~/.bashrc` to `~/.zshrc`, and `~/.bash_profile` to `~/.zprofile`, and obviously update the calls to the relevant configuration files. Installing Oh My Bash/Zsh may overwrite my `.<shell>rc` file. So I'll need to copy over my personal settings and append them to the file again.
 
 Whichever shell I use, cleanest way to manage these configurations is to keep all setup commands in the `.<shell>rc` file. Then in `.profile` and `.<shell>profile` files, just `source` the `.<shell>rc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
 
