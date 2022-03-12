@@ -3,6 +3,9 @@ alias ls='ls -G'
 export CLICOLOR=1
 export LSCOLORS=cxfxcxdxdxcgedafagacax
 
+# Add Homebrew to PATH if 'brew' command doesn't work
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Do not open GUI version of emacs
 alias emacs="emacs -nw"
 
