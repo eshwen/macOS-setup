@@ -3,6 +3,9 @@ alias ls='ls -G'
 export CLICOLOR=1
 export LSCOLORS=cxfxcxdxdxcgedafagacax
 
+# Add Homebrew to PATH if 'brew' command doesn't work
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Do not open GUI version of emacs
 alias emacs="emacs -nw"
 
@@ -17,7 +20,7 @@ eval "$(pyenv init -)"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 
 # Shell completion for git
-source $HOME/.git-completion.bash
+source /opt/homebrew/etc/bash_completion.d
 
 # Web scraping directory shortcuts
 PRICES_WEB_SCRAPING="/Users/eshwen/GitHub/ONS/prices-web-scraping/pm1/pm1"

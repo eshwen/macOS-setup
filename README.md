@@ -6,17 +6,23 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 
 ## Useful installs
 
-### XCode Command Line Tools
+### bash
 
-Install XCode Command Line Tools with
+`zsh` is the default shell in macOS as of Catalina. To switch it to `bash`, do
 
 ```sh
-xcode-select --install
+chsh -s /bin/bash
 ```
+
+Then also download Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>. If sticking with `zsh`, there is an equivalent: <https://github.com/ohmyzsh/ohmyzsh>.
+
+Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. I'm using `bash` by default, but if I want to switch to `zsh`, I just need to rename my `~/.bashrc` to `~/.zshrc`, and `~/.bash_profile` to `~/.zprofile`, and obviously update the calls to the relevant configuration files.
+
+Whichever shell I use, cleanest way to manage these configurations is to keep all setup commands in the `.<shell>rc` file. Then in `.profile` and `.<shell>profile` files, just `source` the `.<shell>rc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
 
 ### Homebrew
 
-Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>
+Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>. This should also install the XCode Command Line Tools which is useful for software development.
 
 Once completed, I can use it to install and manage various programs and packages. It should keep them up to date without requiring conscious individual checks, and should install the right versions for my architecture (i.e., Intel x64 or Apple Silicon) and OS. Install the packages with
 
@@ -131,20 +137,6 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 
 and the settings file is [vscode_settings.json](vscode_settings.json). Even though it should be backed up to my GitHub account, a cold copy could be handy. Make sure the Python path reflects whatever version I have installed. It can be switched on-the-fly in any case.
 
-### bash
-
-`zsh` is the default shell in macOS as of Catalina. To switch it to `bash`, do
-
-```sh
-chsh -s /bin/bash
-```
-
-Then also download Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>. If sticking with `zsh`, there is an equivalent: <https://github.com/ohmyzsh/ohmyzsh>.
-
-Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. I'm using `bash` by default, but if I want to switch to `zsh`, I just need to rename my `~/.bashrc` to `~/.zshrc`, and `~/.bash_profile` to `~/.zprofile`, and obviously update the calls to the relevant configuration files.
-
-Whichever shell I use, cleanest way to manage these configurations is to keep all setup commands in the `.<shell>rc` file. Then in `.profile` and `.<shell>profile` files, just `source` the `.<shell>rc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
-
 ### Google Cloud SDK
 
 This line should be added to my `.bashrc` file to get shell completion commands:
@@ -162,13 +154,6 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 ### Other useful installs
 
 - Terminal settings/preferences (personal choice): [Ocean.terminal](./Ocean/terminal)
-- Git completion for `bash` (equivalent steps for `zsh`): <https://github.com/git/git/blob/master/contrib/completion/git-completion.bash>
-  - Download, then rename to `$HOME/.git-completion.bash`
-  - Add following line to `~/.bashrc`
-
-  ```bash
-  source $HOME/.git-completion.bash
-  ```
 
 ## System sounds
 
