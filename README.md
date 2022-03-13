@@ -175,7 +175,7 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 - Spell Right
 - vscode-icons
 
-and the settings file is [vscode_settings.json](vscode_settings.json). Even though it should be backed up to my GitHub account, a cold copy could be handy. Make sure the Python path reflects whatever version I have installed. It can be switched on-the-fly in any case.
+and the settings file is [vscode_settings.json](vscode_settings.json). Even though it should be backed up to my GitHub account (`@eshwen`), a cold copy could be handy. Make sure the Python path reflects whatever version I have installed. It can be switched on-the-fly in any case.
 
 ### Google Cloud SDK
 
