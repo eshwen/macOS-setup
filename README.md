@@ -194,10 +194,9 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 ### Other useful installs
 
 - Terminal settings/preferences (personal choice): [Ocean_Esh.terminal](./Ocean_Esh.terminal)
-  1) Copy the file somewhere locally
-  2) Open the Terminal, and go to **Preferences** -> **Profiles**
-  3) Hit the three dots in the bottom left corner and click **Import...**
-  4) Select the terminal preferences file and set it as the default
+  1) Open the Terminal, and go to **Preferences** -> **Profiles**
+  2) Hit the three dots in the bottom left corner and click **Import...**
+  3) Select the terminal preferences file and set it as the default
 
 ## System sounds
 
