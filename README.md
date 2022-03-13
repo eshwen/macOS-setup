@@ -53,10 +53,13 @@ brew install --cask google-cloud-sdk  # for the Google Cloud SDK
 brew install --cask google-drive
 brew install --cask handbrake  # for converting videos
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications (uninstall TeXShop afterward)
+brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and subtitle tracks from MKV files
 brew install --cask openemu  # Old video game emulation
+brew install --cask plex  # Media player client for Plex
 brew install --cask private-internet-access
 brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 brew install --cask raindropio
+brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest 
 brew install --cask skype
 brew install --cask todoist
 brew install --cask visual-studio-code  # the best code editor
