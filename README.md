@@ -213,3 +213,18 @@ Then, in System Preferences -> Sound, they should be available.
 
 - Adding ssh keys to GitHub: <https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
 - Emacs reference card: <https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf>
+- Sort all folders in Finder alphabetically: <https://apple.stackexchange.com/questions/22717/how-to-set-arrange-by-for-all-the-folders-in-the-finder>
+
+## Useful shortcuts
+
+- Forward delete: `fn` + `backspace`
+
+## App Store Wishlist
+
+- [ ] Pixelmator Pro
+- [ ] Final Cut Pro X
+
+iOS apps:
+
+- [ ] The Elements
+- [ ] LumaFusion
