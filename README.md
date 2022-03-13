@@ -20,6 +20,14 @@ Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh
 
 Whichever shell I use, cleanest way to manage these configurations is to keep all setup commands in the `.<shell>rc` file. Then in `.profile` and `.<shell>profile` files, just `source` the `.<shell>rc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
 
+### Rosetta 2
+
+Rosetta 2 is Apple's utility to translate Intel-based (x86) apps so they're Apple Silicon-compatibile. It's no longer bundled with macOS as of Monterey. If I try to open an x86 app, I'll be prompted to install it. Otherwise, I can type in the Terminal
+
+```sh
+softwareupdate --install-rosetta
+```
+
 ### Homebrew
 
 Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>. This should also install the XCode Command Line Tools which is useful for software development.
