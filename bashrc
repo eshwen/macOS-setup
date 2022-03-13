@@ -20,7 +20,7 @@ eval "$(pyenv init -)"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 
 # Shell completion for git
-source /opt/homebrew/etc/bash_completion.d
+source /opt/homebrew/etc/bash_completion.d/git-completion.bash
 
 # Web scraping directory shortcuts
 PRICES_WEB_SCRAPING="/Users/eshwen/GitHub/ONS/prices-web-scraping/pm1/pm1"
