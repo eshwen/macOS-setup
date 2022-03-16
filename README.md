@@ -129,7 +129,7 @@ brew upgrade --greedy
 
 ### TeX Live
 
-TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, and TeXShop. Uninstall the latter, since VS Code is way better. For the former three, if they are not installed by default do so with
+TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
 
 ```sh
 brew install cocoaspell  # for TeX spelling utilities
@@ -199,6 +199,8 @@ pip install tensorflow-macos
 pip install tensorflow-metal  # Metal plugin for GPU acceleration
 ```
 
+Then, before using Tensorflow, do either `pyenv local miniforge3` or `pyenv local miniforge3` to activate the environment it's installed in.
+
 ### VS Code
 
 In Visual Studio Code, the `settings.json` file can be edited to override some default commands. My current list of installed extensions are
@@ -255,10 +257,13 @@ Then, in System Preferences -> Sound, they should be available.
 - Adding ssh keys to GitHub: <https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
 - Emacs reference card: <https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf>
 - Sort all folders in Finder alphabetically: <https://apple.stackexchange.com/questions/22717/how-to-set-arrange-by-for-all-the-folders-in-the-finder>
+- Mac glyphs in unicode/HTML: <https://apple.stackexchange.com/questions/55727/where-can-i-find-the-unicode-symbols-for-mac-functional-keys-command-shift-e>
 
 ## Useful shortcuts
 
-- Forward delete: `fn` + `backspace`
+- Forward delete: <kbd>fn</kbd> + <kbd>&#9003;</kbd>
+- Show inspector (so **Get Info** shows for active file): <kbd>&#8984;</kbd> + <kbd>&#8997;</kbd> + <kbd>i</kbd>
+- Toggle to show/hide hidden files and directories (i.e., prefixed with `.`): <kbd>&#8984;</kbd> + <kbd>&#8679;</kbd> + <kbd>.</kbd>
 
 ## App Store Wishlist
 
