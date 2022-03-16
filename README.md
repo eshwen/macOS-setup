@@ -2,7 +2,30 @@
 
 Files and scripts useful for macOS. Helps keep synchronisation between my different Mac computers and offers a backup.
 
-If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](sshfs/) to `~/.sshfs/`. The files [bash_profile](bash_profile), [bashrc](bashrc), [profile](profile), [inputrc](inputrc) should be moved to `~/` and have a `.` prefix their filenames as well. Strip out all the unnecessary stuff from them.
+## Setup
+
+1) Make a directory within the home folder called `GitHub` to store repos:
+
+    ```sh
+    mkdir $HOME/GitHub
+    ```
+
+2) Download GitHub Desktop from <https://desktop.github.com/>, then open it and sign in
+
+3) On this page, hit the **Code** button, followed by **Open with GitHub Desktop**. If prompted for a directory, store the repo in `/Users/eshwen/GitHub/macOS-home-files`
+
+4) Copy over the profile/configuration settings:
+
+    ```sh
+    repo_dir="$HOME/GitHub/macOS-home-files"
+    cd $repo_dir
+    cat bash_profile >> $HOME/.bash_profile
+    cat bashrc >> $HOME/.bashrc
+    cat inputrc >> $HOME/.inputrc
+    cat profile >> $HOME/.profile
+    ```
+
+5) Strip out any unnecessary stuff from these new files
 
 ## Useful installs
 
@@ -14,11 +37,21 @@ If wanting to implement, move files from [ssh/](ssh/) to `~/.ssh/` and [sshfs/](
 chsh -s /bin/bash
 ```
 
-Then also download Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>. If sticking with `zsh`, there is an equivalent: <https://github.com/ohmyzsh/ohmyzsh>.
+Then also download Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>. Follow the instructions to download and install.
 
-Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. I'm using `bash` by default, but if I want to switch to `zsh`, I just need to rename my `~/.bashrc` to `~/.zshrc`, and `~/.bash_profile` to `~/.zprofile`, and obviously update the calls to the relevant configuration files. Installing Oh My Bash/Zsh may overwrite my `.<shell>rc` file. So I'll need to copy over my personal settings and append them to the file again.
+Installing Oh My Bash may overwrite my `.bashrc` file. So I'll need to copy over my personal settings and append them to the file again, e.g., with
 
-Whichever shell I use, cleanest way to manage these configurations is to keep all setup commands in the `.<shell>rc` file. Then in `.profile` and `.<shell>profile` files, just `source` the `.<shell>rc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
+```sh
+cat $HOME/GitHub/macOS-home-files/bashrc >> $HOME/.bashrc
+```
+
+The cleanest way to manage these configurations is to keep all setup commands in the `.bashrc` file. Then in `.profile` and `.bash_profile`, just `source` the `.bashrc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
+
+#### Sticking with zsh
+
+If sticking with `zsh`, there is an equivalent to Oh My Bash called Oh My Zsh: <https://github.com/ohmyzsh/ohmyzsh>. Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. If I want to switch from `bash` to `zsh`, I just need to rename my `~/.bashrc` → `~/.zshrc`, and `~/.bash_profile` → `~/.zprofile`. And obviously update the calls to the relevant configuration files.
+
+I haven't tested it, but as with bash, installing Oh My Zsh may overwrite `~/.zshrc`. So I should be aware of that. And the same logic applies to managing the configuration files as with bash.
 
 ### Rosetta 2
 
