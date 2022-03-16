@@ -68,12 +68,16 @@ Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>. T
 Once completed, I can use it to install and manage various programs and packages. It should keep them up to date without requiring conscious individual checks, and should install the right versions for my architecture (i.e., Intel x64 or Apple Silicon) and OS. Install the packages with
 
 ```sh
+# Formulae
+brew install bash  # for a newer version that that bundled with macOS
 brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
-brew install pyenv  # best way of managing Python installs on Mac
-brew install wget  # for wget command like on linux
 brew install git  # for a newer version than that bundled with macOS
 brew link --overwrite git  # so it's linked by default instead of the version bundled with macOS
+brew install pyenv  # best way of managing Python installs on Mac
+brew install tree  # Show directory trees (use `-L <levels>` options to show set number of levels)
+brew install wget  # for wget command like on linux
 
+# Casks
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # suped version of Spotlight
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
@@ -82,10 +86,9 @@ brew install --cask discord
 brew install --cask filebot  # for batch renaming of files
 brew install --cask folx  # torrent client
 brew install --cask google-chrome
-brew install --cask google-cloud-sdk  # for the Google Cloud SDK
 brew install --cask google-drive
-brew install --cask handbrake  # for converting videos
-brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications (uninstall TeXShop afterward)
+brew install --cask handbrake  # for re-encoding videos
+brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and subtitle tracks from MKV files
 brew install --cask openemu  # Old video game emulation
 brew install --cask plex  # Media player client for Plex
@@ -98,6 +101,11 @@ brew install --cask todoist
 brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
 brew install --cask zoom
+
+# Web scraping-related stuff
+brew install tfenv  # For Terraform
+brew install --cask docker  # For Docker
+brew install --cask google-cloud-sdk  # for the Google Cloud SDK
 ```
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
