@@ -5,6 +5,7 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "vscode-icons",
 
   "vsicons.dontShowNewVersionMessage": true,
 
@@ -24,6 +25,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
 
+  "editor.fontSize": 14,
   "editor.wordWrap": "on",
   "editor.rulers": [
     120
@@ -35,7 +37,7 @@
 
   "python.terminal.activateEnvironment": true,
   "python.linting.pylintEnabled": false,
-  "python.defaultInterpreterPath": "/Users/eshwen/.pyenv/versions/3.9.9/bin/python",
+  "python.defaultInterpreterPath": "/Users/eshwen/.pyenv/versions/3.9.10/bin/python",
 
   "notebook.cellToolbarLocation": {
     "default": "right",
@@ -123,5 +125,9 @@
           "%DOCFILE%"
         ]
       }
-    ]
+    ],
+
+    "markdownlint.config": {
+      "MD033": false
+    }
 }
