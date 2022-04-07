@@ -234,6 +234,10 @@ If using `zsh`, instead add to my `.zshrc`:
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 ```
 
+### Fonts
+
+There are some nice fonts I've found over the years in the [fonts/](./fonts/) directory. To install them to the system's Font Book, just highlight them all in the Finder and double click.
+
 ### Other useful installs
 
 - Terminal settings/preferences (personal choice): [Ocean_Esh.terminal](./Ocean_Esh.terminal)
