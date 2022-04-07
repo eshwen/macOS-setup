@@ -289,10 +289,15 @@ Then, in System Preferences -> Sound, they should be available.
 - Show inspector (so **Get Info** shows for active file): <kbd>&#8984;</kbd> + <kbd>&#8997;</kbd> + <kbd>i</kbd>
 - Toggle to show/hide hidden files and directories (i.e., prefixed with `.`): <kbd>&#8984;</kbd> + <kbd>&#8679;</kbd> + <kbd>.</kbd>
 
-## App Store Wishlist
+## Mac App Wishlist
 
 - [ ] Pixelmator Pro
 - [ ] Final Cut Pro X
+- [ ] Downie
+- [ ] Bartender
+- [ ] One Switch
+- [ ] Duet Display
+- [ ] Vivid
 
 iOS apps:
 
