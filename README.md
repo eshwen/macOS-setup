@@ -157,6 +157,24 @@ and then update the packages with
 sudo tlmgr update --all
 ```
 
+### Garamond Expert
+
+My favourite font is **Garamond Expert with New TX Math** (the package `garamondx` - see [here](helpful_docs/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
+
+```sh
+curl --remote-name https://www.tug.org/fonts/getnonfreefonts/install-getnonfreefonts
+sudo texlua install-getnonfreefonts
+sudo getnonfreefonts --sys -a
+```
+
+If the above doesn't work (sometimes the `microtype` package kinda fails to map things properly), also try
+
+```sh
+updmap-sys
+```
+
+_Do not_ run `getnonfreefonts` with `--user`, or `updmap-user`, for the reasons outlined in <https://tex.stackexchange.com/a/255711>.
+
 ### Python
 
 Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey. While Anaconda is a good environment manager, `pyenv` is the simplest and most lightweight option for pure Python. Once `pyenv` has been installed with Homebrew, install a recent version of Python with
