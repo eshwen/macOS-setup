@@ -103,11 +103,6 @@ brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
 brew install --cask whatsapp
 brew install --cask zoom
-
-# Web scraping-related stuff
-brew install tfenv  # For Terraform
-brew install --cask docker  # For Docker
-brew install --cask google-cloud-sdk  # for the Google Cloud SDK
 ```
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
@@ -241,20 +236,6 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 - vscode-icons
 
 and the settings file is [vscode_settings.json](vscode_settings.json). Even though it should be backed up to my GitHub account (`@eshwen`), a cold copy could be handy. Make sure the Python path reflects whatever version I have installed. It can be switched on-the-fly in any case.
-
-### Google Cloud SDK
-
-This line should be added to my `.bashrc` file to get shell completion commands:
-
-```bash
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
-```
-
-If using `zsh`, instead add to my `.zshrc`:
-
-```zsh
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-```
 
 ### Fonts
 
