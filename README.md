@@ -114,6 +114,8 @@ Typically, the `--cask` option is used when you want to install GUI applications
 
 For any issues with opening these programs, see <https://support.apple.com/en-gb/guide/mac-help/mh40616/mac>.
 
+The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
+
 #### Updating
 
 Upgrade Homebrew packages with
