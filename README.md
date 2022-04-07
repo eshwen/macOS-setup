@@ -89,6 +89,7 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
+brew install --cask messenger  # Facebook Messenger
 brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and subtitle tracks from MKV files
 brew install --cask openemu  # Old video game emulation
 brew install --cask plex  # Media player client for Plex
@@ -100,6 +101,7 @@ brew install --cask skype
 brew install --cask todoist
 brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
+brew install --cask whatsapp
 brew install --cask zoom
 
 # Web scraping-related stuff
