@@ -1,6 +1,6 @@
-# macOS-home-files
+# macOS-setup
 
-Files and scripts useful for macOS. Helps keep synchronisation between my different Mac computers and offers a backup.
+Files and scripts useful for setting up a new Mac. Helps keep synchronisation between my different Mac computers and offers a backup.
 
 ## Setup
 
