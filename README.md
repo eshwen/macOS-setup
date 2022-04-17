@@ -68,6 +68,10 @@ Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>. T
 Once completed, I can use it to install and manage various programs and packages. It should keep them up to date without requiring conscious individual checks, and should install the right versions for my architecture (i.e., Intel x64 or Apple Silicon) and OS. Install the packages with
 
 ```sh
+# Make directory to store gaming apps
+games_dir="/Applications/Games"
+mkdir $games_dir
+
 # Formulae
 brew install bash  # for a newer version than that bundled with macOS
 brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
@@ -83,7 +87,7 @@ brew install --cask alfred  # suped version of Spotlight
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
 brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
 brew install --cask discord
-brew install --cask epic-games
+brew install --cask epic-games --appdir $games_dir
 brew install --cask filebot  # for batch renaming of files
 brew install --cask folx  # torrent client
 brew install --cask github  # GitHub Desktop
@@ -101,9 +105,10 @@ brew install --cask plex  # Media player client for Plex
 brew install --cask private-internet-access
 brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 brew install --cask raindropio
+brew install --cask runescape --appdir $games_dir
 brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest 
 brew install --cask skype
-brew install --cask steam
+brew install --cask steam  --appdir $games_dir
 brew install --cask todoist
 brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
@@ -142,9 +147,11 @@ brew upgrade --greedy
 TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
 
 ```sh
+tex_dir="/Applications/TeX"
+mkdir $tex_dir
 brew install cocoaspell  # for TeX spelling utilities
-brew install bibdesk  # for LaTeX bibliography management
-brew install tex-live-utility  # for maintaining installed LaTeX packages
+brew install --cask bibdesk --appdir $tex_dir  # for LaTeX bibliography management
+brew install --cask tex-live-utility --appdir $tex_dir  # for maintaining installed LaTeX packages
 ```
 
 MacTeX/TeX Live installs as root (possibly to avoid large installs and conflicts for multiple users). So if avoiding TeX Live Utility to update packages, I can go via the command line with `sudo` privileges. Check for outdated packages with
