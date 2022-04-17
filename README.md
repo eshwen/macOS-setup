@@ -109,6 +109,11 @@ brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
 brew install --cask whatsapp
 brew install --cask zoom
+
+# Huboo-specific
+brew install --cask docker
+brew install --cask microsoft-teams
+brew install --cask postman
 ```
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
