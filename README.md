@@ -69,7 +69,7 @@ Once completed, I can use it to install and manage various programs and packages
 
 ```sh
 # Formulae
-brew install bash  # for a newer version that that bundled with macOS
+brew install bash  # for a newer version than that bundled with macOS
 brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
 brew install git  # for a newer version than that bundled with macOS
 brew link --overwrite git  # so it's linked by default instead of the version bundled with macOS
@@ -83,13 +83,18 @@ brew install --cask alfred  # suped version of Spotlight
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
 brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
 brew install --cask discord
+brew install --cask epic-games
 brew install --cask filebot  # for batch renaming of files
 brew install --cask folx  # torrent client
+brew install --cask github  # GitHub Desktop
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask messenger  # Facebook Messenger
+brew install --cask microsoft-excel
+brew install --cask microsoft-powerpoint
+brew install --cask microsoft-word
 brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and subtitle tracks from MKV files
 brew install --cask openemu  # Old video game emulation
 brew install --cask plex  # Media player client for Plex
@@ -98,6 +103,7 @@ brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file fo
 brew install --cask raindropio
 brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest 
 brew install --cask skype
+brew install --cask steam
 brew install --cask todoist
 brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
