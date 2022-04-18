@@ -174,7 +174,7 @@ sudo tlmgr update --all
 
 ### Garamond Expert
 
-My favourite font is **Garamond Expert with New TX Math** (the package `garamondx` - see [here](helpful_docs/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
+My favourite font is **Garamond Expert with New TX Math** (the LaTeX package `garamondx` - see [here](helpful_docs/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
 
 ```sh
 curl --remote-name https://www.tug.org/fonts/getnonfreefonts/install-getnonfreefonts
@@ -182,7 +182,7 @@ sudo texlua install-getnonfreefonts
 sudo getnonfreefonts --sys -a
 ```
 
-If the above doesn't work (sometimes the `microtype` package kinda fails to map things properly), also try
+If the above doesn't work (sometimes the `microtype` package fails to map things properly), also try
 
 ```sh
 updmap-sys
@@ -222,7 +222,7 @@ These will be tied to the active environment. So switching to a different Python
 
 #### Tensorflow
 
-If `pip install tensorflow` doesn't work, it may because it does not run natively on Apple Silicon. Run the following commands to get a usable install:
+If `pip install tensorflow` doesn't work, it may because it does not yet run natively on Apple Silicon. Run the following commands to get a usable install:
 
 ```sh
 pyenv install miniforge3
@@ -234,7 +234,7 @@ pip install tensorflow-macos
 pip install tensorflow-metal  # Metal plugin for GPU acceleration
 ```
 
-Then, before using Tensorflow, do either `pyenv local miniforge3` or `pyenv local miniforge3` to activate the environment it's installed in.
+Then, before using Tensorflow, do either `pyenv local miniforge3` or `pyenv global miniforge3` to activate the environment it's installed in.
 
 ### VS Code
 
