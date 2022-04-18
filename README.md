@@ -108,7 +108,7 @@ brew install --cask raindropio
 brew install --cask runescape --appdir $games_dir
 brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest 
 brew install --cask skype
-brew install --cask steam  --appdir $games_dir
+brew install --cask steam --appdir $games_dir
 brew install --cask todoist
 brew install --cask visual-studio-code  # the best code editor
 brew install --cask vlc
