@@ -12,12 +12,12 @@ Files and scripts useful for setting up a new Mac. Helps keep synchronisation be
 
 2) Download GitHub Desktop from <https://desktop.github.com/>, then open it and sign in
 
-3) On this page, hit the **Code** button, followed by **Open with GitHub Desktop**. If prompted for a directory, store the repo in `/Users/eshwen/GitHub/macOS-home-files`
+3) On this page, hit the **Code** button, followed by **Open with GitHub Desktop**. If prompted for a directory, store the repo in `/Users/eshwen/GitHub/macOS-setup`
 
 4) Copy over the profile/configuration settings:
 
     ```sh
-    repo_dir="$HOME/GitHub/macOS-home-files"
+    repo_dir="$HOME/GitHub/macOS-setup"
     cd $repo_dir
     cat bash_profile >> $HOME/.bash_profile
     cat bashrc >> $HOME/.bashrc
@@ -42,7 +42,7 @@ Then also download Oh My Bash (bash configuration management, themes, plugins): 
 Installing Oh My Bash may overwrite my `.bashrc` file. So I'll need to copy over my personal settings and append them to the file again, e.g., with
 
 ```sh
-cat $HOME/GitHub/macOS-home-files/bashrc >> $HOME/.bashrc
+cat $HOME/GitHub/macOS-setup/bashrc >> $HOME/.bashrc
 ```
 
 The cleanest way to manage these configurations is to keep all setup commands in the `.bashrc` file. Then in `.profile` and `.bash_profile`, just `source` the `.bashrc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
