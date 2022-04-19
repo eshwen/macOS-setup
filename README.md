@@ -150,6 +150,26 @@ Casks with auto-update utilities (like a lot of GUI applications) won't be updat
 brew upgrade --greedy
 ```
 
+#### Cleanup and uninstalling
+
+Homebrew should run a cleanup of caches and old files every so often. For manual scrubbing, run
+
+```sh
+brew cleanup -s --prune all
+```
+
+Uninstall a formula/cask with
+
+```sh
+brew uninstall <formula/cask>
+```
+
+Uninstall unused dependencies of formulae/casks with
+
+```sh
+brew autoremove
+```
+
 ### TeX Live
 
 TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
