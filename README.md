@@ -116,10 +116,12 @@ brew install --cask whatsapp
 brew install --cask zoom
 
 # Huboo-specific
+brew install mysql
 brew install --cask aws-vpn-client
 brew install --cask docker
 brew install --cask microsoft-outlook
 brew install --cask microsoft-teams
+brew install --cask mysqlworkbench
 brew install --cask postman
 brew install --cask slack
 ```
