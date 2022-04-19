@@ -117,6 +117,7 @@ brew install --cask zoom
 
 # Huboo-specific
 brew install mysql
+brew install --cask anaconda
 brew install --cask aws-vpn-client
 brew install --cask docker
 brew install --cask microsoft-outlook
