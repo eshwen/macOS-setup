@@ -287,7 +287,7 @@ I don't like some of the system sound effects in Big Sur. I've uploaded [Basso](
 
 ```bash
 mkdir ~/Library/Sounds
-cp Basso_Catalina.aiff Glass_Catalina.aiff ~/Libraray/Sounds/
+cp Basso_Catalina.aiff Glass_Catalina.aiff ~/Library/Sounds/
 ```
 
 Then, in System Preferences -> Sound, they should be available.
