@@ -299,6 +299,15 @@ Then, in System Preferences -> Sound, they should be available.
 - Sort all folders in Finder alphabetically: <https://apple.stackexchange.com/questions/22717/how-to-set-arrange-by-for-all-the-folders-in-the-finder>
 - Mac glyphs in unicode/HTML: <https://apple.stackexchange.com/questions/55727/where-can-i-find-the-unicode-symbols-for-mac-functional-keys-command-shift-e>
 
+## Configuration options
+
+- Enable 3-finger drag on the trackpad
+  - Go to **System Preferences** -> **Accessibility** -> **Pointer Control**
+  - Under **Mouse & Trackpad** -> **Trackpad Options...** select **three finger drag** from the dropdown menu and tick the checkbox
+- Order everything in every directory within Finder alphabetically
+  - In the menu bar in Finder, go to **View** -> **Show View Options**
+  - Ensure **Group By** and **Sort By** have the value **Name** and click **Use As Defaults**
+
 ## Useful shortcuts
 
 - Forward delete: <kbd>fn</kbd> + <kbd>&#9003;</kbd>
