@@ -324,7 +324,13 @@ Then, in System Preferences -> Sound, they should be available.
 - [ ] Duet Display
 - [ ] Vivid
 
+## iOS/iPadOS App Wishlist
+
 iOS apps:
 
 - [ ] The Elements
 - [ ] LumaFusion
+- [ ] YacReader
+- [ ] Sporcle
+- [ ] Procreate
+- [ ] Dark Sky
