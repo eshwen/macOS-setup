@@ -251,6 +251,8 @@ pip install tensorflow-metal  # Metal plugin for GPU acceleration
 
 Then, before using Tensorflow, do either `pyenv local miniforge3` or `pyenv global miniforge3` to activate the environment it's installed in.
 
+See also: https://developer.apple.com/metal/tensorflow-plugin/
+
 ### VS Code
 
 In Visual Studio Code, the `settings.json` file can be edited to override some default commands. My current list of installed extensions are
