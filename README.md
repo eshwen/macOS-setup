@@ -335,4 +335,3 @@ iOS apps:
 - [ ] YacReader
 - [ ] Sporcle
 - [ ] Procreate
-- [ ] Dark Sky
