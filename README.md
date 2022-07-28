@@ -207,7 +207,11 @@ _Do not_ run `getnonfreefonts` with `--user`, or `updmap-user`, for the reasons 
 
 ### Python
 
-Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey. While Anaconda is a good environment manager, `pyenv` is the simplest and most lightweight option for pure Python. Once `pyenv` has been installed with Homebrew, install a recent version of Python with
+Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey.
+
+#### pyenv
+
+While Anaconda is a good environment manager, `pyenv` is the simplest and most lightweight option for pure Python. Once `pyenv` has been installed with Homebrew, install a recent version of Python with
 
 ```sh
 pyenv install <version>
@@ -223,6 +227,25 @@ and can be switched to any other install with
 
 ```sh
 pyenv global <version>
+```
+
+#### Anaconda
+
+For completeness, below are instructions to install Anaconda with Homebrew:
+
+```sh
+brew install --cask anaconda
+conda init bash  # replace with 'conda init zsh' for zsh
+conda activate
+conda deactivate
+```
+
+Then, to install the Anaconda Navigator (a GUI for managing conda environments and installing related tools), do
+
+```sh
+conda activate
+conda install -c anaconda anaconda-navigator -y
+conda deactivate
 ```
 
 #### Dependencies
