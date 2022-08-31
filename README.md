@@ -237,6 +237,7 @@ For completeness, below are instructions to install Anaconda with Homebrew:
 brew install --cask anaconda
 conda init "$(basename "${SHELL}")"
 conda activate
+conda config --set auto_activate_base false
 conda deactivate
 ```
 
