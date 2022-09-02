@@ -235,7 +235,8 @@ For completeness, below are instructions to install Anaconda with Homebrew:
 
 ```sh
 brew install --cask anaconda
-conda init "$(basename "${SHELL}")"
+conda init "$(basename "${SHELL}")"  # If 'conda' executable doesn't work, run $(brew --prefix)/anaconda3/bin/conda
+<exit and reopen shell>
 conda activate
 conda config --set auto_activate_base false
 conda deactivate
