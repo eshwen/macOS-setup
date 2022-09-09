@@ -77,6 +77,7 @@ brew install bash  # for a newer version than that bundled with macOS
 brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
 brew install git  # for a newer version than that bundled with macOS
 brew link --overwrite git  # so it's linked by default instead of the version bundled with macOS
+brew install poetry  # for Python project management
 brew install pyenv  # best way of managing Python installs on Mac
 brew install tree  # Show directory trees (use `-L <levels>` options to show set number of levels)
 brew install wget  # for wget command like on linux
