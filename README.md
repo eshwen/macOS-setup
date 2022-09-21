@@ -165,7 +165,6 @@ TeX Live is installed under the `mactex` cask with Homebrew. As well as the actu
 ```sh
 tex_dir="/Applications/TeX"
 mkdir $tex_dir
-brew install cocoaspell  # for TeX spelling utilities
 brew install --cask bibdesk --appdir $tex_dir  # for LaTeX bibliography management
 brew install --cask tex-live-utility --appdir $tex_dir  # for maintaining installed LaTeX packages
 ```
