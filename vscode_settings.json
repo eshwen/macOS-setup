@@ -10,6 +10,7 @@
   "vsicons.dontShowNewVersionMessage": true,
 
   "git.ignoreLegacyWarning": true,
+  "git.autofetch": true,
 
   "spellright.language": [
     "en",
@@ -36,8 +37,33 @@
   "terminal.integrated.fontSize": 14,
 
   "python.terminal.activateEnvironment": true,
-  "python.linting.pylintEnabled": false,
-  "python.defaultInterpreterPath": "/Users/eshwen/.pyenv/versions/3.9.10/bin/python",
+
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Args": [
+    "--max-line-length=120",
+    "--ignore=E712,W503"
+  ],
+  
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length 120"
+  ],
+  
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+
+  "isort.args":[
+    "--profile", "black",
+    "-w", "120"
+  ],
+
+  "autoDocstring.docstringFormat": "google-notypes",  // Types not required when using type hinting
 
   "notebook.cellToolbarLocation": {
     "default": "right",
