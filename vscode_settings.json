@@ -26,7 +26,6 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
 
-  "editor.fontSize": 14,
   "editor.wordWrap": "on",
   "editor.rulers": [
     120
