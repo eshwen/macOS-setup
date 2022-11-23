@@ -218,15 +218,21 @@ While Anaconda is a good environment manager, `pyenv` is the simplest and most l
 pyenv install <version>
 ```
 
-Multiple installs are supported, so I can have separate Python 2 and Python 3 environments, or even separate Python 3.X ones. Each is bundled with `pip` for external package dependency management. The active environment can be found with
+Multiple installations are supported, so I can have separate Python 2 and Python 3 environments, or even separate Python 3.X ones. Each is bundled with `pip` for external package dependency management. The active environment can be found with
 
 ```sh
-pyenv global
+pyenv local
 ```
 
-and can be switched to any other install with
+and can be switched to any other installation (applicable to the active directory) with
 
 ```sh
+pyenv local <version>
+```
+
+Change the global default Python version with
+
+```shell
 pyenv global <version>
 ```
 
@@ -275,7 +281,7 @@ pip install tensorflow-macos
 pip install tensorflow-metal  # Metal plugin for GPU acceleration
 ```
 
-Then, before using Tensorflow, do either `pyenv local miniforge3` or `pyenv global miniforge3` to activate the environment it's installed in.
+Then, before using Tensorflow, do either `pyenv local miniforge3` to activate the environment it's installed in.
 
 See also: https://developer.apple.com/metal/tensorflow-plugin/
 
