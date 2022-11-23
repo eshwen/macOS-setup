@@ -95,6 +95,7 @@ brew install --cask github  # GitHub Desktop
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
+brew install --cask hyper  # a nicer, modern terminal
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask messenger  # Facebook Messenger
 brew install --cask microsoft-excel
@@ -307,6 +308,12 @@ There are some nice fonts I've found over the years in the [fonts/](./fonts/) di
   1) Open the Terminal, and go to **Preferences** -> **Profiles**
   2) Hit the three dots in the bottom left corner and click **Import...**
   3) Select the terminal preferences file and set it as the default
+
+- Hyper settings:
+
+    ```shell
+    hyper i hyper-material-theme 
+    ```
 
 ## System sounds
 
