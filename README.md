@@ -106,6 +106,7 @@ brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and
 brew install --cask openemu  # Old video game emulation
 brew install --cask plex  # Media player client for Plex
 brew install --cask private-internet-access
+brew install --cask pycharm  # My favourite IDE at the moment
 brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 brew install --cask raindropio
 brew install --cask runescape --appdir $games_dir
@@ -113,7 +114,7 @@ brew install --cask sidequest  # For sideloading more VR content onto Oculus Que
 brew install --cask skype
 brew install --cask steam --appdir $games_dir
 brew install --cask todoist
-brew install --cask visual-studio-code  # the best code editor
+brew install --cask visual-studio-code  # A good code and text editor supporting many languages
 brew install --cask vlc
 brew install --cask whatsapp
 brew install --cask zoom
