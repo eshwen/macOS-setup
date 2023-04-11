@@ -87,6 +87,7 @@ brew install wget  # for wget command like on linux
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # suped version of Spotlight
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
+brew install --cask bartender  # for menu bar organisation
 brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
