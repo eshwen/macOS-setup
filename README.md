@@ -98,6 +98,7 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
 brew install --cask hyper  # a nicer, modern terminal
+brew install --cask lastpass  # desktop client to avoid reliance on browser extension
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask messenger  # Facebook Messenger
 brew install --cask microsoft-excel
