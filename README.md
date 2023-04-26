@@ -95,6 +95,7 @@ brew install --cask epic-games --appdir $games_dir
 brew install --cask filebot  # for batch renaming of files
 brew install --cask folx  # torrent client
 brew install --cask github  # GitHub Desktop
+brew install --cask gog-galaxy --appdir $games_dir
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
