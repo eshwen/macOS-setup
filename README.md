@@ -24,40 +24,6 @@ Files and scripts useful for setting up a new Mac. Helps keep synchronisation be
 
 5) Strip out any unnecessary stuff from these new files
 
-## Shell
-
-`zsh` is the default shell in macOS as of Catalina.
-
-### Changing shells
-
-To change shells, do
-
-```sh
-chsh -s <executable_path>
-```
-
-where `<executable_path>` is the path to the shell executable. For example, to change to `bash`, do
-
-```sh
-chsh -s /bin/bash
-```
-
-If installing a new shell with Homebrew (see below), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.
-
-If changing the shell, log out and log back in to ensure it takes effect.
-
-### Extensions
-
-[Fig](https://fig.io/) is an excellent tool for managing everything terminal-related: appearance, autocomplete, shell profiles, settings, plugins, etc. It's a bit like Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
-
-Install it with Homebrew (see below). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.
-
-All shell profiles and settings, and plugins can be backed up to your Fig account, and therefore synced across computers.
-
-#### Issues
-
-- For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
-
 ## Useful installs
 
 ### Rosetta 2
@@ -173,6 +139,40 @@ Uninstall unused dependencies of formulae/casks with
 ```sh
 brew autoremove
 ```
+
+### Shell
+
+`zsh` is the default shell in macOS as of Catalina.
+
+#### Changing shells
+
+To change shells, do
+
+```sh
+chsh -s <executable_path>
+```
+
+where `<executable_path>` is the path to the shell executable. For example, to change to `bash`, do
+
+```sh
+chsh -s /bin/bash
+```
+
+If installing a new shell with Homebrew (see above), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.
+
+If changing the shell, log out and log back in to ensure it takes effect.
+
+#### Extensions
+
+[Fig](https://fig.io/) is an excellent tool for managing everything terminal-related: appearance, autocomplete, shell profiles, settings, plugins, etc. It's a bit like Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
+
+Install it with Homebrew (see above). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.
+
+All shell profiles and settings, and plugins can be backed up to your Fig account, and therefore synced across computers.
+
+##### Issues
+
+- For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
 
 ### TeX Live
 
