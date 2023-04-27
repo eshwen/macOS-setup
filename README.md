@@ -19,43 +19,16 @@ Files and scripts useful for setting up a new Mac. Helps keep synchronisation be
     ```sh
     repo_dir="$HOME/GitHub/macOS-setup"
     cd $repo_dir
-    cat bash_profile >> $HOME/.bash_profile
-    cat bashrc >> $HOME/.bashrc
     cat inputrc >> $HOME/.inputrc
-    cat profile >> $HOME/.profile
     ```
 
 5) Strip out any unnecessary stuff from these new files
 
 ## Useful installs
 
-### bash
-
-`zsh` is the default shell in macOS as of Catalina. To switch it to `bash`, do
-
-```sh
-chsh -s /bin/bash
-```
-
-Then also download Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>. Follow the instructions to download and install.
-
-Installing Oh My Bash may overwrite my `.bashrc` file. So I'll need to copy over my personal settings and append them to the file again, e.g., with
-
-```sh
-cat $HOME/GitHub/macOS-setup/bashrc >> $HOME/.bashrc
-```
-
-The cleanest way to manage these configurations is to keep all setup commands in the `.bashrc` file. Then in `.profile` and `.bash_profile`, just `source` the `.bashrc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
-
-#### Sticking with zsh
-
-If sticking with `zsh`, there is an equivalent to Oh My Bash called Oh My Zsh: <https://github.com/ohmyzsh/ohmyzsh>. Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. If I want to switch from `bash` to `zsh`, I just need to rename my `~/.bashrc` → `~/.zshrc`, and `~/.bash_profile` → `~/.zprofile`. And obviously update the calls to the relevant configuration files.
-
-I haven't tested it, but as with bash, installing Oh My Zsh may overwrite `~/.zshrc`. So I should be aware of that. And the same logic applies to managing the configuration files as with bash.
-
 ### Rosetta 2
 
-Rosetta 2 is Apple's utility to translate Intel-based (x86) apps so they're Apple Silicon-compatibile. It's no longer bundled with macOS as of Monterey. If I try to open an x86 app, I'll be prompted to install it. Otherwise, I can type in the Terminal
+Rosetta 2 is Apple's utility to translate Intel-based (x86) apps, so they're Apple Silicon-compatible. It's no longer bundled with macOS as of Monterey. If I try to open an x86 app, I'll be prompted to install it. Otherwise, I can type in the Terminal
 
 ```sh
 softwareupdate --install-rosetta
@@ -82,6 +55,7 @@ brew install poetry  # for Python project management
 brew install pyenv  # best way of managing Python installs on Mac
 brew install tree  # Show directory trees (use `-L <levels>` options to show set number of levels)
 brew install wget  # for wget command like on linux
+brew install zsh  # for a newer version than that bundled with macOS
 
 # Casks
 brew install --cask adobe-acrobat-reader
@@ -92,6 +66,7 @@ brew install --cask bartender  # for menu bar organisation
 brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
+brew install --cask fig  # for modern terminal settings, plugin management, etc.
 brew install --cask filebot  # for batch renaming of files
 brew install --cask folx  # torrent client
 brew install --cask github  # GitHub Desktop
@@ -165,9 +140,43 @@ Uninstall unused dependencies of formulae/casks with
 brew autoremove
 ```
 
+### Shell
+
+`zsh` is the default shell in macOS as of Catalina.
+
+#### Changing shells
+
+To change shells, do
+
+```sh
+chsh -s <executable_path>
+```
+
+where `<executable_path>` is the path to the shell executable. For example, to change to `bash`, do
+
+```sh
+chsh -s /bin/bash
+```
+
+If installing a new shell with Homebrew (see above), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.
+
+If changing the shell, log out and log back in to ensure it takes effect.
+
+#### Extensions
+
+[Fig](https://fig.io/) is an excellent tool for managing everything terminal-related: appearance, autocomplete, shell profiles, settings, plugins, etc. It's a bit like Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
+
+Install it with Homebrew (see above). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.
+
+All shell profiles and settings, and plugins can be backed up to your Fig account, and therefore synced across computers.
+
+##### Issues
+
+- For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
+
 ### TeX Live
 
-TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
+TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop, and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
 
 ```sh
 tex_dir="/Applications/TeX"
@@ -196,7 +205,7 @@ sudo tlmgr update --all
 
 ### Garamond Expert
 
-My favourite font is **Garamond Expert with New TX Math** (the LaTeX package `garamondx` - see [here](helpful_docs/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
+My favourite font is **Garamond Expert with New TX Math** (the LaTeX package `garamondx` - see [here](https://mirror.ox.ac.uk/sites/ctan.org/fonts/garamondx/doc/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
 
 ```sh
 curl --remote-name https://www.tug.org/fonts/getnonfreefonts/install-getnonfreefonts
@@ -275,7 +284,7 @@ These will be tied to the active environment. So switching to a different Python
 
 #### Tensorflow
 
-If `pip install tensorflow` doesn't work, it may because it does not yet run natively on Apple Silicon. Run the following commands to get a usable install:
+If `pip install tensorflow` doesn't work, it may because it does not yet run natively on Apple Silicon. Run the following commands to get a usable installation:
 
 ```sh
 pyenv install miniforge3
@@ -312,7 +321,7 @@ and the settings file is [vscode_settings.json](vscode_settings.json). Even thou
 
 ### Fonts
 
-There are some nice fonts I've found over the years in the [fonts/](./fonts/) directory. To install them to the system's Font Book, just highlight them all in the Finder and double click.
+There are some nice fonts I've found over the years in the [fonts/](./fonts) directory. To install them to the system's Font Book, just highlight them all in the Finder and double click.
 
 ### Other useful installs
 
