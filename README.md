@@ -55,7 +55,7 @@ I haven't tested it, but as with bash, installing Oh My Zsh may overwrite `~/.zs
 
 ### Rosetta 2
 
-Rosetta 2 is Apple's utility to translate Intel-based (x86) apps so they're Apple Silicon-compatibile. It's no longer bundled with macOS as of Monterey. If I try to open an x86 app, I'll be prompted to install it. Otherwise, I can type in the Terminal
+Rosetta 2 is Apple's utility to translate Intel-based (x86) apps, so they're Apple Silicon-compatible. It's no longer bundled with macOS as of Monterey. If I try to open an x86 app, I'll be prompted to install it. Otherwise, I can type in the Terminal
 
 ```sh
 softwareupdate --install-rosetta
@@ -167,7 +167,7 @@ brew autoremove
 
 ### TeX Live
 
-TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
+TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop, and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
 
 ```sh
 tex_dir="/Applications/TeX"
@@ -196,7 +196,7 @@ sudo tlmgr update --all
 
 ### Garamond Expert
 
-My favourite font is **Garamond Expert with New TX Math** (the LaTeX package `garamondx` - see [here](helpful_docs/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
+My favourite font is **Garamond Expert with New TX Math** (the LaTeX package `garamondx` - see [here](https://mirror.ox.ac.uk/sites/ctan.org/fonts/garamondx/doc/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
 
 ```sh
 curl --remote-name https://www.tug.org/fonts/getnonfreefonts/install-getnonfreefonts
@@ -275,7 +275,7 @@ These will be tied to the active environment. So switching to a different Python
 
 #### Tensorflow
 
-If `pip install tensorflow` doesn't work, it may because it does not yet run natively on Apple Silicon. Run the following commands to get a usable install:
+If `pip install tensorflow` doesn't work, it may because it does not yet run natively on Apple Silicon. Run the following commands to get a usable installation:
 
 ```sh
 pyenv install miniforge3
@@ -312,7 +312,7 @@ and the settings file is [vscode_settings.json](vscode_settings.json). Even thou
 
 ### Fonts
 
-There are some nice fonts I've found over the years in the [fonts/](./fonts/) directory. To install them to the system's Font Book, just highlight them all in the Finder and double click.
+There are some nice fonts I've found over the years in the [fonts/](./fonts) directory. To install them to the system's Font Book, just highlight them all in the Finder and double click.
 
 ### Other useful installs
 
