@@ -266,7 +266,9 @@ In Visual Studio Code, the `settings.json` file can be edited to override some d
 
 and the settings file is [vscode_settings.json](vscode_settings.json). Even though it should be backed up to my GitHub account (`@eshwen`), a cold copy could be handy. Make sure the Python path reflects whatever version I have installed. It can be switched on-the-fly in any case.
 
-### TeX Live
+### LaTeX
+
+#### TeX Live
 
 TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop, and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
 
@@ -295,7 +297,7 @@ and then update the packages with
 sudo tlmgr update --all
 ```
 
-### Garamond Expert
+#### Garamond Expert
 
 My favourite font is **Garamond Expert with New TX Math** (the LaTeX package `garamondx` - see [here](https://mirror.ox.ac.uk/sites/ctan.org/fonts/garamondx/doc/garamondx-doc.pdf)). As well as being visually appealing, it supports bold, italic, and small cap styles that other Garamond variants do not. If compiling a LaTeX document on Overleaf, this should already be installed. However, it is not bundled with TeX Live due to licensing. To circumvent this, follow the instructions at <http://tug.org/fonts/getnonfreefonts/>:
 
@@ -312,7 +314,6 @@ updmap-sys
 ```
 
 _Do not_ run `getnonfreefonts` with `--user`, or `updmap-user`, for the reasons outlined in <https://tex.stackexchange.com/a/255711>.
-
 
 ### Fonts
 
