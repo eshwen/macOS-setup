@@ -19,39 +19,46 @@ Files and scripts useful for setting up a new Mac. Helps keep synchronisation be
     ```sh
     repo_dir="$HOME/GitHub/macOS-setup"
     cd $repo_dir
-    cat bash_profile >> $HOME/.bash_profile
-    cat bashrc >> $HOME/.bashrc
     cat inputrc >> $HOME/.inputrc
-    cat profile >> $HOME/.profile
     ```
 
 5) Strip out any unnecessary stuff from these new files
 
-## Useful installs
+## Shell
 
-### bash
+`zsh` is the default shell in macOS as of Catalina.
 
-`zsh` is the default shell in macOS as of Catalina. To switch it to `bash`, do
+### Changing shells
+
+To change shells, do
+
+```sh
+chsh -s <executable_path>
+```
+
+where `<executable_path>` is the path to the shell executable. For example, to change to `bash`, do
 
 ```sh
 chsh -s /bin/bash
 ```
 
-Then also download Oh My Bash (bash configuration management, themes, plugins): <https://github.com/ohmybash/oh-my-bash>. Follow the instructions to download and install.
+If installing a new shell with Homebrew (see below), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.
 
-Installing Oh My Bash may overwrite my `.bashrc` file. So I'll need to copy over my personal settings and append them to the file again, e.g., with
+If changing the shell, log out and log back in to ensure it takes effect.
 
-```sh
-cat $HOME/GitHub/macOS-setup/bashrc >> $HOME/.bashrc
-```
+### Extensions
 
-The cleanest way to manage these configurations is to keep all setup commands in the `.bashrc` file. Then in `.profile` and `.bash_profile`, just `source` the `.bashrc` file. More info can be found at <https://scriptingosx.com/2017/04/about-bash_profile-and-bashrc-on-macos/>.
+[Fig](https://fig.io/) is an excellent tool for managing everything terminal-related: appearance, autocomplete, shell profiles, settings, plugins, etc. It's a bit like Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
 
-#### Sticking with zsh
+Install it with Homebrew (see below). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.
 
-If sticking with `zsh`, there is an equivalent to Oh My Bash called Oh My Zsh: <https://github.com/ohmyzsh/ohmyzsh>. Both shells have configuration files `.bashrc` for `bash`, and `.zshrc` for `zsh`. If I want to switch from `bash` to `zsh`, I just need to rename my `~/.bashrc` → `~/.zshrc`, and `~/.bash_profile` → `~/.zprofile`. And obviously update the calls to the relevant configuration files.
+All shell profiles and settings, and plugins can be backed up to your Fig account, and therefore synced across computers.
 
-I haven't tested it, but as with bash, installing Oh My Zsh may overwrite `~/.zshrc`. So I should be aware of that. And the same logic applies to managing the configuration files as with bash.
+#### Issues
+
+- For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
+
+## Useful installs
 
 ### Rosetta 2
 
@@ -82,6 +89,7 @@ brew install poetry  # for Python project management
 brew install pyenv  # best way of managing Python installs on Mac
 brew install tree  # Show directory trees (use `-L <levels>` options to show set number of levels)
 brew install wget  # for wget command like on linux
+brew install zsh  # for a newer version than that bundled with macOS
 
 # Casks
 brew install --cask adobe-acrobat-reader
@@ -92,6 +100,7 @@ brew install --cask bartender  # for menu bar organisation
 brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
+brew install --cask fig  # for modern terminal settings, plugin management, etc.
 brew install --cask filebot  # for batch renaming of files
 brew install --cask folx  # torrent client
 brew install --cask github  # GitHub Desktop
