@@ -274,13 +274,7 @@ conda deactivate
 
 #### Dependencies
 
-A useful suite of packages is housed in [requirements.txt](./requirements.txt). Install them with
-
-```sh
-pip install -r requirements.txt
-```
-
-These will be tied to the active environment. So switching to a different Python version will require them to be installed again.
+See <https://github.com/eshwen/ds-python-boilerplate> for a list of common Python dependencies for data science.
 
 #### Tensorflow
 
