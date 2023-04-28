@@ -173,6 +173,7 @@ All shell profiles and settings, and plugins can be backed up to your Fig accoun
 ##### Issues
 
 - For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
+- When hovering over an element in PyCharm fails to pop up with the tooltip, see this issue: <https://github.com/withfig/fig/issues/2357>
 
 ### Python
 
