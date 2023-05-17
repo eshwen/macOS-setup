@@ -58,7 +58,6 @@ brew install wget  # for wget command like on linux
 brew install zsh  # for a newer version than that bundled with macOS
 
 # Casks
-brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # suped version of Spotlight
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
 brew install --cask ankerwork  # For configuring my webcam
