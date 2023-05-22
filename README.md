@@ -66,6 +66,7 @@ brew install --cask bartender  # for menu bar organisation
 brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
+brew install --cask fantastical  # Better calendar app than the default
 brew install --cask fig  # for modern terminal settings, plugin management, etc.
 brew install --cask filebot --force --no-quarantine  # for batch renaming of files. Additional options required to start up properly
 brew install --cask folx  # torrent client
