@@ -120,6 +120,28 @@ Casks with auto-update utilities (like a lot of GUI applications) won't be updat
 brew upgrade --greedy
 ```
 
+#### Viewing
+
+Check everything that's installed with
+
+```sh
+brew list
+```
+
+Check only top-level formulae with
+
+```sh
+brew leaves
+```
+
+Add the `-r` option for formulae that were explicitly installed, or `-p` for formulae installed as a dependency of a cask.
+
+Check which formulae and casks are using a specific dependency with
+
+```sh
+brew uses --installed --recursive <dependency>
+```
+
 #### Cleanup and uninstalling
 
 Homebrew should run a cleanup of caches and old files every so often. For manual scrubbing, run
@@ -133,6 +155,8 @@ Uninstall a formula/cask with
 ```sh
 brew uninstall <formula/cask>
 ```
+
+Add the `--zap` option to remove all associated files.
 
 Uninstall unused dependencies of formulae/casks with
 
