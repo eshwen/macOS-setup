@@ -88,6 +88,7 @@ brew install --cask private-internet-access
 brew install --cask pycharm  # My favourite IDE at the moment
 brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
 brew install --cask raindropio
+brew install --cask readdle-spark  # For the Spark email client
 brew install --cask runescape --appdir $games_dir
 brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest 
 brew install --cask skype
