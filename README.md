@@ -357,7 +357,11 @@ There are some nice fonts I've found over the years in the [fonts/](./fonts) dir
 - Hyper settings:
 
     ```shell
-    hyper i hyper-material-theme 
+    hyper i hyper-material-theme
+    hyper i hyper-fading-scrollbar
+    hyper i hyper-blink
+    hyper i hyper-quit
+    hyper i default-shell
     ```
 
 ## Verified Git commits
