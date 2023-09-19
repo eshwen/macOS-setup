@@ -201,6 +201,7 @@ All shell profiles and settings, and plugins can be backed up to your Fig accoun
 
 - For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
 - When hovering over an element in PyCharm fails to pop up with the tooltip, see this issue: <https://github.com/withfig/fig/issues/2357>
+- Fig may conflict with environment initialisation in PyCharm. Normally, when a virtualenv/Poetry environment/etc. is detected in a project and you open the terminal, that env will automatically activate. If it doesn't, install the `Zsh Autoswitch Python Virtualenv` plugin for Fig
 
 ### Python
 
