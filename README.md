@@ -429,6 +429,21 @@ Then copy that public key we generated earlier (in its entirety), and add it to 
 
 This should apply to GitHub Desktop as well, not just commits on the CLI. Just ensure you're using the same email address for your commits as entered when creating the key. Double check in Preferences -> Git -> Email.
 
+## Bartender 5 triggers
+
+Bartender contains functionality to show a (normally hidden) menu bar item based on a trigger. These can be on specific WiFi connections, battery percentages, or shell scripts. New triggers can be added in Bartender's settings -> Triggers.
+
+### Private Internet Access trigger
+
+One thing I would like to be aware of is when my VPN Private Internet Access (PIA) is active. The most robust trigger for this case is a script, pasting the following:
+
+```shell
+PATH="$PATH:/usr/local/bin"
+[[ "$(piactl get connectionstate)" != "Connected" ]]; echo "$?"
+```
+
+Now it will show the PIA icon when the VPN is connected. An unintuitive subtlety with these shell scripts is that Bartender designates `1` as True and `0` as False, the opposite of the Unix default. This is why the operator above is `!=` instead of `==`.
+
 ## System sounds
 
 I don't like some of the system sound effects in Big Sur. I've uploaded [Basso](./Basso_Catalina.aiff) and [Glass](./Glass_Catalina.aiff) from Catalina. To use them as system sounds, do
