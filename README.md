@@ -431,7 +431,7 @@ This should apply to GitHub Desktop as well, not just commits on the CLI. Just e
 
 ## Bartender 5 triggers
 
-Bartender contains functionality to show a (normally hidden) menu bar item based on a trigger. These can be on specific WiFi connections, battery percentages, or shell scripts. New triggers can be added in Bartender's settings -> Triggers.
+Bartender contains functionality to show a (normally-hidden) menu bar item based on a trigger. These can be on specific WiFi connections, battery percentages, or shell scripts. New triggers can be added in Bartender's settings -> Triggers.
 
 ### Private Internet Access trigger
 
@@ -442,7 +442,7 @@ PATH="$PATH:/usr/local/bin"
 [[ "$(piactl get connectionstate)" != "Connected" ]]; echo "$?"
 ```
 
-Now it will show the PIA icon when the VPN is connected. An unintuitive subtlety with these shell scripts is that Bartender designates `1` as True and `0` as False, the opposite of the Unix default. This is why the operator above is `!=` instead of `==`.
+Now it will show the PIA icon when the VPN is connected. An unintuitive subtlety with these shell scripts is that Bartender designates `1` as True and `0` as False - the opposite of the Unix default! This is why the operator above is `!=` instead of `==`.
 
 ## System sounds
 
