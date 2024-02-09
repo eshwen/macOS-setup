@@ -76,6 +76,7 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
 brew install --cask hyper  # a nicer, modern terminal
+brew install --cask macgpt  # ChatGPT plugin
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask messenger  # Facebook Messenger
 brew install --cask microsoft-excel
@@ -97,6 +98,7 @@ brew install --cask skype
 brew install --cask steam --appdir $games_dir
 brew install --cask todoist
 brew install --cask visual-studio-code  # A good code and text editor supporting many languages
+brew install --cask vivid  # Unlock higher brightness range on the display
 brew install --cask vlc
 brew install --cask whatsapp
 brew install --cask zoom
