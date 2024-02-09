@@ -84,7 +84,6 @@ brew install --cask microsoft-powerpoint
 brew install --cask microsoft-word
 brew install --cask mimestream  # a modern, macOS-native Gmail client
 brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and subtitle tracks from MKV files
-brew install --cask notion
 brew install --cask openemu  # Old video game emulation
 brew install --cask plex  # Media player client for Plex
 brew install --cask private-internet-access
