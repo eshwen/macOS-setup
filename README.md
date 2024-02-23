@@ -445,6 +445,20 @@ PATH="$PATH:/usr/local/bin"
 
 Now it will show the PIA icon when the VPN is connected. An unintuitive subtlety with these shell scripts is that Bartender designates `1` as True and `0` as False - the opposite of the Unix default! This is why the operator above is `!=` instead of `==`.
 
+## Time Machine
+
+Time Machine is a great backup utility, but it's not perfect. One of the drawbacks is that - from the GUI - it's not easy to create complex exclusions from the backup.
+
+Since I do a lot of Python development, I don't want to back up virtual environments, etc. To exclude these, you can use `find` to search for the directories and pipe them to `tmutil`, e.g.,
+
+```shell
+find `pwd` -maxdepth 3 -type d -name '.venv' | xargs -n 1 tmutil addexclusion
+```
+
+to exclude the `.venv` directory.
+
+There's also a [tmignore] tool to automatically exclude files from your `.gitignore`, but that doesn't appear to be maintained anymore.
+
 ## System sounds
 
 I don't like some of the system sound effects in Big Sur. I've uploaded [Basso](./Basso_Catalina.aiff) and [Glass](./Glass_Catalina.aiff) from Catalina. To use them as system sounds, do
@@ -477,3 +491,5 @@ Then, in System Preferences -> Sound, they should be available.
 - Forward delete: <kbd>fn</kbd> + <kbd>&#9003;</kbd>
 - Show inspector (so **Get Info** shows for active file): <kbd>&#8984;</kbd> + <kbd>&#8997;</kbd> + <kbd>i</kbd>
 - Toggle to show/hide hidden files and directories (i.e., prefixed with `.`): <kbd>&#8984;</kbd> + <kbd>&#8679;</kbd> + <kbd>.</kbd>
+
+[tmignore]: https://github.com/samuelmeuli/tmignore
