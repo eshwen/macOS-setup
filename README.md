@@ -76,6 +76,7 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
 brew install --cask hyper  # a nicer, modern terminal
+brew install --cask lg-onscreen-control  # for controlling my LG monitor
 brew install --cask macgpt  # ChatGPT plugin
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask messenger  # Facebook Messenger
