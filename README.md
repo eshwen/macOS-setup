@@ -192,17 +192,43 @@ If changing the shell, log out and log back in to ensure it takes effect.
 
 #### Extensions
 
-[Fig](https://fig.io/) is an excellent tool for managing everything terminal-related: appearance, autocomplete, shell profiles, settings, plugins, etc. It's a bit like Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
+[Amazon Q](https://aws.amazon.com/q/) is an decent tool for managing terminal-related stuff: appearance, autocomplete, shell profiles, settings, plugins, etc. It's similar to Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
 
 Install it with Homebrew (see above). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.
 
-All shell profiles and settings, and plugins can be backed up to your Fig account, and therefore synced across computers.
+Other things to install:
 
-##### Issues
+- [Oh My Zsh](https://ohmyz.sh/)
+- [zsh-autoswitch-virtualenv](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
+    - Follow the specific instructions to integrate with Oh My Zsh
+- [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
+    - Follow the specific instructions to integrate with Oh My Zsh
+- zsh-syntax-highlighting
+    - With `brew install zsh-syntax-highlighting`
 
-- For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
-- When hovering over an element in PyCharm fails to pop up with the tooltip, see this issue: <https://github.com/withfig/fig/issues/2357>
-- Fig may conflict with environment initialisation in PyCharm. Normally, when a virtualenv/Poetry environment/etc. is detected in a project and you open the terminal, that env will automatically activate. If it doesn't, install the `Zsh Autoswitch Python Virtualenv` plugin for Fig
+#### `.zshrc`
+
+The `.zshrc` configuration file requires manual editing with Amazon Q, compared to Fig (RIP). Add these lines between the Amazon Q blocks:
+
+```shell
+# Executables for Homebrew and Pyenv
+export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin"
+
+# Activate Pyenv and Python
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# Activate Google Cloud SDK completions
+if [ -f /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc ]; then
+    source /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc
+fi
+if [ -f /opt/homebrew/share/google-cloud-sdk/path.zsh.inc ]; then
+    source /opt/homebrew/share/google-cloud-sdk/path.zsh.inc
+fi
+
+# Activate Zsh syntax highlighting. Put this at the very end of the file
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
 
 ### Python
 
