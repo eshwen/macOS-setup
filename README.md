@@ -212,7 +212,7 @@ The `.zshrc` configuration file requires manual editing with Amazon Q, compared 
 
 ```shell
 # Executables for Homebrew and Pyenv
-export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin"
+export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.pyenv/bin"
 
 # Activate Pyenv and Python
 eval "$(pyenv init --path)"
