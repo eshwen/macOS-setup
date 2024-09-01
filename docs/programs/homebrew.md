@@ -6,10 +6,11 @@ It should keep them up to date without requiring conscious individual checks, an
 
 ## Installation
 
-Install Homebrew with the instructions at <https://brew.sh/>. This should also install the XCode Command Line Tools which is useful for software development.(1)
+Install Homebrew with the instructions at <https://brew.sh/>.(1) This should also install the XCode Command Line Tools which is useful for software development.(2)
 { .annotate }
 
-1. The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
+1. You may need to manually add the Homebrew executable to your `PATH`. See [cli.md/#zshrc](./cli.md/#zshrc)
+2. The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
 
 ## Useful CLI utilities
 
