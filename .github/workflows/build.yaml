@@ -14,7 +14,14 @@ concurrency:
 
 jobs:
   build:
-    uses: eshwen/adrenaline/.github/workflows/builder@v0.5.0
-    with:
-      python-version: '3.12'
-      install-dev-deps: true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'write'
+      actions: 'write'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eshwen/adrenaline/builder@v0.5.0
+        with:
+          python-version: '3.12'
+          install-dev-deps: true
