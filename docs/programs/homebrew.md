@@ -73,7 +73,7 @@ brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file fo
 brew install --cask raindropio
 brew install --cask readdle-spark  # For the Spark email client
 brew install --cask runescape --appdir $games_dir
-brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest 
+brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest
 brew install --cask skype
 brew install --cask steam --appdir $games_dir
 brew install --cask todoist
