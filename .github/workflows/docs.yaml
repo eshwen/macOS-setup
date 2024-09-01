@@ -1,0 +1,37 @@
+name: API documentation
+
+on:
+  release:
+    types:
+      - published
+
+concurrency:
+  group: docs-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'write'
+      actions: 'write'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eshwen/adrenaline/builder@v0.5.0
+        with:
+          python-version: '3.12'
+          install-dev-deps: true
+
+      - name: Get version number
+        uses: nowsprinting/check-version-format-action@v4
+        id: version
+        with:
+          prefix: 'v'
+
+      - name: Build docs
+        run: |
+          git fetch origin gh-pages --depth=1
+          git config user.name github-actions  # Required for Mike
+          git config user.email github-actions@github.com
+          poetry run mike deploy --update-aliases --push ${{ steps.version.outputs.major_without_prefix }}.${{ steps.version.outputs.minor }} latest

@@ -1,0 +1,95 @@
+site_name: macOS-setup
+site_url: https://eshwen.github.io/macOS-setup/
+repo_url: https://github.com/eshwen/macOS-setup
+repo_name: eshwen/macOS-setup
+edit_uri: blob/main/docs/
+
+extra:
+  version:
+    provider: mike
+
+nav:
+  - Home:
+    - Homepage: index.md
+    - See Also: see-also.md
+  - Getting Started:
+      - getting_started/getting-started.md
+  - Programs:
+      - programs/programs.md
+      - Homebrew: programs/homebrew.md
+      - CLI: programs/cli.md
+      - Python: programs/python.md
+      - IDEs: programs/ides.md
+      - LaTeX: programs/latex.md
+  - Mac Utilities:
+      - mac_utilities/mac-utilities.md
+
+plugins:
+  - search:
+      lang: en
+  - autorefs
+  - section-index
+  - mike:
+      alias_type: symlink
+      canonical_version: latest
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: light blue
+      accent: orange
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - css/code_select.css
+
+markdown_extensions:
+  - toc:
+      permalink: ⚓︎
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.magiclink
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details
+  - admonition

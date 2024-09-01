@@ -1,0 +1,24 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "macOS-setup"
+version = "2.2.0"
+description = "Files and scripts useful for macOS. Helps keep synchronisation between my different Mac computers and offers a backup."
+authors = ["Eshwen Bhal, PhD <milanman.eshb@gmail.com>"]
+readme = "README.md"
+
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+mkdocs = "^1.5.3"
+pymdown-extensions = "^10.3.1"
+mkdocs-material = "^9.1.17"
+mkdocs-autorefs = "^1.1.0"
+mkdocs-section-index = "^0.3.9"
+termynal = "~0.11.1"
+mike = "^2.1.3"
