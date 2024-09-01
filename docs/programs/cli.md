@@ -71,9 +71,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 - Terminal settings/preferences (personal choice): [Ocean_Esh.terminal](./Ocean_Esh.terminal)
-  1. Open the Terminal, and go to **Preferences** -> **Profiles**
-  2. Hit the three dots in the bottom left corner and click **Import...**
-  3. Select the terminal preferences file and set it as the default
+    1. Open the Terminal, and go to **Preferences** -> **Profiles**
+    2. Hit the three dots in the bottom left corner and click **Import...**
+    3. Select the terminal preferences file and set it as the default
 
 - Hyper settings:
 
