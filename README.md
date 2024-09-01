@@ -60,6 +60,7 @@ brew install zsh  # for a newer version than that bundled with macOS
 # Casks
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # suped version of Spotlight
+brew install --cask amazon-q  # for modern terminal settings, plugin management, etc.
 brew install --cask android-file-transfer  # For copying files to Oculus Quest
 brew install --cask ankerwork  # For configuring my webcam
 brew install --cask bartender  # for menu bar organisation
@@ -67,7 +68,6 @@ brew install --cask blackhole-64ch  # for BlackHole (audio output from screen re
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
 brew install --cask fantastical  # Better calendar app than the default
-brew install --cask fig  # for modern terminal settings, plugin management, etc.
 brew install --cask filebot --force --no-quarantine  # for batch renaming of files. Additional options required to start up properly
 brew install --cask folx  # torrent client
 brew install --cask github  # GitHub Desktop
@@ -76,6 +76,7 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake  # for re-encoding videos
 brew install --cask hyper  # a nicer, modern terminal
+brew install --cask macgpt  # ChatGPT plugin
 brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
 brew install --cask messenger  # Facebook Messenger
 brew install --cask microsoft-excel
@@ -83,7 +84,6 @@ brew install --cask microsoft-powerpoint
 brew install --cask microsoft-word
 brew install --cask mimestream  # a modern, macOS-native Gmail client
 brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and subtitle tracks from MKV files
-brew install --cask notion
 brew install --cask openemu  # Old video game emulation
 brew install --cask plex  # Media player client for Plex
 brew install --cask private-internet-access
@@ -97,6 +97,7 @@ brew install --cask skype
 brew install --cask steam --appdir $games_dir
 brew install --cask todoist
 brew install --cask visual-studio-code  # A good code and text editor supporting many languages
+brew install --cask vivid  # Unlock higher brightness range on the display
 brew install --cask vlc
 brew install --cask whatsapp
 brew install --cask zoom
@@ -191,17 +192,43 @@ If changing the shell, log out and log back in to ensure it takes effect.
 
 #### Extensions
 
-[Fig](https://fig.io/) is an excellent tool for managing everything terminal-related: appearance, autocomplete, shell profiles, settings, plugins, etc. It's a bit like Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
+[Amazon Q](https://aws.amazon.com/q/) is an decent tool for managing terminal-related stuff: appearance, autocomplete, shell profiles, settings, plugins, etc. It's similar to Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
 
 Install it with Homebrew (see above). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.
 
-All shell profiles and settings, and plugins can be backed up to your Fig account, and therefore synced across computers.
+Other things to install:
 
-##### Issues
+- [Oh My Zsh](https://ohmyz.sh/)
+- [zsh-autoswitch-virtualenv](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
+    - Follow the specific instructions to integrate with Oh My Zsh
+- [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
+    - Follow the specific instructions to integrate with Oh My Zsh
+- zsh-syntax-highlighting
+    - With `brew install zsh-syntax-highlighting`
 
-- For an error about `.zshenv` not being found when launching the terminal in PyCharm, try the solution here: <https://github.com/withfig/fig/issues/2232#issuecomment-1497465713>
-- When hovering over an element in PyCharm fails to pop up with the tooltip, see this issue: <https://github.com/withfig/fig/issues/2357>
-- Fig may conflict with environment initialisation in PyCharm. Normally, when a virtualenv/Poetry environment/etc. is detected in a project and you open the terminal, that env will automatically activate. If it doesn't, install the `Zsh Autoswitch Python Virtualenv` plugin for Fig
+#### `.zshrc`
+
+The `.zshrc` configuration file requires manual editing with Amazon Q, compared to Fig (RIP). Add these lines between the Amazon Q blocks:
+
+```shell
+# Executables for Homebrew and Pyenv
+export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.pyenv/bin"
+
+# Activate Pyenv and Python
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# Activate Google Cloud SDK completions
+if [ -f /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc ]; then
+    source /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc
+fi
+if [ -f /opt/homebrew/share/google-cloud-sdk/path.zsh.inc ]; then
+    source /opt/homebrew/share/google-cloud-sdk/path.zsh.inc
+fi
+
+# Activate Zsh syntax highlighting. Put this at the very end of the file
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
 
 ### Python
 
@@ -444,6 +471,20 @@ PATH="$PATH:/usr/local/bin"
 
 Now it will show the PIA icon when the VPN is connected. An unintuitive subtlety with these shell scripts is that Bartender designates `1` as True and `0` as False - the opposite of the Unix default! This is why the operator above is `!=` instead of `==`.
 
+## Time Machine
+
+Time Machine is a great backup utility, but it's not perfect. One of the drawbacks is that - from the GUI - it's not easy to create complex exclusions from the backup.
+
+Since I do a lot of Python development, I don't want to back up virtual environments, etc. To exclude these, you can use `find` to search for the directories and pipe them to `tmutil`, e.g.,
+
+```shell
+find `pwd` -maxdepth 3 -type d -name '.venv' | xargs -n 1 tmutil addexclusion
+```
+
+to exclude the `.venv` directory.
+
+There's also a [tmignore] tool to automatically exclude files from your `.gitignore`, but that doesn't appear to be maintained anymore.
+
 ## System sounds
 
 I don't like some of the system sound effects in Big Sur. I've uploaded [Basso](./Basso_Catalina.aiff) and [Glass](./Glass_Catalina.aiff) from Catalina. To use them as system sounds, do
@@ -476,3 +517,5 @@ Then, in System Preferences -> Sound, they should be available.
 - Forward delete: <kbd>fn</kbd> + <kbd>&#9003;</kbd>
 - Show inspector (so **Get Info** shows for active file): <kbd>&#8984;</kbd> + <kbd>&#8997;</kbd> + <kbd>i</kbd>
 - Toggle to show/hide hidden files and directories (i.e., prefixed with `.`): <kbd>&#8984;</kbd> + <kbd>&#8679;</kbd> + <kbd>.</kbd>
+
+[tmignore]: https://github.com/samuelmeuli/tmignore
