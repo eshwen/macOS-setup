@@ -9,6 +9,8 @@ description = "Files and scripts useful for macOS. Helps keep synchronisation be
 authors = ["Eshwen Bhal, PhD <milanman.eshb@gmail.com>"]
 readme = "README.md"
 
+package-mode = false
+
 [tool.poetry.dependencies]
 python = "^3.12"
 
