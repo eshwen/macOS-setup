@@ -70,7 +70,7 @@ fi
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
-- Terminal settings/preferences (personal choice): [Ocean_Esh.terminal](./Ocean_Esh.terminal)
+- Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
     1. Open the Terminal, and go to **Preferences** :material-arrow-right: **Profiles**
     2. Hit the three dots in the bottom left corner and click **Import...**
     3. Select the terminal preferences file and set it as the default
@@ -148,3 +148,5 @@ Then copy that public key we generated earlier (in its entirety), and add it to 
 4. Hit **Add GPG key**
 
 This should apply to GitHub Desktop as well, not just commits on the CLI. Just ensure you're using the same email address for your commits as entered when creating the key. Double check in Preferences :material-arrow-right: Git :material-arrow-right: Email.
+
+[Ocean_Esh.terminal]: https://github.com/eshwen/macOS-setup/blob/main/Ocean_Esh.terminal
