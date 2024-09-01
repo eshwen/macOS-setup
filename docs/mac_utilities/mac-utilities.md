@@ -28,11 +28,11 @@ Then, in System Preferences :material-arrow-right: Sound, they should be availab
 ## Configuration options
 
 - Enable 3-finger drag on the trackpad
-  - Go to **System Preferences** :material-arrow-right: **Accessibility** :material-arrow-right: **Pointer Control**
-  - Under **Mouse & Trackpad** :material-arrow-right: **Trackpad Options...** select **three finger drag** from the dropdown menu and tick the checkbox
+    - Go to **System Preferences** :material-arrow-right: **Accessibility** :material-arrow-right: **Pointer Control**
+    - Under **Mouse & Trackpad** :material-arrow-right: **Trackpad Options...** select **three finger drag** from the dropdown menu and tick the checkbox
 - Order everything in every directory within Finder alphabetically
-  - In the menu bar in Finder, go to **View** :material-arrow-right: **Show View Options**
-  - Ensure **Group By** and **Sort By** have the value **Name** and click **Use As Defaults**
+    - In the menu bar in Finder, go to **View** :material-arrow-right: **Show View Options**
+    - Ensure **Group By** and **Sort By** have the value **Name** and click **Use As Defaults**
 
 ## Useful shortcuts
 
