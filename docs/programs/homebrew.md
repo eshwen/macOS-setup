@@ -1,16 +1,19 @@
 # Homebrew
 
+Homebrew :simple-homebrew: is an excellent, open source package manager for macOS. It's full of useful GUI programs as well as command line utilities that can be easily installed.
 
-Install Homebrew (an excellent package manager for macOS): <https://brew.sh/>. This should also install the XCode Command Line Tools which is useful for software development.
+It should keep them up to date without requiring conscious individual checks, and should install the right versions for my architecture (i.e., Intel x64 or Apple Silicon) and OS version.
 
-Once completed, I can use it to install and manage various programs and packages. It should keep them up to date without requiring conscious individual checks, and should install the right versions for my architecture (i.e., Intel x64 or Apple Silicon) and OS. Install the packages with
+## Installation
+
+Install Homebrew with the instructions at <https://brew.sh/>. This should also install the XCode Command Line Tools which is useful for software development.(1)
+{ .annotate }
+
+1. The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
+
+## Useful CLI utilities
 
 ```sh
-# Make directory to store gaming apps
-games_dir="/Applications/Games"
-mkdir $games_dir
-
-# Formulae
 brew install bash  # for a newer version than that bundled with macOS
 brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
 brew install git  # for a newer version than that bundled with macOS
@@ -21,8 +24,20 @@ brew install pyenv  # best way of managing Python installs on Mac
 brew install tree  # Show directory trees (use `-L <levels>` options to show set number of levels)
 brew install wget  # for wget command like on linux
 brew install zsh  # for a newer version than that bundled with macOS
+```
 
-# Casks
+## Useful GUI applications
+
+Create a directory for games with
+
+```shell
+games_dir="/Applications/Games"
+mkdir $games_dir
+```
+
+Then install the following GUI applications with
+
+```sh
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # suped version of Spotlight
 brew install --cask amazon-q  # for modern terminal settings, plugin management, etc.
@@ -71,8 +86,6 @@ brew install --cask zoom
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
 For any issues with opening these programs, see <https://support.apple.com/en-gb/guide/mac-help/mh40616/mac>.
-
-The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
 
 ## Updating
 
