@@ -148,7 +148,7 @@ brew autoremove
 
 ## Bartender 5 triggers
 
-Bartender contains functionality to show a (normally-hidden) menu bar item based on a trigger. These can be on specific WiFi connections, battery percentages, or shell scripts. New triggers can be added in Bartender's settings -> Triggers.
+Bartender contains functionality to show a (normally-hidden) menu bar item based on a trigger. These can be on specific WiFi connections, battery percentages, or shell scripts. New triggers can be added in Bartender's settings :material-arrow-right: Triggers.
 
 ### Private Internet Access trigger
 

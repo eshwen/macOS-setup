@@ -23,15 +23,15 @@ mkdir ~/Library/Sounds
 cp Basso_Catalina.aiff Glass_Catalina.aiff ~/Library/Sounds/
 ```
 
-Then, in System Preferences -> Sound, they should be available.
+Then, in System Preferences :material-arrow-right: Sound, they should be available.
 
 ## Configuration options
 
 - Enable 3-finger drag on the trackpad
-  - Go to **System Preferences** -> **Accessibility** -> **Pointer Control**
-  - Under **Mouse & Trackpad** -> **Trackpad Options...** select **three finger drag** from the dropdown menu and tick the checkbox
+  - Go to **System Preferences** :material-arrow-right: **Accessibility** :material-arrow-right: **Pointer Control**
+  - Under **Mouse & Trackpad** :material-arrow-right: **Trackpad Options...** select **three finger drag** from the dropdown menu and tick the checkbox
 - Order everything in every directory within Finder alphabetically
-  - In the menu bar in Finder, go to **View** -> **Show View Options**
+  - In the menu bar in Finder, go to **View** :material-arrow-right: **Show View Options**
   - Ensure **Group By** and **Sort By** have the value **Name** and click **Use As Defaults**
 
 ## Useful shortcuts
