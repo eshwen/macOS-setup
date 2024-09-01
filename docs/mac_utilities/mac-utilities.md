@@ -16,7 +16,7 @@ There's also a [tmignore] tool to automatically exclude files from your `.gitign
 
 ## System sounds
 
-I don't like some of the system sound effects in Big Sur. I've uploaded [Basso](./Basso_Catalina.aiff) and [Glass](./Glass_Catalina.aiff) from Catalina. To use them as system sounds, do
+I don't like some of the system sound effects in Big Sur. I've uploaded [Basso] and [Glass] from Catalina. To use them as system sounds, do
 
 ```bash
 mkdir ~/Library/Sounds
@@ -41,3 +41,7 @@ Then, in System Preferences :material-arrow-right: Sound, they should be availab
 - Toggle to show/hide hidden files and directories (i.e., prefixed with `.`): <kbd>&#8984;</kbd> + <kbd>&#8679;</kbd> + <kbd>.</kbd>
 
 [tmignore]: https://github.com/samuelmeuli/tmignore
+
+[Basso]: https://github.com/eshwen/macOS-setup/blob/main/Basso_Catalina.aiff
+
+[Glass]: https://github.com/eshwen/macOS-setup/blob/main/Glass_Catalina.aiff
