@@ -1,0 +1,30 @@
+exclude: |
+  (?x)^(
+    mkdocs.yml
+  )$
+
+default_language_version:
+  python: python3.12
+
+default_stages: [ pre-commit, pre-push,commit, push ]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: name-tests-test
+        args: [ --pytest-test-first ]
+      - id: trailing-whitespace
+
+
+  - repo: https://github.com/python-poetry/poetry
+    rev: '1.8.3'
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+        args: [ --no-update ]
