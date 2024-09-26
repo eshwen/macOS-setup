@@ -74,14 +74,12 @@ brew install --cask raindropio
 brew install --cask readdle-spark  # For the Spark email client
 brew install --cask runescape --appdir $games_dir
 brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest
-brew install --cask skype
 brew install --cask steam --appdir $games_dir
 brew install --cask todoist
 brew install --cask visual-studio-code  # A good code and text editor supporting many languages
 brew install --cask vivid  # Unlock higher brightness range on the display
 brew install --cask vlc
 brew install --cask whatsapp
-brew install --cask zoom
 ```
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
