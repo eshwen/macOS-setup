@@ -7,9 +7,12 @@ TeX Live is installed under the `mactex` cask with Homebrew. As well as the actu
 ```sh
 tex_dir="/Applications/TeX"
 mkdir $tex_dir
-brew install --cask bibdesk --appdir $tex_dir  # for LaTeX bibliography management
-brew install --cask tex-live-utility --appdir $tex_dir  # for maintaining installed LaTeX packages
+brew install --cask bibdesk --appdir $tex_dir  # (1)
+brew install --cask tex-live-utility --appdir $tex_dir  # (2)
 ```
+
+1. For managing BibTeX references.
+2. For updating TeX Live packages.
 
 MacTeX/TeX Live installs as root (possibly to avoid large installs and conflicts for multiple users). So if avoiding TeX Live Utility to update packages, I can go via the command line with `sudo` privileges. Check for outdated packages with
 
