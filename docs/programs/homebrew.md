@@ -15,17 +15,28 @@ Install Homebrew with the instructions at <https://brew.sh/>.(1) This should als
 ## Useful CLI utilities
 
 ```sh
-brew install bash  # for a newer version than that bundled with macOS
-brew install emacs  # since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do 'brew reinstall --cask --no-quarantine emacs'
-brew install git  # for a newer version than that bundled with macOS
-brew link --overwrite git  # so it's linked by default instead of the version bundled with macOS
-brew install gnupg  # GPG key generation utility (for signing Git commits
-brew install poetry  # for Python project management
-brew install pyenv  # best way of managing Python installs on Mac
-brew install tree  # Show directory trees (use `-L <levels>` options to show set number of levels)
-brew install wget  # for wget command like on linux
-brew install zsh  # for a newer version than that bundled with macOS
+brew install bash  # (1)
+brew install emacs  # (2)
+brew install git  # (3)
+brew link --overwrite git  # (4)
+brew install gnupg  # (5)
+brew install poetry  # (6)
+brew install pyenv  # (7)
+brew install tree  # (8)
+brew install wget  # (9)
+brew install zsh  # (10)
 ```
+
+1. For a newer version than that bundled with macOS.
+2. Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do `brew reinstall --cask --no-quarantine emacs`.
+3. For a newer version than that bundled with macOS.
+4. So it's linked by default instead of the version bundled with macOS.
+5. GPG key generation utility (for signing Git commits).
+6. For Python project management.
+7. Best way of managing Python installs on Mac.
+8. Show directory trees (use `-L <levels>` options to show set number of levels).
+9. For `wget` command, like on linux.
+10. For a newer version than that bundled with macOS.
 
 ## Useful GUI applications
 
@@ -40,47 +51,67 @@ Then install the following GUI applications with
 
 ```sh
 brew install --cask adobe-acrobat-reader
-brew install --cask alfred  # suped version of Spotlight
-brew install --cask amazon-q  # for modern terminal settings, plugin management, etc.
-brew install --cask android-file-transfer  # For copying files to Oculus Quest
-brew install --cask ankerwork  # For configuring my webcam
-brew install --cask bartender  # for menu bar organisation
-brew install --cask blackhole-64ch  # for BlackHole (audio output from screen recording)
+brew install --cask alfred  # (1)
+brew install --cask amazon-q  # (2)
+brew install --cask android-file-transfer  # (3)
+brew install --cask ankerwork  # (4)
+brew install --cask bartender  # (5)
+brew install --cask blackhole-64ch  # (6)
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
-brew install --cask fantastical  # Better calendar app than the default
-brew install --cask filebot --force --no-quarantine  # for batch renaming of files. Additional options required to start up properly
-brew install --cask folx  # torrent client
-brew install --cask github  # GitHub Desktop
+brew install --cask fantastical  # (7)
+brew install --cask filebot --force --no-quarantine  # (8)
+brew install --cask folx  # (9)
+brew install --cask github
 brew install --cask gog-galaxy --appdir $games_dir
 brew install --cask google-chrome
 brew install --cask google-drive
-brew install --cask handbrake  # for re-encoding videos
-brew install --cask hyper  # a nicer, modern terminal
-brew install --cask macgpt  # ChatGPT plugin
-brew install --cask mactex  # for MacTeX distro of TeXLive with GUI applications
-brew install --cask messenger  # Facebook Messenger
+brew install --cask handbrake
+brew install --cask hyper  # (10)
+brew install --cask macgpt  # (11)
+brew install --cask mactex  # (12)
+brew install --cask messenger
 brew install --cask microsoft-excel
 brew install --cask microsoft-powerpoint
 brew install --cask microsoft-word
-brew install --cask mimestream  # a modern, macOS-native Gmail client
-brew install --cask mkvtoolnix  # for quickly adding/removing embedded audio and subtitle tracks from MKV files
-brew install --cask openemu  # Old video game emulation
-brew install --cask plex  # Media player client for Plex
+brew install --cask mimestream  # (13)
+brew install --cask mkvtoolnix  # (14)
+brew install --cask openemu  # (15)
+brew install --cask plex
 brew install --cask private-internet-access
-brew install --cask pycharm  # My favourite IDE at the moment
-brew install --cask qlvideo  # for QLVideo (thumbnails for mkv and other file formats)
+brew install --cask pycharm
+brew install --cask qlvideo  # (16)
 brew install --cask raindropio
-brew install --cask readdle-spark  # For the Spark email client
+brew install --cask readdle-spark  # (17)
 brew install --cask runescape --appdir $games_dir
-brew install --cask sidequest  # For sideloading more VR content onto Oculus Quest
+brew install --cask sidequest  # (18)
 brew install --cask steam --appdir $games_dir
 brew install --cask todoist
-brew install --cask visual-studio-code  # A good code and text editor supporting many languages
-brew install --cask vivid  # Unlock higher brightness range on the display
+brew install --cask visual-studio-code
+brew install --cask vivid  # (19)
 brew install --cask vlc
 brew install --cask whatsapp
 ```
+
+1. Suped up version of Spotlight.
+2. For modern terminal settings, plugin management, etc. Requires an AWS account.
+3. For copying files to Oculus Quest.
+4. For configuring my webcam.
+5. For menu bar organisation. Requires a licence.
+6. For capturing audio output alongside a screen recording.
+7. Better calendar app than the default.
+8. For batch renaming of files. Additional options required to start up properly.
+9. Torrent client.
+10. A nicer, modern terminal.
+11. ChatGPT plugin. Requires a licence.
+12. For MacTeX distro of TeXLive with GUI applications.
+13. A modern, macOS-native Gmail client. Requires a subscription.
+14. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
+15. Retro video game emulator.
+16. For thumbnails for mkv and other file formats.
+17. Another powerful email client.
+18. For sideloading more VR content onto Oculus Quest.
+19. Unlock higher brightness range on the display. Requires a licence.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
