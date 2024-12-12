@@ -50,6 +50,7 @@ mkdir $games_dir
 Then install the following GUI applications with
 
 ```sh
+brew install --cask arc
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # (1)
 brew install --cask amazon-q  # (2)
