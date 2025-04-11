@@ -58,6 +58,7 @@ brew install --cask android-file-transfer  # (3)
 brew install --cask ankerwork  # (4)
 brew install --cask bartender  # (5)
 brew install --cask blackhole-64ch  # (6)
+brew install --cask chatgpt
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
 brew install --cask fantastical  # (7)
@@ -69,7 +70,6 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake
 brew install --cask hyper  # (10)
-brew install --cask macgpt  # (11)
 brew install --cask mactex  # (12)
 brew install --cask messenger
 brew install --cask microsoft-excel
