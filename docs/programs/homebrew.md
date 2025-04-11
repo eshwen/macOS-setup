@@ -58,6 +58,7 @@ brew install --cask android-file-transfer  # (3)
 brew install --cask ankerwork  # (4)
 brew install --cask bartender  # (5)
 brew install --cask blackhole-64ch  # (6)
+brew install --cask chatgpt
 brew install --cask discord
 brew install --cask epic-games --appdir $games_dir
 brew install --cask fantastical  # (7)
@@ -69,27 +70,26 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake
 brew install --cask hyper  # (10)
-brew install --cask macgpt  # (11)
-brew install --cask mactex  # (12)
+brew install --cask mactex  # (11)
 brew install --cask messenger
 brew install --cask microsoft-excel
 brew install --cask microsoft-powerpoint
 brew install --cask microsoft-word
-brew install --cask mimestream  # (13)
-brew install --cask mkvtoolnix  # (14)
-brew install --cask openemu  # (15)
+brew install --cask mimestream  # (12)
+brew install --cask mkvtoolnix  # (13)
+brew install --cask openemu  # (14)
 brew install --cask plex
 brew install --cask private-internet-access
 brew install --cask pycharm
-brew install --cask qlvideo  # (16)
+brew install --cask qlvideo  # (15)
 brew install --cask raindropio
-brew install --cask readdle-spark  # (17)
+brew install --cask readdle-spark  # (16)
 brew install --cask runescape --appdir $games_dir
-brew install --cask sidequest  # (18)
+brew install --cask sidequest  # (17)
 brew install --cask steam --appdir $games_dir
 brew install --cask todoist
 brew install --cask visual-studio-code
-brew install --cask vivid  # (19)
+brew install --cask vivid  # (18)
 brew install --cask vlc
 brew install --cask whatsapp
 ```
@@ -104,15 +104,14 @@ brew install --cask whatsapp
 8. For batch renaming of files. Additional options required to start up properly.
 9. Torrent client.
 10. A nicer, modern terminal.
-11. ChatGPT plugin. Requires a licence.
-12. For MacTeX distro of TeXLive with GUI applications.
-13. A modern, macOS-native Gmail client. Requires a subscription.
-14. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
-15. Retro video game emulator.
-16. For thumbnails for mkv and other file formats.
-17. Another powerful email client.
-18. For sideloading more VR content onto Oculus Quest.
-19. Unlock higher brightness range on the display. Requires a licence.
+11. For MacTeX distro of TeXLive with GUI applications.
+12. A modern, macOS-native Gmail client. Requires a subscription.
+13. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
+14. Retro video game emulator.
+15. For thumbnails for mkv and other file formats.
+16. Another powerful email client.
+17. For sideloading more VR content onto Oculus Quest.
+18. Unlock higher brightness range on the display. Requires a licence.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
