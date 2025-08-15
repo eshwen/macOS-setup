@@ -70,6 +70,7 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake
 brew install --cask hyper  # (10)
+brew install --cask jetbrains-toolbox
 brew install --cask mactex  # (11)
 brew install --cask messenger
 brew install --cask microsoft-excel
@@ -80,7 +81,6 @@ brew install --cask mkvtoolnix  # (13)
 brew install --cask openemu  # (14)
 brew install --cask plex
 brew install --cask private-internet-access
-brew install --cask pycharm
 brew install --cask qlvideo  # (15)
 brew install --cask raindropio
 brew install --cask readdle-spark  # (16)
