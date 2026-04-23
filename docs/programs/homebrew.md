@@ -22,6 +22,7 @@ brew install gnupg  # (4)
 brew install poetry  # (5)
 brew install pyenv  # (6)
 brew install tree  # (7)
+brew install uv  # (10)
 brew install wget  # (8)
 brew install zsh  # (9)
 ```
@@ -35,6 +36,7 @@ brew install zsh  # (9)
 7. Show directory trees (use `-L <levels>` options to show set number of levels).
 8. For `wget` command, like on linux.
 9. For a newer version than that bundled with macOS.
+10. An Python project manager even more modern than Poetry.
 
 ## Useful GUI applications
 
