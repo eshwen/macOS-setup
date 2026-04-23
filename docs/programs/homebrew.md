@@ -49,11 +49,11 @@ Then install the following GUI applications with
 
 ```sh
 brew install --cask adobe-creative-cloud # (20)
-brew install --cask arc
 brew install --cask alfred  # (1)
 brew install --cask amazon-q  # (2)
 brew install --cask android-file-transfer  # (3)
 brew install --cask ankerwork  # (4)
+brew install --cask arc
 brew install --cask bartender  # (5)
 brew install --cask blackhole-64ch  # (6)
 brew install --cask chatgpt
