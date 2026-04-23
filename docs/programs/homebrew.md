@@ -70,7 +70,6 @@ brew install --cask handbrake
 brew install --cask hyper  # (10)
 brew install --cask jetbrains-toolbox
 brew install --cask mactex  # (11)
-brew install --cask messenger
 brew install --cask microsoft-excel
 brew install --cask microsoft-powerpoint
 brew install --cask microsoft-word
