@@ -841,18 +841,18 @@
 </ol>
 <h2 id="useful-cli-utilities">Useful CLI utilities<a class="headerlink" href="#useful-cli-utilities" title="Permanent link">⚓︎</a></h2>
 <p><code>sh
-brew install bash  # (1)
-brew install emacs  # (2)
-brew install git  # (3)
-brew link --overwrite git  # (4)
-brew install gnupg  # (5)
-brew install poetry  # (6)
-brew install pyenv  # (7)
-brew install tree  # (8)
-brew install wget  # (9)
-brew install zsh  # (10)</code></p>
+brew install emacs  # (1)
+brew install git  # (2)
+brew link --overwrite git  # (3)
+brew install gemini-cli
+brew install gnupg  # (4)
+brew install poetry  # (5)
+brew install pyenv  # (6)
+brew install tree  # (7)
+brew install uv  # (10)
+brew install wget  # (8)
+brew install zsh  # (9)</code></p>
 <ol>
-<li>For a newer version than that bundled with macOS.</li>
 <li>Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do <code>brew reinstall --cask --no-quarantine emacs</code>.</li>
 <li>For a newer version than that bundled with macOS.</li>
 <li>So it's linked by default instead of the version bundled with macOS.</li>
@@ -862,6 +862,7 @@ brew install zsh  # (10)</code></p>
 <li>Show directory trees (use <code>-L &lt;levels&gt;</code> options to show set number of levels).</li>
 <li>For <code>wget</code> command, like on linux.</li>
 <li>For a newer version than that bundled with macOS.</li>
+<li>An Python project manager even more modern than Poetry.</li>
 </ol>
 <h2 id="useful-gui-applications">Useful GUI applications<a class="headerlink" href="#useful-gui-applications" title="Permanent link">⚓︎</a></h2>
 <p>Create a directory for games with</p>
@@ -870,53 +871,48 @@ games_dir="/Applications/Games"
 mkdir $games_dir</code></p>
 <p>Then install the following GUI applications with</p>
 <p><code>sh
-brew install --cask adobe-creative-cloud # (20)
+brew install --cask adobe-creative-cloud # (19)
+brew install --cask android-file-transfer  # (2)
+brew install --cask ankerwork  # (3)
+brew install --cask antigravity
 brew install --cask arc
-brew install --cask adobe-acrobat-reader
-brew install --cask alfred  # (1)
-brew install --cask amazon-q  # (2)
-brew install --cask android-file-transfer  # (3)
-brew install --cask ankerwork  # (4)
-brew install --cask bartender  # (5)
-brew install --cask blackhole-64ch  # (6)
+brew install --cask bartender  # (4)
+brew install --cask blackhole-64ch  # (5)
 brew install --cask chatgpt
 brew install --cask discord
+brew install --cask docker-desktop
 brew install --cask epic-games --appdir $games_dir
-brew install --cask fantastical  # (7)
-brew install --cask filebot --force --no-quarantine  # (8)
-brew install --cask folx  # (9)
+brew install --cask fantastical  # (6)
+brew install --cask filebot --force --no-quarantine  # (7)
+brew install --cask folx  # (8)
 brew install --cask github
 brew install --cask gog-galaxy --appdir $games_dir
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake
-brew install --cask hyper  # (10)
+brew install --cask hyper  # (9)
 brew install --cask jetbrains-toolbox
-brew install --cask mactex  # (11)
-brew install --cask messenger
-brew install --cask microsoft-excel
-brew install --cask microsoft-powerpoint
-brew install --cask microsoft-word
-brew install --cask mimestream  # (12)
-brew install --cask mkvtoolnix  # (13)
-brew install --cask openemu  # (14)
+brew install --cask kiro-cli  # (1)
+brew install --cask mactex  # (10)
+brew install --cask mimestream  # (11)
+brew install --cask mkvtoolnix  # (12)
+brew install --cask openemu  # (13)
 brew install --cask plex
-brew install --cask private-internet-access
-brew install --cask qlvideo  # (15)
+brew install --cask quicklook-video  # (14)
 brew install --cask raindropio
-brew install --cask readdle-spark  # (16)
+brew install --cask readdle-spark  # (15)
 brew install --cask runescape --appdir $games_dir
-brew install --cask sidequest  # (17)
+brew install --cask sidequest  # (16)
 brew install --cask steam --appdir $games_dir
-brew install --cask tailscale-app  # (19)
+brew install --cask surfshark
+brew install --cask tailscale-app  # (18)
 brew install --cask todoist
 brew install --cask visual-studio-code
-brew install --cask vivid  # (18)
+brew install --cask vivid  # (17)
 brew install --cask vlc
 brew install --cask whatsapp</code></p>
 <ol>
-<li>Suped up version of Spotlight.</li>
-<li>For modern terminal settings, plugin management, etc. Requires an AWS account.</li>
+<li>Good terminal autocomplete. Requires an AWS account.</li>
 <li>For copying files to Oculus Quest.</li>
 <li>For configuring my webcam.</li>
 <li>For menu bar organisation. Requires a licence.</li>
