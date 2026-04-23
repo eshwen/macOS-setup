@@ -49,7 +49,6 @@ Then install the following GUI applications with
 
 ```sh
 brew install --cask adobe-creative-cloud # (19)
-brew install --cask amazon-q  # (1)
 brew install --cask android-file-transfer  # (2)
 brew install --cask ankerwork  # (3)
 brew install --cask arc
@@ -68,6 +67,7 @@ brew install --cask google-drive
 brew install --cask handbrake
 brew install --cask hyper  # (9)
 brew install --cask jetbrains-toolbox
+brew install --cask kiro-cli  # (1)
 brew install --cask mactex  # (10)
 brew install --cask mimestream  # (11)
 brew install --cask mkvtoolnix  # (12)
@@ -87,7 +87,7 @@ brew install --cask vlc
 brew install --cask whatsapp
 ```
 
-1. For modern terminal settings, plugin management, etc. Requires an AWS account.
+1. Good terminal autocomplete. Requires an AWS account.
 2. For copying files to Oculus Quest.
 3. For configuring my webcam.
 4. For menu bar organisation. Requires a licence.
