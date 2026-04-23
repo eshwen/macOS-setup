@@ -15,28 +15,26 @@ Install Homebrew with the instructions at <https://brew.sh/>.(1) This should als
 ## Useful CLI utilities
 
 ```sh
-brew install bash  # (1)
-brew install emacs  # (2)
-brew install git  # (3)
-brew link --overwrite git  # (4)
-brew install gnupg  # (5)
-brew install poetry  # (6)
-brew install pyenv  # (7)
-brew install tree  # (8)
-brew install wget  # (9)
-brew install zsh  # (10)
+brew install emacs  # (1)
+brew install git  # (2)
+brew link --overwrite git  # (3)
+brew install gnupg  # (4)
+brew install poetry  # (5)
+brew install pyenv  # (6)
+brew install tree  # (7)
+brew install wget  # (8)
+brew install zsh  # (9)
 ```
 
-1. For a newer version than that bundled with macOS.
-2. Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do `brew reinstall --cask --no-quarantine emacs`.
-3. For a newer version than that bundled with macOS.
-4. So it's linked by default instead of the version bundled with macOS.
-5. GPG key generation utility (for signing Git commits).
-6. For Python project management.
-7. Best way of managing Python installs on Mac.
-8. Show directory trees (use `-L <levels>` options to show set number of levels).
-9. For `wget` command, like on linux.
-10. For a newer version than that bundled with macOS.
+1. Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do `brew reinstall --cask --no-quarantine emacs`.
+2. For a newer version than that bundled with macOS.
+3. So it's linked by default instead of the version bundled with macOS.
+4. GPG key generation utility (for signing Git commits).
+5. For Python project management.
+6. Best way of managing Python installs on Mac.
+7. Show directory trees (use `-L <levels>` options to show set number of levels).
+8. For `wget` command, like on linux.
+9. For a newer version than that bundled with macOS.
 
 ## Useful GUI applications
 
