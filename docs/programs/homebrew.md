@@ -56,6 +56,7 @@ brew install --cask bartender  # (4)
 brew install --cask blackhole-64ch  # (5)
 brew install --cask chatgpt
 brew install --cask discord
+brew install --cask docker-desktop
 brew install --cask epic-games --appdir $games_dir
 brew install --cask fantastical  # (6)
 brew install --cask filebot --force --no-quarantine  # (7)
