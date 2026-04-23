@@ -77,7 +77,7 @@ brew install --cask mimestream  # (12)
 brew install --cask mkvtoolnix  # (13)
 brew install --cask openemu  # (14)
 brew install --cask plex
-brew install --cask qlvideo  # (15)
+brew install --cask quicklook-video  # (15)
 brew install --cask raindropio
 brew install --cask readdle-spark  # (16)
 brew install --cask runescape --appdir $games_dir
