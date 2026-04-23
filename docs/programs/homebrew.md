@@ -50,6 +50,7 @@ mkdir $games_dir
 Then install the following GUI applications with
 
 ```sh
+brew install --cask adobe-creative-cloud # (20)
 brew install --cask arc
 brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # (1)
@@ -114,6 +115,7 @@ brew install --cask whatsapp
 17. For sideloading more VR content onto Oculus Quest.
 18. Unlock higher brightness range on the display. Requires a licence.
 19. For remote access to other devices, e.g., a NAS.
+20. Manager for Lightroom and other Adobe products.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
