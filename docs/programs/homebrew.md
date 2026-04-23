@@ -18,10 +18,12 @@ Install Homebrew with the instructions at <https://brew.sh/>.(1) This should als
 brew install emacs  # (1)
 brew install git  # (2)
 brew link --overwrite git  # (3)
+brew install gemini-cli
 brew install gnupg  # (4)
 brew install poetry  # (5)
 brew install pyenv  # (6)
 brew install tree  # (7)
+brew install uv  # (10)
 brew install wget  # (8)
 brew install zsh  # (9)
 ```
@@ -35,6 +37,7 @@ brew install zsh  # (9)
 7. Show directory trees (use `-L <levels>` options to show set number of levels).
 8. For `wget` command, like on linux.
 9. For a newer version than that bundled with macOS.
+10. An Python project manager even more modern than Poetry.
 
 ## Useful GUI applications
 
@@ -51,11 +54,13 @@ Then install the following GUI applications with
 brew install --cask adobe-creative-cloud # (19)
 brew install --cask android-file-transfer  # (2)
 brew install --cask ankerwork  # (3)
+brew install --cask antigravity
 brew install --cask arc
 brew install --cask bartender  # (4)
 brew install --cask blackhole-64ch  # (5)
 brew install --cask chatgpt
 brew install --cask discord
+brew install --cask docker-desktop
 brew install --cask epic-games --appdir $games_dir
 brew install --cask fantastical  # (6)
 brew install --cask filebot --force --no-quarantine  # (7)
@@ -79,6 +84,7 @@ brew install --cask readdle-spark  # (15)
 brew install --cask runescape --appdir $games_dir
 brew install --cask sidequest  # (16)
 brew install --cask steam --appdir $games_dir
+brew install --cask surfshark
 brew install --cask tailscale-app  # (18)
 brew install --cask todoist
 brew install --cask visual-studio-code
