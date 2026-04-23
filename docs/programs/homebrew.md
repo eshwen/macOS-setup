@@ -50,7 +50,6 @@ Then install the following GUI applications with
 ```sh
 brew install --cask adobe-creative-cloud # (20)
 brew install --cask arc
-brew install --cask adobe-acrobat-reader
 brew install --cask alfred  # (1)
 brew install --cask amazon-q  # (2)
 brew install --cask android-file-transfer  # (3)
