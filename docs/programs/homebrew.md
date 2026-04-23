@@ -77,7 +77,6 @@ brew install --cask mimestream  # (12)
 brew install --cask mkvtoolnix  # (13)
 brew install --cask openemu  # (14)
 brew install --cask plex
-brew install --cask private-internet-access
 brew install --cask qlvideo  # (15)
 brew install --cask raindropio
 brew install --cask readdle-spark  # (16)
