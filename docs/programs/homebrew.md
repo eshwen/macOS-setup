@@ -82,6 +82,7 @@ brew install --cask readdle-spark  # (15)
 brew install --cask runescape --appdir $games_dir
 brew install --cask sidequest  # (16)
 brew install --cask steam --appdir $games_dir
+brew install --cask surfshark
 brew install --cask tailscale-app  # (18)
 brew install --cask todoist
 brew install --cask visual-studio-code
