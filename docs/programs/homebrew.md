@@ -51,67 +51,65 @@ mkdir $games_dir
 Then install the following GUI applications with
 
 ```sh
-brew install --cask adobe-creative-cloud # (19)
-brew install --cask android-file-transfer  # (2)
-brew install --cask ankerwork  # (3)
+brew install --cask adobe-creative-cloud # (18)
+brew install --cask android-file-transfer  # (1)
+brew install --cask ankerwork  # (2)
 brew install --cask antigravity
 brew install --cask arc
-brew install --cask bartender  # (4)
-brew install --cask blackhole-64ch  # (5)
+brew install --cask bartender  # (3)
+brew install --cask blackhole-64ch  # (4)
 brew install --cask chatgpt
 brew install --cask discord
 brew install --cask docker-desktop
 brew install --cask epic-games --appdir $games_dir
-brew install --cask fantastical  # (6)
-brew install --cask filebot --force --no-quarantine  # (7)
-brew install --cask folx  # (8)
+brew install --cask fantastical  # (5)
+brew install --cask filebot --force --no-quarantine  # (6)
+brew install --cask folx  # (7)
 brew install --cask github
 brew install --cask gog-galaxy --appdir $games_dir
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake
-brew install --cask hyper  # (9)
+brew install --cask hyper  # (8)
 brew install --cask jetbrains-toolbox
-brew install --cask kiro-cli  # (1)
-brew install --cask mactex  # (10)
-brew install --cask mimestream  # (11)
-brew install --cask mkvtoolnix  # (12)
-brew install --cask openemu  # (13)
+brew install --cask mactex  # (9)
+brew install --cask mimestream  # (10)
+brew install --cask mkvtoolnix  # (11)
+brew install --cask openemu  # (12)
 brew install --cask plex
-brew install --cask quicklook-video  # (14)
+brew install --cask quicklook-video  # (13)
 brew install --cask raindropio
-brew install --cask readdle-spark  # (15)
+brew install --cask readdle-spark  # (14)
 brew install --cask runescape --appdir $games_dir
-brew install --cask sidequest  # (16)
+brew install --cask sidequest  # (15)
 brew install --cask steam --appdir $games_dir
 brew install --cask surfshark
-brew install --cask tailscale-app  # (18)
+brew install --cask tailscale-app  # (17)
 brew install --cask todoist
 brew install --cask visual-studio-code
-brew install --cask vivid  # (17)
+brew install --cask vivid  # (16)
 brew install --cask vlc
 brew install --cask whatsapp
 ```
 
-1. Good terminal autocomplete. Requires an AWS account.
-2. For copying files to Oculus Quest.
-3. For configuring my webcam.
-4. For menu bar organisation. Requires a licence.
-5. For capturing audio output alongside a screen recording.
-6. Better calendar app than the default.
-7. For batch renaming of files. Additional options required to start up properly.
-8. Torrent client.
-9. A nicer, modern terminal.
-10. For MacTeX distro of TeXLive with GUI applications.
-11. A modern, macOS-native Gmail client. Requires a subscription.
-12. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
-13. Retro video game emulator.
-14. For thumbnails for mkv and other file formats.
-15. Another powerful email client.
-16. For sideloading more VR content onto Oculus Quest.
-17. Unlock higher brightness range on the display. Requires a licence.
-18. For remote access to other devices, e.g., a NAS.
-19. Manager for Lightroom and other Adobe products.
+1. For copying files to Oculus Quest.
+2. For configuring my webcam.
+3. For menu bar organisation. Requires a licence.
+4. For capturing audio output alongside a screen recording.
+5. Better calendar app than the default.
+6. For batch renaming of files. Additional options required to start up properly.
+7. Torrent client.
+8. A nicer, modern terminal.
+9. For MacTeX distro of TeXLive with GUI applications.
+10. A modern, macOS-native Gmail client. Requires a subscription.
+11. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
+12. Retro video game emulator.
+13. For thumbnails for mkv and other file formats.
+14. Another powerful email client.
+15. For sideloading more VR content onto Oculus Quest.
+16. Unlock higher brightness range on the display. Requires a licence.
+17. For remote access to other devices, e.g., a NAS.
+18. Manager for Lightroom and other Adobe products.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 

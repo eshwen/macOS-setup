@@ -32,12 +32,6 @@ If changing the shell, log out and log back in to ensure it takes effect.
 
 ### Extensions
 
-[Amazon Q](https://aws.amazon.com/q/) is an decent tool for managing terminal-related stuff: appearance, autocomplete, shell profiles, settings, plugins, etc. It's similar to Oh My Bash/Zsh, but more modern and with a GUI. And it works with `bash`, `zsh`, and `fish`.
-
-Install it with Homebrew (see above). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.
-
-Other things to install:
-
 - [Oh My Zsh](https://ohmyz.sh/)
 - [zsh-autoswitch-virtualenv](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
     - Follow the specific instructions to integrate with Oh My Zsh
@@ -46,44 +40,25 @@ Other things to install:
 - zsh-syntax-highlighting
     - With `brew install zsh-syntax-highlighting`
 
-### `.zshrc`
+### Settings for Terminal
 
-The `.zshrc` configuration file requires manual editing with Amazon Q, compared to Fig (RIP). Add these lines between the Amazon Q blocks:
+Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
+
+1. Open the Terminal, and go to **Preferences** :material-arrow-right: **Profiles**
+2. Hit the three dots in the bottom left corner and click **Import...**
+3. Select the terminal preferences file and set it as the default
+
+### Settings for Hyper
+
+If using Hyper as the terminal, personalise with
 
 ```shell
-# Executables for Homebrew and Pyenv
-export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.pyenv/bin"
-
-# Activate Pyenv and Python
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-
-# Activate Google Cloud SDK completions
-if [ -f /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc ]; then
-    source /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc
-fi
-if [ -f /opt/homebrew/share/google-cloud-sdk/path.zsh.inc ]; then
-    source /opt/homebrew/share/google-cloud-sdk/path.zsh.inc
-fi
-
-# Activate Zsh syntax highlighting. Put this at the very end of the file
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+hyper i hyper-material-theme
+hyper i hyper-fading-scrollbar
+hyper i hyper-blink
+hyper i hyper-quit
+hyper i default-shell
 ```
-
-- Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
-    1. Open the Terminal, and go to **Preferences** :material-arrow-right: **Profiles**
-    2. Hit the three dots in the bottom left corner and click **Import...**
-    3. Select the terminal preferences file and set it as the default
-
-- Hyper settings:
-
-    ```shell
-    hyper i hyper-material-theme
-    hyper i hyper-fading-scrollbar
-    hyper i hyper-blink
-    hyper i hyper-quit
-    hyper i default-shell
-    ```
 
 ## Verified Git commits
 
