@@ -42,22 +42,25 @@ If changing the shell, log out and log back in to ensure it takes effect.
 - zsh-automcomplete
     - With `brew install zsh-autocomplete`
 
-### `.zshrc`
+### Settings for Terminal
 
-- Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
-    1. Open the Terminal, and go to **Preferences** :material-arrow-right: **Profiles**
-    2. Hit the three dots in the bottom left corner and click **Import...**
-    3. Select the terminal preferences file and set it as the default
+Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
 
-- Hyper settings:
+1. Open the Terminal, and go to **Preferences** :material-arrow-right: **Profiles**
+2. Hit the three dots in the bottom left corner and click **Import...**
+3. Select the terminal preferences file and set it as the default
 
-    ```shell
-    hyper i hyper-material-theme
-    hyper i hyper-fading-scrollbar
-    hyper i hyper-blink
-    hyper i hyper-quit
-    hyper i default-shell
-    ```
+### Settings for Hyper
+
+If using Hyper as the terminal, personalise with
+
+```shell
+hyper i hyper-material-theme
+hyper i hyper-fading-scrollbar
+hyper i hyper-blink
+hyper i hyper-quit
+hyper i default-shell
+```
 
 ## Verified Git commits
 
