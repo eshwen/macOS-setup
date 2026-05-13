@@ -597,14 +597,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zshrc" class="md-nav__link">
-    .zshrc
+  <a href="#settings-for-terminal" class="md-nav__link">
+    Settings for Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-for-hyper" class="md-nav__link">
+    Settings for Hyper
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified-git-commits" class="md-nav__link">
+    Verified Git commits
+  </a>
   
 </li>
       
@@ -759,14 +773,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zshrc" class="md-nav__link">
-    .zshrc
+  <a href="#settings-for-terminal" class="md-nav__link">
+    Settings for Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-for-hyper" class="md-nav__link">
+    Settings for Hyper
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified-git-commits" class="md-nav__link">
+    Verified Git commits
+  </a>
   
 </li>
       
@@ -805,9 +833,6 @@ chsh -s /bin/bash</code></p>
 <p>If installing a new shell with Homebrew (see above), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.</p>
 <p>If changing the shell, log out and log back in to ensure it takes effect.</p>
 <h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">⚓︎</a></h3>
-<p><a href="https://aws.amazon.com/q/">Amazon Q</a> is an decent tool for managing terminal-related stuff: appearance, autocomplete, shell profiles, settings, plugins, etc. It's similar to Oh My Bash/Zsh, but more modern and with a GUI. And it works with <code>bash</code>, <code>zsh</code>, and <code>fish</code>.</p>
-<p>Install it with Homebrew (see above). Then, open it and follow the instructions to set it up. It should automatically detect the shell and prompt anything else it needs.</p>
-<p>Other things to install:</p>
 <ul>
 <li><a href="https://ohmyz.sh/">Oh My Zsh</a></li>
 <li><a href="https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv">zsh-autoswitch-virtualenv</a><ul>
@@ -823,43 +848,21 @@ chsh -s /bin/bash</code></p>
 </ul>
 </li>
 </ul>
-<h3 id="zshrc"><code>.zshrc</code><a class="headerlink" href="#zshrc" title="Permanent link">⚓︎</a></h3>
-<p>The <code>.zshrc</code> configuration file requires manual editing with Amazon Q, compared to Fig (RIP). Add these lines between the Amazon Q blocks:</p>
-<p>```shell</p>
-<h1 id="executables-for-homebrew-and-pyenv">Executables for Homebrew and Pyenv<a class="headerlink" href="#executables-for-homebrew-and-pyenv" title="Permanent link">⚓︎</a></h1>
-<p>export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.pyenv/bin"</p>
-<h1 id="activate-pyenv-and-python">Activate Pyenv and Python<a class="headerlink" href="#activate-pyenv-and-python" title="Permanent link">⚓︎</a></h1>
-<p>eval "$(pyenv init --path)"
-eval "$(pyenv init -)"</p>
-<h1 id="activate-google-cloud-sdk-completions">Activate Google Cloud SDK completions<a class="headerlink" href="#activate-google-cloud-sdk-completions" title="Permanent link">⚓︎</a></h1>
-<p>if [ -f /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc ]; then
-    source /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc
-fi
-if [ -f /opt/homebrew/share/google-cloud-sdk/path.zsh.inc ]; then
-    source /opt/homebrew/share/google-cloud-sdk/path.zsh.inc
-fi</p>
-<h1 id="activate-zsh-syntax-highlighting-put-this-at-the-very-end-of-the-file">Activate Zsh syntax highlighting. Put this at the very end of the file<a class="headerlink" href="#activate-zsh-syntax-highlighting-put-this-at-the-very-end-of-the-file" title="Permanent link">⚓︎</a></h1>
-<p>source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-```</p>
-<ul>
-<li>
+<h3 id="settings-for-terminal">Settings for Terminal<a class="headerlink" href="#settings-for-terminal" title="Permanent link">⚓︎</a></h3>
 <p>Terminal settings/preferences (personal choice): <a href="https://github.com/eshwen/macOS-setup/blob/main/Ocean_Esh.terminal">Ocean_Esh.terminal</a></p>
 <ol>
 <li>Open the Terminal, and go to <strong>Preferences</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> <strong>Profiles</strong></li>
 <li>Hit the three dots in the bottom left corner and click <strong>Import...</strong></li>
 <li>Select the terminal preferences file and set it as the default</li>
 </ol>
-</li>
-<li>
-<p>Hyper settings:</p>
+<h3 id="settings-for-hyper">Settings for Hyper<a class="headerlink" href="#settings-for-hyper" title="Permanent link">⚓︎</a></h3>
+<p>If using Hyper as the terminal, personalise with</p>
 <p><code>shell
 hyper i hyper-material-theme
 hyper i hyper-fading-scrollbar
 hyper i hyper-blink
 hyper i hyper-quit
 hyper i default-shell</code></p>
-</li>
-</ul>
 <h2 id="verified-git-commits">Verified Git commits<a class="headerlink" href="#verified-git-commits" title="Permanent link">⚓︎</a></h2>
 <p>For that sweet <strong>Verified</strong> mark next to commits on GitHub, the simplest method is to generate a GPG key and associate it with your account. Start with</p>
 <p>```shell
