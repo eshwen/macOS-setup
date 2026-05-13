@@ -39,8 +39,6 @@ If changing the shell, log out and log back in to ensure it takes effect.
     - Follow the specific instructions to integrate with Oh My Zsh
 - zsh-syntax-highlighting
     - With `brew install zsh-syntax-highlighting`
-- zsh-automcomplete
-    - With `brew install zsh-autocomplete`
 
 ### Settings for Terminal
 
