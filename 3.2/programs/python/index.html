@@ -766,46 +766,46 @@
 <p>Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey.</p>
 <h2 id="pyenv">pyenv<a class="headerlink" href="#pyenv" title="Permanent link">⚓︎</a></h2>
 <p>While Anaconda is a good environment manager, <code>pyenv</code> is the simplest and most lightweight option for pure Python. Once <code>pyenv</code> has been installed with Homebrew, install a recent version of Python with</p>
-<p><code>sh
-pyenv install &lt;version&gt;</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>pyenv<span class="w"> </span>install<span class="w"> </span>&lt;version&gt;
+</code></pre></div>
 <p>Multiple installations are supported, so I can have separate Python 2 and Python 3 environments, or even separate Python 3.X ones. Each is bundled with <code>pip</code> for external package dependency management. The active environment can be found with</p>
-<p><code>sh
-pyenv local</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>pyenv<span class="w"> </span><span class="nb">local</span>
+</code></pre></div>
 <p>and can be switched to any other installation (applicable to the active directory) with</p>
-<p><code>sh
-pyenv local &lt;version&gt;</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>pyenv<span class="w"> </span><span class="nb">local</span><span class="w"> </span>&lt;version&gt;
+</code></pre></div>
 <p>Change the global default Python version with</p>
-<p><code>shell
-pyenv global &lt;version&gt;</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>pyenv<span class="w"> </span>global<span class="w"> </span>&lt;version&gt;
+</code></pre></div>
 <h2 id="anaconda">Anaconda<a class="headerlink" href="#anaconda" title="Permanent link">⚓︎</a></h2>
 <p>For completeness, below are instructions to install Anaconda with Homebrew:</p>
-<p><code>sh
-brew install --cask anaconda
-conda init "$(basename "${SHELL}")"  # (1)
-&lt;exit and reopen shell&gt;
-conda activate
-conda config --set auto_activate_base false
-conda deactivate</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>anaconda
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a>conda<span class="w"> </span>init<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SHELL</span><span class="si">}</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># (1)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a>&lt;<span class="nb">exit</span><span class="w"> </span>and<span class="w"> </span>reopen<span class="w"> </span>shell&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos="4 "></span></a>conda<span class="w"> </span>activate
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos="5 "></span></a>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos="6 "></span></a>conda<span class="w"> </span>deactivate
+</code></pre></div>
 <ol>
 <li>If <code>conda</code> executable doesn't work, run <code>$(brew --prefix)/anaconda3/bin/conda</code></li>
 </ol>
 <p>Then, to install the Anaconda Navigator (a GUI for managing conda environments and installing related tools), do</p>
-<p><code>sh
-conda activate
-conda install -c anaconda anaconda-navigator -y
-conda deactivate</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a>conda<span class="w"> </span>activate
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>anaconda<span class="w"> </span>anaconda-navigator<span class="w"> </span>-y
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a>conda<span class="w"> </span>deactivate
+</code></pre></div>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">⚓︎</a></h2>
 <p>See <a href="https://github.com/eshwen/ds-python-boilerplate">https://github.com/eshwen/ds-python-boilerplate</a> for a list of common Python dependencies for data science.</p>
 <h2 id="tensorflow">Tensorflow<a class="headerlink" href="#tensorflow" title="Permanent link">⚓︎</a></h2>
 <p>If <code>pip install tensorflow</code> doesn't work, it may because it does not yet run natively on Apple Silicon. Run the following commands to get a usable installation:</p>
-<p>```sh
-pyenv install miniforge3
-pyenv local miniforge3
-conda install -c apple tensorflow-deps -y</p>
-<p>pip install -U pip
-pip install tensorflow-macos
-pip install tensorflow-metal  # Metal plugin for GPU acceleration
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a>pyenv<span class="w"> </span>install<span class="w"> </span>miniforge3
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a>pyenv<span class="w"> </span><span class="nb">local</span><span class="w"> </span>miniforge3
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>apple<span class="w"> </span>tensorflow-deps<span class="w"> </span>-y
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos="4 "></span></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos="5 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><a href="#__codelineno-6-6"><span class="linenos" data-linenos="6 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>tensorflow-macos
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><a href="#__codelineno-6-7"><span class="linenos" data-linenos="7 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>tensorflow-metal<span class="w">  </span><span class="c1"># Metal plugin for GPU acceleration</span>
+</code></pre></div>
 <p>Then, before using Tensorflow, do either <code>pyenv local miniforge3</code> to activate the environment it's installed in.</p>
 <p>See also: <a href="https://developer.apple.com/metal/tensorflow-plugin/">https://developer.apple.com/metal/tensorflow-plugin/</a></p>
 

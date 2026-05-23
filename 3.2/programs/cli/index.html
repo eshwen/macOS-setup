@@ -819,17 +819,17 @@
 <h1 id="command-line-interface-cli">Command Line Interface (CLI)<a class="headerlink" href="#command-line-interface-cli" title="Permanent link">⚓︎</a></h1>
 <h2 id="rosetta-2">Rosetta 2<a class="headerlink" href="#rosetta-2" title="Permanent link">⚓︎</a></h2>
 <p>Rosetta 2 is Apple's utility to translate Intel-based (x86) apps, so they're Apple Silicon-compatible. It's no longer bundled with macOS as of Monterey. If I try to open an x86 app, I'll be prompted to install it. Otherwise, I can type in the Terminal</p>
-<p><code>sh
-softwareupdate --install-rosetta</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>softwareupdate<span class="w"> </span>--install-rosetta
+</code></pre></div>
 <h2 id="shell">Shell<a class="headerlink" href="#shell" title="Permanent link">⚓︎</a></h2>
 <p><code>zsh</code> is the default shell in macOS as of Catalina.</p>
 <h3 id="changing-shells">Changing shells<a class="headerlink" href="#changing-shells" title="Permanent link">⚓︎</a></h3>
 <p>To change shells, do</p>
-<p><code>sh
-chsh -s &lt;executable_path&gt;</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>chsh<span class="w"> </span>-s<span class="w"> </span>&lt;executable_path&gt;
+</code></pre></div>
 <p>where <code>&lt;executable_path&gt;</code> is the path to the shell executable. For example, to change to <code>bash</code>, do</p>
-<p><code>sh
-chsh -s /bin/bash</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>chsh<span class="w"> </span>-s<span class="w"> </span>/bin/bash
+</code></pre></div>
 <p>If installing a new shell with Homebrew (see above), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.</p>
 <p>If changing the shell, log out and log back in to ensure it takes effect.</p>
 <h3 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">⚓︎</a></h3>
@@ -857,50 +857,48 @@ chsh -s /bin/bash</code></p>
 </ol>
 <h3 id="settings-for-hyper">Settings for Hyper<a class="headerlink" href="#settings-for-hyper" title="Permanent link">⚓︎</a></h3>
 <p>If using Hyper as the terminal, personalise with</p>
-<p><code>shell
-hyper i hyper-material-theme
-hyper i hyper-fading-scrollbar
-hyper i hyper-blink
-hyper i hyper-quit
-hyper i default-shell</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>hyper<span class="w"> </span>i<span class="w"> </span>hyper-material-theme
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a>hyper<span class="w"> </span>i<span class="w"> </span>hyper-fading-scrollbar
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos="3 "></span></a>hyper<span class="w"> </span>i<span class="w"> </span>hyper-blink
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos="4 "></span></a>hyper<span class="w"> </span>i<span class="w"> </span>hyper-quit
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos="5 "></span></a>hyper<span class="w"> </span>i<span class="w"> </span>default-shell
+</code></pre></div>
 <h2 id="verified-git-commits">Verified Git commits<a class="headerlink" href="#verified-git-commits" title="Permanent link">⚓︎</a></h2>
 <p>For that sweet <strong>Verified</strong> mark next to commits on GitHub, the simplest method is to generate a GPG key and associate it with your account. Start with</p>
-<p>```shell
-gpg --default-new-key-algo rsa4096 --gen-key</p>
-<h1 id="enter-real-name">Enter real name<a class="headerlink" href="#enter-real-name" title="Permanent link">⚓︎</a></h1>
-<h1 id="enter-email-address-associated-with-github-account">Enter email address associated with GitHub account<a class="headerlink" href="#enter-email-address-associated-with-github-account" title="Permanent link">⚓︎</a></h1>
-<h1 id="dont-enter-a-passphrase-unless-you-want-to-type-it-in-every-time-you-commit">Don't enter a passphrase unless you want to type it in every time you commit<a class="headerlink" href="#dont-enter-a-passphrase-unless-you-want-to-type-it-in-every-time-you-commit" title="Permanent link">⚓︎</a></h1>
-<h1 id="enter-o-to-finish">Enter <code>o</code> to finish<a class="headerlink" href="#enter-o-to-finish" title="Permanent link">⚓︎</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>gpg<span class="w"> </span>--default-new-key-algo<span class="w"> </span>rsa4096<span class="w"> </span>--gen-key
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a><span class="c1"># Enter real name</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a><span class="c1"># Enter email address associated with GitHub account</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos="4 "></span></a><span class="c1"># Don&#39;t enter a passphrase unless you want to type it in every time you commit</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos="5 "></span></a><span class="c1"># Enter `o` to finish</span>
+</code></pre></div>
 <p>Then view the key with</p>
-<p><code>shell
-gpg --list-secret-keys --keyid-format=long</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a>gpg<span class="w"> </span>--list-secret-keys<span class="w"> </span>--keyid-format<span class="o">=</span>long
+</code></pre></div>
 <p>The output will look something like</p>
-<p>```text
-gpg: checking the trustdb
-gpg: marginals needed: 3  completes needed: 1  trust model: pgp
-gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
-gpg: next trustdb check due at 2024-12-01
-/Users/username/.gnupg/pubring.kbx</p>
-<hr />
-<p>sec   rsa4096/ABC123DEF456GHI 2022-12-02 [SC] [expires: 2024-12-01]
-      JBNM4H5LJK5BKJ4BMNVTBHOI4H55P4BJ5K6L4JKL
-uid                 [ultimate] Real Name <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#117;&#115;&#101;&#114;&#110;&#97;&#109;&#101;&#64;&#100;&#111;&#109;&#97;&#105;&#110;&#46;&#99;&#111;&#109;">&#117;&#115;&#101;&#114;&#110;&#97;&#109;&#101;&#64;&#100;&#111;&#109;&#97;&#105;&#110;&#46;&#99;&#111;&#109;</a>
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a>gpg: checking the trustdb
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a>gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a>gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos="4 "></span></a>gpg: next trustdb check due at 2024-12-01
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos="5 "></span></a>/Users/username/.gnupg/pubring.kbx
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><a href="#__codelineno-6-6"><span class="linenos" data-linenos="6 "></span></a>--------------------------------
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><a href="#__codelineno-6-7"><span class="linenos" data-linenos="7 "></span></a>sec   rsa4096/ABC123DEF456GHI 2022-12-02 [SC] [expires: 2024-12-01]
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><a href="#__codelineno-6-8"><span class="linenos" data-linenos="8 "></span></a>      JBNM4H5LJK5BKJ4BMNVTBHOI4H55P4BJ5K6L4JKL
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><a href="#__codelineno-6-9"><span class="linenos" data-linenos="9 "></span></a>uid                 [ultimate] Real Name &lt;username@domain.com&gt;
+</code></pre></div>
 <p>The bit after <code>sec   rsa4096/</code> is what we need next (<code>ABC123DEF456GHI</code>). To show the public key, do</p>
-<p><code>shell
-gpg --armor --export ABC123DEF456GHI</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a>gpg<span class="w"> </span>--armor<span class="w"> </span>--export<span class="w"> </span>ABC123DEF456GHI
+</code></pre></div>
 <p>which will output something like</p>
-<p>```text
------BEGIN PGP PUBLIC KEY BLOCK-----</p>
-<p>AMASSIVEBLOCKOFLETTERSNUMBERSANDSYMBOLS
------END PGP PUBLIC KEY BLOCK-----
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos="1 "></span></a>-----BEGIN PGP PUBLIC KEY BLOCK-----
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><a href="#__codelineno-8-2"><span class="linenos" data-linenos="2 "></span></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><a href="#__codelineno-8-3"><span class="linenos" data-linenos="3 "></span></a>AMASSIVEBLOCKOFLETTERSNUMBERSANDSYMBOLS
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><a href="#__codelineno-8-4"><span class="linenos" data-linenos="4 "></span></a>-----END PGP PUBLIC KEY BLOCK-----
+</code></pre></div>
 <p>Remove existing keys and associate this one to your GitHub account with</p>
-<p><code>shell
-git config --global --unset gpg.format
-git config --global user.signingkey ABC123DEF456GHI
-git config --global commit.gpgsign true</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><a href="#__codelineno-9-1"><span class="linenos" data-linenos="1 "></span></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--unset<span class="w"> </span>gpg.format
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><a href="#__codelineno-9-2"><span class="linenos" data-linenos="2 "></span></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.signingkey<span class="w"> </span>ABC123DEF456GHI
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><a href="#__codelineno-9-3"><span class="linenos" data-linenos="3 "></span></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>commit.gpgsign<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
 <p>Then copy that public key we generated earlier (in its entirety), and add it to your GitHub account:</p>
 <ol>
 <li>Visit <a href="https://github.com/settings/gpg/new">https://github.com/settings/gpg/new</a></li>

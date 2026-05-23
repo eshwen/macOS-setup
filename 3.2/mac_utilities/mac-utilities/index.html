@@ -762,15 +762,15 @@
 <h2 id="time-machine">Time Machine<a class="headerlink" href="#time-machine" title="Permanent link">⚓︎</a></h2>
 <p>Time Machine is a great backup utility, but it's not perfect. One of the drawbacks is that - from the GUI - it's not easy to create complex exclusions from the backup.</p>
 <p>Since I do a lot of Python development, I don't want to back up virtual environments, etc. To exclude these, you can use <code>find</code> to search for the directories and pipe them to <code>tmutil</code>, e.g.,</p>
-<p><code>shell
-find `pwd` -maxdepth 3 -type d -name '.venv' | xargs -n 1 tmutil addexclusion</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>find<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">3</span><span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;.venv&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>tmutil<span class="w"> </span>addexclusion
+</code></pre></div>
 <p>to exclude the <code>.venv</code> directory.</p>
 <p>There's also a <a href="https://github.com/samuelmeuli/tmignore">tmignore</a> tool to automatically exclude files from your <code>.gitignore</code>, but that doesn't appear to be maintained anymore.</p>
 <h2 id="system-sounds">System sounds<a class="headerlink" href="#system-sounds" title="Permanent link">⚓︎</a></h2>
 <p>I don't like some of the system sound effects in Big Sur. I've uploaded <a href="https://github.com/eshwen/macOS-setup/blob/main/Basso_Catalina.aiff">Basso</a> and <a href="https://github.com/eshwen/macOS-setup/blob/main/Glass_Catalina.aiff">Glass</a> from Catalina. To use them as system sounds, do</p>
-<p><code>bash
-mkdir ~/Library/Sounds
-cp Basso_Catalina.aiff Glass_Catalina.aiff ~/Library/Sounds/</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>mkdir<span class="w"> </span>~/Library/Sounds
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>cp<span class="w"> </span>Basso_Catalina.aiff<span class="w"> </span>Glass_Catalina.aiff<span class="w"> </span>~/Library/Sounds/
+</code></pre></div>
 <p>Then, in System Preferences <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> Sound, they should be available.</p>
 <h2 id="configuration-options">Configuration options<a class="headerlink" href="#configuration-options" title="Permanent link">⚓︎</a></h2>
 <ul>
