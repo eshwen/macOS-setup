@@ -39,16 +39,9 @@ brew install zsh  # (9)
 9. For a newer version than that bundled with macOS.
 10. An Python project manager even more modern than Poetry.
 
-## Useful GUI applications
+## GUI applications
 
-Create a directory for games with
-
-```shell
-games_dir="/Applications/Games"
-mkdir $games_dir
-```
-
-Then install the following GUI applications with
+Install the following GUI applications with
 
 ```sh
 brew install --cask adobe-creative-cloud # (18)
@@ -61,12 +54,10 @@ brew install --cask blackhole-64ch  # (4)
 brew install --cask chatgpt
 brew install --cask discord
 brew install --cask docker-desktop
-brew install --cask epic-games --appdir $games_dir
 brew install --cask fantastical  # (5)
 brew install --cask filebot --force --no-quarantine  # (6)
 brew install --cask folx  # (7)
 brew install --cask github
-brew install --cask gog-galaxy --appdir $games_dir
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask handbrake
@@ -80,9 +71,9 @@ brew install --cask plex
 brew install --cask quicklook-video  # (13)
 brew install --cask raindropio
 brew install --cask readdle-spark  # (14)
-brew install --cask runescape --appdir $games_dir
+brew install --cask runescape
 brew install --cask sidequest  # (15)
-brew install --cask steam --appdir $games_dir
+brew install --cask steam
 brew install --cask surfshark
 brew install --cask tailscale-app  # (17)
 brew install --cask todoist
