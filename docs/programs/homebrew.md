@@ -86,7 +86,6 @@ brew install --cask steam --appdir $games_dir
 brew install --cask surfshark
 brew install --cask tailscale-app  # (17)
 brew install --cask todoist
-brew install --cask visual-studio-code
 brew install --cask vivid  # (16)
 brew install --cask vlc
 brew install --cask whatsapp
