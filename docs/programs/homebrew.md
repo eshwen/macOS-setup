@@ -62,6 +62,7 @@ brew install --cask google-gemini  # (16)
 brew install --cask handbrake
 brew install --cask hyper  # (6)
 brew install --cask jetbrains-toolbox
+brew install --cask logi-options+
 brew install --cask mactex  # (7)
 brew install --cask mimestream  # (8)
 brew install --cask mkvtoolnix  # (9)
