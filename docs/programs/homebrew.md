@@ -60,6 +60,7 @@ brew install --cask folx  # (7)
 brew install --cask github
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install --cask google-gemini  # (19)
 brew install --cask handbrake
 brew install --cask hyper  # (8)
 brew install --cask jetbrains-toolbox
@@ -101,6 +102,7 @@ brew install --cask whatsapp
 16. Unlock higher brightness range on the display. Requires a licence.
 17. For remote access to other devices, e.g., a NAS.
 18. Manager for Lightroom and other Adobe products.
+19. Desktop client for Gemini's chat interface.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
