@@ -164,6 +164,24 @@ Uninstall unused dependencies of formulae/casks with
 brew autoremove
 ```
 
+## Porting
+
+All the programs Homebrew has installed can be easily ported to a new machine.
+
+1. Generate a manifest of installed formulae and casks with
+
+    ```sh
+    brew bundle dump
+    ```
+
+    1. This will create a `Brewfile` in the user's home directory
+
+2. Copy the `Brewfile` to the new machine and install the contents with
+
+    ```sh
+    brew bundle install
+    ```
+
 ## Bartender 5 triggers
 
 Bartender contains functionality to show a (normally-hidden) menu bar item based on a trigger. These can be on specific WiFi connections, battery percentages, or shell scripts. New triggers can be added in Bartender's settings :material-arrow-right: Triggers.
