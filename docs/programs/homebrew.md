@@ -75,6 +75,7 @@ brew install --cask jetbrains-toolbox
 brew install --cask mactex  # (9)
 brew install --cask mimestream  # (10)
 brew install --cask mkvtoolnix  # (11)
+brew install --cask obsidian
 brew install --cask openemu  # (12)
 brew install --cask plex
 brew install --cask quicklook-video  # (13)
