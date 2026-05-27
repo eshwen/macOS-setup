@@ -15,10 +15,10 @@ Install Homebrew with the instructions at <https://brew.sh/>.(1) This should als
 ## Useful CLI utilities
 
 ```sh
+brew install --cask antigravity-cli
 brew install emacs  # (1)
 brew install git  # (2)
 brew link --overwrite git  # (3)
-brew install gemini-cli
 brew install gnupg  # (4)
 brew install poetry  # (5)
 brew install pyenv  # (6)
@@ -54,7 +54,7 @@ Then install the following GUI applications with
 brew install --cask adobe-creative-cloud # (18)
 brew install --cask android-file-transfer  # (1)
 brew install --cask ankerwork  # (2)
-brew install --cask antigravity
+brew install --cask antigravity-ide
 brew install --cask arc
 brew install --cask bartender  # (3)
 brew install --cask blackhole-64ch  # (4)
