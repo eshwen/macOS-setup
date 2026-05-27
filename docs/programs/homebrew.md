@@ -75,6 +75,7 @@ brew install --cask sidequest  # (12)
 brew install --cask steam
 brew install --cask surfshark
 brew install --cask tailscale-app  # (14)
+brew install --cask the-unarchiver  # (17)
 brew install --cask todoist
 brew install --cask vivid  # (13)
 brew install --cask vlc
@@ -97,6 +98,7 @@ brew install --cask whatsapp
 14. For remote access to other devices, e.g., a NAS.
 15. Manager for Lightroom and other Adobe products.
 16. Desktop client for Gemini's chat interface.
+17. A more versatile tool for decompressing archives than the built-in one.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
