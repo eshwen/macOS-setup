@@ -12,5 +12,9 @@ There are some nice fonts I've found over the years in the [fonts] directory. To
 
 While the aim is to install everything with Homebrew, not all programs are available. These include
 
-- Fujifilm X RAW Studio
-- Viltrox Lens
+- [Fujifilm X RAW Studio]
+- [Viltrox Lens]
+
+[Fujifilm X RAW Studio]: https://www.fujifilm-x.com/en-gb/products/software/x-raw-studio/
+
+[Viltrox Lens]: https://viltrox.com/pages/download-center-1
