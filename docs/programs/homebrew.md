@@ -54,7 +54,7 @@ Then install the following GUI applications with
 brew install --cask adobe-creative-cloud # (18)
 brew install --cask android-file-transfer  # (1)
 brew install --cask ankerwork  # (2)
-brew install --cask antigravity
+brew install --cask antigravity-ide
 brew install --cask arc
 brew install --cask bartender  # (3)
 brew install --cask blackhole-64ch  # (4)
