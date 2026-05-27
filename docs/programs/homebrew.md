@@ -44,7 +44,7 @@ brew install zsh  # (9)
 Install the following GUI applications with
 
 ```sh
-brew install --cask adobe-creative-cloud # (17)
+brew install --cask adobe-creative-cloud # (16)
 brew install --cask android-file-transfer  # (1)
 brew install --cask ankerwork  # (2)
 brew install --cask antigravity-ide
@@ -59,7 +59,7 @@ brew install --cask folx  # (6)
 brew install --cask github
 brew install --cask google-chrome
 brew install --cask google-drive
-brew install --cask google-gemini  # (18)
+brew install --cask google-gemini  # (17)
 brew install --cask handbrake
 brew install --cask hyper  # (7)
 brew install --cask jetbrains-toolbox
@@ -71,14 +71,13 @@ brew install --cask openemu  # (11)
 brew install --cask plex
 brew install --cask quicklook-video  # (12)
 brew install --cask raindropio
-brew install --cask readdle-spark  # (13)
 brew install --cask runescape
-brew install --cask sidequest  # (14)
+brew install --cask sidequest  # (13)
 brew install --cask steam
 brew install --cask surfshark
-brew install --cask tailscale-app  # (16)
+brew install --cask tailscale-app  # (15)
 brew install --cask todoist
-brew install --cask vivid  # (15)
+brew install --cask vivid  # (14)
 brew install --cask vlc
 brew install --cask whatsapp
 ```
@@ -95,12 +94,11 @@ brew install --cask whatsapp
 10. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
 11. Retro video game emulator.
 12. For thumbnails for mkv and other file formats.
-13. Another powerful email client.
-14. For sideloading more VR content onto Oculus Quest.
-15. Unlock higher brightness range on the display. Requires a licence.
-16. For remote access to other devices, e.g., a NAS.
-17. Manager for Lightroom and other Adobe products.
-18. Desktop client for Gemini's chat interface.
+13. For sideloading more VR content onto Oculus Quest.
+14. Unlock higher brightness range on the display. Requires a licence.
+15. For remote access to other devices, e.g., a NAS.
+16. Manager for Lightroom and other Adobe products.
+17. Desktop client for Gemini's chat interface.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
