@@ -15,10 +15,10 @@ Install Homebrew with the instructions at <https://brew.sh/>.(1) This should als
 ## Useful CLI utilities
 
 ```sh
+brew install --cask antigravity-cli
 brew install emacs  # (1)
 brew install git  # (2)
 brew link --overwrite git  # (3)
-brew install gemini-cli
 brew install gnupg  # (4)
 brew install poetry  # (5)
 brew install pyenv  # (6)
