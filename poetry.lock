@@ -844,21 +844,21 @@ files = [
 
 [[package]]
 name = "termynal"
-version = "0.11.1"
+version = "0.14.0"
 description = "A lightweight and modern animated terminal window"
 optional = false
-python-versions = ">=3.8.1,<4.0.0"
+python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "termynal-0.11.1-py3-none-any.whl", hash = "sha256:553fc58b126a0482b71a442263d33a9b47fb69868a7fdd6cc36dc9f006aab7a2"},
-    {file = "termynal-0.11.1.tar.gz", hash = "sha256:ce70d264a649d26365bf72b8cfc5aa2bf903adafebc1027347343779a8695ff0"},
+    {file = "termynal-0.14.0-py3-none-any.whl", hash = "sha256:b5147545e29256d35148251f5c2d3d23dec1d2fb0b4ba464ff330a7de8b56fc6"},
+    {file = "termynal-0.14.0.tar.gz", hash = "sha256:2918a1a6cf468497fbb3a72dc3726743988829eef1136d0c78a81df70ec869f6"},
 ]
 
 [package.dependencies]
-markdown = "*"
+markdown = ">=3"
 
 [package.extras]
-mkdocs = ["mkdocs (>=1.4,<2.0)"]
+mkdocs = ["mkdocs (>=1.4)"]
 
 [[package]]
 name = "urllib3"
@@ -977,4 +977,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "ab2160abd76f4734ee8523e8b4af05b006fab88f8bffd5181a34f0a994778505"
+content-hash = "2c43b502e72983c30c5eec1ff3c10e18edcc19532a9eb7b5871de5f204720245"
