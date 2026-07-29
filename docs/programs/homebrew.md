@@ -44,6 +44,7 @@ brew install zsh  # (9)
 Install the following GUI applications with
 
 ```sh
+brew install --cask 1password
 brew install --cask adobe-creative-cloud # (15)
 brew install --cask android-file-transfer  # (1)
 brew install --cask ankerwork  # (2)
