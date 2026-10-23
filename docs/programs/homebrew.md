@@ -49,7 +49,6 @@ brew install --cask adobe-creative-cloud # (15)
 brew install --cask android-file-transfer  # (1)
 brew install --cask ankerwork  # (2)
 brew install --cask antigravity-ide
-brew install --cask arc
 brew install --cask bartender  # (3)
 brew install --cask blackhole-64ch  # (4)
 brew install --cask chatgpt
@@ -77,6 +76,7 @@ brew install --cask sidequest  # (12)
 brew install --cask steam
 brew install --cask surfshark
 brew install --cask tailscale-app  # (14)
+brew install --cask thebrowsercompany-dia
 brew install --cask the-unarchiver  # (17)
 brew install --cask todoist
 brew install --cask vivid  # (13)
