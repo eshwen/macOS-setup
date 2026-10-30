@@ -45,62 +45,60 @@ Install the following GUI applications with
 
 ```sh
 brew install --cask 1password
-brew install --cask adobe-creative-cloud # (15)
+brew install --cask adobe-creative-cloud # (14)
 brew install --cask android-file-transfer  # (1)
 brew install --cask ankerwork  # (2)
 brew install --cask antigravity-ide
-brew install --cask bartender  # (3)
-brew install --cask blackhole-64ch  # (4)
+brew install --cask blackhole-64ch  # (3)
 brew install --cask chatgpt
 brew install --cask discord
 brew install --cask docker-desktop
-brew install --cask filebot --force --no-quarantine  # (5)
+brew install --cask filebot --force --no-quarantine  # (4)
 brew install --cask github
 brew install --cask google-chrome
 brew install --cask google-drive
-brew install --cask google-gemini  # (16)
+brew install --cask google-gemini  # (15)
 brew install --cask handbrake
-brew install --cask hyper  # (6)
+brew install --cask hyper  # (5)
 brew install --cask jetbrains-toolbox
 brew install --cask logi-options+
-brew install --cask mactex  # (7)
-brew install --cask mimestream  # (8)
-brew install --cask mkvtoolnix  # (9)
+brew install --cask mactex  # (6)
+brew install --cask mimestream  # (7)
+brew install --cask mkvtoolnix  # (8)
 brew install --cask obsidian
-brew install --cask openemu  # (10)
+brew install --cask openemu  # (9)
 brew install --cask plex
-brew install --cask quicklook-video  # (11)
+brew install --cask quicklook-video  # (10)
 brew install --cask raindropio
 brew install --cask runescape
-brew install --cask sidequest  # (12)
+brew install --cask sidequest  # (11)
 brew install --cask steam
 brew install --cask surfshark
-brew install --cask tailscale-app  # (14)
+brew install --cask tailscale-app  # (13)
 brew install --cask thebrowsercompany-dia
-brew install --cask the-unarchiver  # (17)
+brew install --cask the-unarchiver  # (16)
 brew install --cask todoist
-brew install --cask vivid  # (13)
+brew install --cask vivid  # (12)
 brew install --cask vlc
 brew install --cask whatsapp
 ```
 
 1. For copying files to Oculus Quest.
 2. For configuring my webcam.
-3. For menu bar organisation. Requires a licence.
-4. For capturing audio output alongside a screen recording.
-5. For batch renaming of files. Additional options required to start up properly.
-6. A nicer, modern terminal.
-7. For MacTeX distro of TeXLive with GUI applications.
-8. A modern, macOS-native Gmail client. Requires a subscription.
-9. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
-10. Retro video game emulator.
-11. For thumbnails for mkv and other file formats.
-12. For sideloading more VR content onto Oculus Quest.
-13. Unlock higher brightness range on the display. Requires a licence.
-14. For remote access to other devices, e.g., a NAS.
-15. Manager for Lightroom and other Adobe products.
-16. Desktop client for Gemini's chat interface.
-17. A more versatile tool for decompressing archives than the built-in one.
+3. For capturing audio output alongside a screen recording.
+4. For batch renaming of files. Additional options required to start up properly.
+5. A nicer, modern terminal.
+6. For MacTeX distro of TeXLive with GUI applications.
+7. A modern, macOS-native Gmail client. Requires a subscription.
+8. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
+9. Retro video game emulator.
+10. For thumbnails for mkv and other file formats.
+11. For sideloading more VR content onto Oculus Quest.
+12. Unlock higher brightness range on the display. Requires a licence.
+13. For remote access to other devices, e.g., a NAS.
+14. Manager for Lightroom and other Adobe products.
+15. Desktop client for Gemini's chat interface.
+16. A more versatile tool for decompressing archives than the built-in one.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
