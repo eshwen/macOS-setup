@@ -76,15 +76,3 @@ conda deactivate
 ## Dependencies
 
 See <https://github.com/eshwen/ds-python-boilerplate> for a list of common Python dependencies for data science.
-
-## Tensorflow
-
-Tensorflow runs natively on Apple Silicon, so it can be added like any other dependency:
-
-```sh
-uv add tensorflow
-```
-
-For GPU acceleration, also add Apple's Metal plugin with `uv add tensorflow-metal`. It tends to lag behind Tensorflow releases, so check which Tensorflow and Python versions it supports first.
-
-See also: <https://developer.apple.com/metal/tensorflow-plugin/>
