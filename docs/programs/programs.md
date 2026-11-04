@@ -14,10 +14,13 @@ While the aim is to install everything with Homebrew, not all programs are avail
 
 - [Fujifilm X RAW Studio]
 - [Glow]
+- [OpenEmu] (its Homebrew cask is disabled because it fails Gatekeeper checks)
 - [Viltrox Lens]
 
 [Fujifilm X RAW Studio]: https://www.fujifilm-x.com/en-gb/products/software/x-raw-studio/
 
 [Glow]: https://macglow.app/
+
+[OpenEmu]: https://openemu.org/
 
 [Viltrox Lens]: https://viltrox.com/pages/download-center-1

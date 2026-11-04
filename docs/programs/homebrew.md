@@ -45,7 +45,7 @@ Install the following GUI applications with
 
 ```sh
 brew install --cask 1password
-brew install --cask adobe-creative-cloud # (14)
+brew install --cask adobe-creative-cloud # (13)
 brew install --cask android-file-transfer  # (1)
 brew install --cask ankerwork  # (2)
 brew install --cask antigravity-ide
@@ -57,28 +57,27 @@ brew install --cask filebot --force --no-quarantine  # (4)
 brew install --cask github
 brew install --cask google-chrome
 brew install --cask google-drive
-brew install --cask google-gemini  # (15)
+brew install --cask google-gemini  # (14)
 brew install --cask handbrake
 brew install --cask hyper  # (5)
 brew install --cask jetbrains-toolbox
 brew install --cask logi-options+
-brew install --cask mactex  # (6)
+brew install --cask mactex-no-gui  # (6)
 brew install --cask mimestream  # (7)
 brew install --cask mkvtoolnix  # (8)
 brew install --cask obsidian
-brew install --cask openemu  # (9)
 brew install --cask plex
-brew install --cask quicklook-video  # (10)
+brew install --cask quicklook-video  # (9)
 brew install --cask raindropio
 brew install --cask runescape
-brew install --cask sidequest  # (11)
+brew install --cask sidequest  # (10)
 brew install --cask steam
 brew install --cask surfshark
-brew install --cask tailscale-app  # (13)
+brew install --cask tailscale-app  # (12)
 brew install --cask thebrowsercompany-dia
-brew install --cask the-unarchiver  # (16)
+brew install --cask the-unarchiver  # (15)
 brew install --cask todoist
-brew install --cask vivid  # (12)
+brew install --cask vivid  # (11)
 brew install --cask vlc
 brew install --cask whatsapp
 ```
@@ -88,17 +87,16 @@ brew install --cask whatsapp
 3. For capturing audio output alongside a screen recording.
 4. For batch renaming of files. Additional options required to start up properly.
 5. A nicer, modern terminal.
-6. For MacTeX distro of TeXLive with GUI applications.
+6. For the MacTeX distribution of TeX Live, without the GUI applications. See [LaTeX](./latex.md).
 7. A modern, macOS-native Gmail client. Requires a subscription.
 8. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
-9. Retro video game emulator.
-10. For thumbnails for mkv and other file formats.
-11. For sideloading more VR content onto Oculus Quest.
-12. Unlock higher brightness range on the display. Requires a licence.
-13. For remote access to other devices, e.g., a NAS.
-14. Manager for Lightroom and other Adobe products.
-15. Desktop client for Gemini's chat interface.
-16. A more versatile tool for decompressing archives than the built-in one.
+9. For thumbnails for mkv and other file formats.
+10. For sideloading more VR content onto Oculus Quest.
+11. Unlock higher brightness range on the display. Requires a licence.
+12. For remote access to other devices, e.g., a NAS.
+13. Manager for Lightroom and other Adobe products.
+14. Desktop client for Gemini's chat interface.
+15. A more versatile tool for decompressing archives than the built-in one.
 
 Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
 
