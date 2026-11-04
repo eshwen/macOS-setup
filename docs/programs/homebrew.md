@@ -62,7 +62,7 @@ brew install --cask handbrake
 brew install --cask hyper  # (5)
 brew install --cask jetbrains-toolbox
 brew install --cask logi-options+
-brew install --cask mactex  # (6)
+brew install --cask mactex-no-gui  # (6)
 brew install --cask mimestream  # (7)
 brew install --cask mkvtoolnix  # (8)
 brew install --cask obsidian
@@ -88,7 +88,7 @@ brew install --cask whatsapp
 3. For capturing audio output alongside a screen recording.
 4. For batch renaming of files. Additional options required to start up properly.
 5. A nicer, modern terminal.
-6. For MacTeX distro of TeXLive with GUI applications.
+6. For the MacTeX distribution of TeX Live, without the GUI applications. See [LaTeX](./latex.md).
 7. A modern, macOS-native Gmail client. Requires a subscription.
 8. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
 9. Retro video game emulator.

@@ -2,13 +2,11 @@
 
 ## TeX Live
 
-TeX Live is installed under the `mactex` cask with Homebrew. As well as the actual TeX backend, it may bundle the spelling utility cocoAspell, and fronted GUI applications like BibDesk, TeX Live Utility, LaTeXiT, and TeXShop. Uninstall the latter two, since VS Code is way better than TeXShop, and I've never needed LaTeXiT. For the former three, if they are not installed by default do so with
+TeX Live is installed with the `mactex-no-gui` cask in [Homebrew](./homebrew.md). It's the full MacTeX distribution without the GUI applications like TeXShop and LaTeXiT, which I don't need since VS Code is way better. Install the two GUI applications I do use as separate casks, so Homebrew keeps them up to date:
 
 ```sh
-tex_dir="/Applications/TeX"
-mkdir $tex_dir
-brew install --cask bibdesk --appdir $tex_dir  # (1)
-brew install --cask tex-live-utility --appdir $tex_dir  # (2)
+brew install --cask bibdesk --appdir /Applications/TeX  # (1)
+brew install --cask tex-live-utility --appdir /Applications/TeX  # (2)
 ```
 
 1. For managing BibTeX references.
