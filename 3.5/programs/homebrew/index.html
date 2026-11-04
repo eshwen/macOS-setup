@@ -988,7 +988,7 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
 <p class="annotate">Install Homebrew with the instructions at <a href="https://brew.sh/">https://brew.sh/</a>.(1) This should also install the XCode Command Line Tools which is useful for software development.(2)</p>
 <ol>
-<li>You may need to manually add the Homebrew executable to your <code>PATH</code>. See <a href="../cli/#zshrc">cli.md/#zshrc</a></li>
+<li>The installer prints the line to add Homebrew to your <code>PATH</code>. On Apple Silicon, it's <code>eval "$(/opt/homebrew/bin/brew shellenv)"</code> in <code>~/.zprofile</code>.</li>
 <li>The manpage is at <a href="https://docs.brew.sh/Manpage">https://docs.brew.sh/Manpage</a>, containing a bunch of useful commands like <code>autoremove</code> (to remove unused dependencies).</li>
 </ol>
 <h2 id="useful-cli-utilities">Useful CLI utilities<a class="headerlink" href="#useful-cli-utilities" title="Permanent link">⚓︎</a></h2>
@@ -1000,26 +1000,26 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>poetry<span class="w">  </span><span class="c1"># (5)</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos=" 7 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>pyenv<span class="w">  </span><span class="c1"># (6)</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos=" 8 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>tree<span class="w">  </span><span class="c1"># (7)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>uv<span class="w">  </span><span class="c1"># (10)</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><a href="#__codelineno-0-10"><span class="linenos" data-linenos="10 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>wget<span class="w">  </span><span class="c1"># (8)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><a href="#__codelineno-0-11"><span class="linenos" data-linenos="11 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>zsh<span class="w">  </span><span class="c1"># (9)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>uv<span class="w">  </span><span class="c1"># (8)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><a href="#__codelineno-0-10"><span class="linenos" data-linenos="10 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>wget<span class="w">  </span><span class="c1"># (9)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><a href="#__codelineno-0-11"><span class="linenos" data-linenos="11 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>zsh<span class="w">  </span><span class="c1"># (10)</span>
 </code></pre></div>
 <ol>
 <li>Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do <code>brew reinstall --cask --no-quarantine emacs</code>.</li>
 <li>For a newer version than that bundled with macOS.</li>
 <li>So it's linked by default instead of the version bundled with macOS.</li>
 <li>GPG key generation utility (for signing Git commits).</li>
-<li>For Python project management.</li>
-<li>Best way of managing Python installs on Mac.</li>
+<li>For working in repos that still use Poetry. Use uv for everything else.</li>
+<li>For working in repos that still use pyenv. Use uv for everything else.</li>
 <li>Show directory trees (use <code>-L &lt;levels&gt;</code> options to show set number of levels).</li>
+<li>The default for managing Python installs, projects and environments. See <a href="../python/">Python</a>.</li>
 <li>For <code>wget</code> command, like on linux.</li>
 <li>For a newer version than that bundled with macOS.</li>
-<li>An Python project manager even more modern than Poetry.</li>
 </ol>
 <h2 id="gui-applications">GUI applications<a class="headerlink" href="#gui-applications" title="Permanent link">⚓︎</a></h2>
 <p>Install the following GUI applications with</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos=" 1 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>1password
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos=" 2 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>adobe-creative-cloud<span class="w"> </span><span class="c1"># (14)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos=" 2 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>adobe-creative-cloud<span class="w"> </span><span class="c1"># (13)</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos=" 3 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>android-file-transfer<span class="w">  </span><span class="c1"># (1)</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos=" 4 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>ankerwork<span class="w">  </span><span class="c1"># (2)</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos=" 5 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>antigravity-ide
@@ -1031,30 +1031,29 @@
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><a href="#__codelineno-1-11"><span class="linenos" data-linenos="11 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>github
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a><a href="#__codelineno-1-12"><span class="linenos" data-linenos="12 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>google-chrome
 <a id="__codelineno-1-13" name="__codelineno-1-13"></a><a href="#__codelineno-1-13"><span class="linenos" data-linenos="13 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>google-drive
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><a href="#__codelineno-1-14"><span class="linenos" data-linenos="14 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>google-gemini<span class="w">  </span><span class="c1"># (15)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><a href="#__codelineno-1-14"><span class="linenos" data-linenos="14 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>google-gemini<span class="w">  </span><span class="c1"># (14)</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><a href="#__codelineno-1-15"><span class="linenos" data-linenos="15 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>handbrake
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a><a href="#__codelineno-1-16"><span class="linenos" data-linenos="16 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>hyper<span class="w">  </span><span class="c1"># (5)</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17"></a><a href="#__codelineno-1-17"><span class="linenos" data-linenos="17 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>jetbrains-toolbox
 <a id="__codelineno-1-18" name="__codelineno-1-18"></a><a href="#__codelineno-1-18"><span class="linenos" data-linenos="18 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>logi-options+
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><a href="#__codelineno-1-19"><span class="linenos" data-linenos="19 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>mactex<span class="w">  </span><span class="c1"># (6)</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><a href="#__codelineno-1-19"><span class="linenos" data-linenos="19 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>mactex-no-gui<span class="w">  </span><span class="c1"># (6)</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20"></a><a href="#__codelineno-1-20"><span class="linenos" data-linenos="20 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>mimestream<span class="w">  </span><span class="c1"># (7)</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21"></a><a href="#__codelineno-1-21"><span class="linenos" data-linenos="21 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>mkvtoolnix<span class="w">  </span><span class="c1"># (8)</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a><a href="#__codelineno-1-22"><span class="linenos" data-linenos="22 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>obsidian
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><a href="#__codelineno-1-23"><span class="linenos" data-linenos="23 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>openemu<span class="w">  </span><span class="c1"># (9)</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><a href="#__codelineno-1-24"><span class="linenos" data-linenos="24 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>plex
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><a href="#__codelineno-1-25"><span class="linenos" data-linenos="25 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>quicklook-video<span class="w">  </span><span class="c1"># (10)</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><a href="#__codelineno-1-26"><span class="linenos" data-linenos="26 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>raindropio
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><a href="#__codelineno-1-27"><span class="linenos" data-linenos="27 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>runescape
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><a href="#__codelineno-1-28"><span class="linenos" data-linenos="28 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>sidequest<span class="w">  </span><span class="c1"># (11)</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><a href="#__codelineno-1-29"><span class="linenos" data-linenos="29 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>steam
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><a href="#__codelineno-1-30"><span class="linenos" data-linenos="30 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>surfshark
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><a href="#__codelineno-1-31"><span class="linenos" data-linenos="31 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>tailscale-app<span class="w">  </span><span class="c1"># (13)</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a><a href="#__codelineno-1-32"><span class="linenos" data-linenos="32 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>thebrowsercompany-dia
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><a href="#__codelineno-1-33"><span class="linenos" data-linenos="33 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>the-unarchiver<span class="w">  </span><span class="c1"># (16)</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a><a href="#__codelineno-1-34"><span class="linenos" data-linenos="34 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>todoist
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a><a href="#__codelineno-1-35"><span class="linenos" data-linenos="35 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>vivid<span class="w">  </span><span class="c1"># (12)</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a><a href="#__codelineno-1-36"><span class="linenos" data-linenos="36 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>vlc
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a><a href="#__codelineno-1-37"><span class="linenos" data-linenos="37 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>whatsapp
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><a href="#__codelineno-1-23"><span class="linenos" data-linenos="23 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>plex
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><a href="#__codelineno-1-24"><span class="linenos" data-linenos="24 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>quicklook-video<span class="w">  </span><span class="c1"># (9)</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><a href="#__codelineno-1-25"><span class="linenos" data-linenos="25 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>raindropio
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><a href="#__codelineno-1-26"><span class="linenos" data-linenos="26 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>runescape
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><a href="#__codelineno-1-27"><span class="linenos" data-linenos="27 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>sidequest<span class="w">  </span><span class="c1"># (10)</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><a href="#__codelineno-1-28"><span class="linenos" data-linenos="28 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>steam
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><a href="#__codelineno-1-29"><span class="linenos" data-linenos="29 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>surfshark
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><a href="#__codelineno-1-30"><span class="linenos" data-linenos="30 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>tailscale-app<span class="w">  </span><span class="c1"># (12)</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a><a href="#__codelineno-1-31"><span class="linenos" data-linenos="31 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>thebrowsercompany-dia
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><a href="#__codelineno-1-32"><span class="linenos" data-linenos="32 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>the-unarchiver<span class="w">  </span><span class="c1"># (15)</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><a href="#__codelineno-1-33"><span class="linenos" data-linenos="33 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>todoist
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><a href="#__codelineno-1-34"><span class="linenos" data-linenos="34 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>vivid<span class="w">  </span><span class="c1"># (11)</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a><a href="#__codelineno-1-35"><span class="linenos" data-linenos="35 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>vlc
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><a href="#__codelineno-1-36"><span class="linenos" data-linenos="36 "></span></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>whatsapp
 </code></pre></div>
 <ol>
 <li>For copying files to Oculus Quest.</li>
@@ -1062,10 +1061,9 @@
 <li>For capturing audio output alongside a screen recording.</li>
 <li>For batch renaming of files. Additional options required to start up properly.</li>
 <li>A nicer, modern terminal.</li>
-<li>For MacTeX distro of TeXLive with GUI applications.</li>
+<li>For the MacTeX distribution of TeX Live, without the GUI applications. See <a href="../latex/">LaTeX</a>.</li>
 <li>A modern, macOS-native Gmail client. Requires a subscription.</li>
 <li>For quickly adding/removing embedded audio and subtitle tracks from MKV files.</li>
-<li>Retro video game emulator.</li>
 <li>For thumbnails for mkv and other file formats.</li>
 <li>For sideloading more VR content onto Oculus Quest.</li>
 <li>Unlock higher brightness range on the display. Requires a licence.</li>
