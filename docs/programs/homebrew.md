@@ -9,7 +9,7 @@ It should keep them up to date without requiring conscious individual checks, an
 Install Homebrew with the instructions at <https://brew.sh/>.(1) This should also install the XCode Command Line Tools which is useful for software development.(2)
 { .annotate }
 
-1. You may need to manually add the Homebrew executable to your `PATH`. See [cli.md/#zshrc](./cli.md/#zshrc)
+1. The installer prints the line to add Homebrew to your `PATH`. On Apple Silicon, it's `eval "$(/opt/homebrew/bin/brew shellenv)"` in `~/.zprofile`.
 2. The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
 
 ## Useful CLI utilities
@@ -23,21 +23,21 @@ brew install gnupg  # (4)
 brew install poetry  # (5)
 brew install pyenv  # (6)
 brew install tree  # (7)
-brew install uv  # (10)
-brew install wget  # (8)
-brew install zsh  # (9)
+brew install uv  # (8)
+brew install wget  # (9)
+brew install zsh  # (10)
 ```
 
 1. Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do `brew reinstall --cask --no-quarantine emacs`.
 2. For a newer version than that bundled with macOS.
 3. So it's linked by default instead of the version bundled with macOS.
 4. GPG key generation utility (for signing Git commits).
-5. For Python project management.
-6. Best way of managing Python installs on Mac.
+5. For working in repos that still use Poetry. Use uv for everything else.
+6. For working in repos that still use pyenv. Use uv for everything else.
 7. Show directory trees (use `-L <levels>` options to show set number of levels).
-8. For `wget` command, like on linux.
-9. For a newer version than that bundled with macOS.
-10. An Python project manager even more modern than Poetry.
+8. The default for managing Python installs, projects and environments. See [Python](./python.md).
+9. For `wget` command, like on linux.
+10. For a newer version than that bundled with macOS.
 
 ## GUI applications
 
