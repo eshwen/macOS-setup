@@ -6,99 +6,29 @@ It should keep them up to date without requiring conscious individual checks, an
 
 ## Installation
 
-Install Homebrew with the instructions at <https://brew.sh/>.(1) This should also install the XCode Command Line Tools which is useful for software development.(2)
+`bootstrap.sh` installs Homebrew and everything in the [Brewfile](https://github.com/eshwen/macOS-setup/blob/main/Brewfile). To install Homebrew by hand, follow the instructions at <https://brew.sh/>.(1) This should also install the Xcode Command Line Tools, which are useful for software development.(2)
 { .annotate }
 
 1. The installer prints the line to add Homebrew to your `PATH`. On Apple Silicon, it's `eval "$(/opt/homebrew/bin/brew shellenv)"` in `~/.zprofile`.
 2. The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
 
-## Useful CLI utilities
+## Packages
 
-```sh
-brew install --cask antigravity-cli
-brew install emacs  # (1)
-brew install git  # (2)
-brew link --overwrite git  # (3)
-brew install gnupg  # (4)
-brew install poetry  # (5)
-brew install pyenv  # (6)
-brew install tree  # (7)
-brew install uv  # (8)
-brew install wget  # (9)
-brew install zsh  # (10)
+Everything I install with Homebrew is in the Brewfile:
+
+```ruby
+--8<-- "Brewfile"
 ```
 
-1. Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do `brew reinstall --cask --no-quarantine emacs`.
-2. For a newer version than that bundled with macOS.
-3. So it's linked by default instead of the version bundled with macOS.
-4. GPG key generation utility (for signing Git commits).
-5. For working in repos that still use Poetry. Use uv for everything else.
-6. For working in repos that still use pyenv. Use uv for everything else.
-7. Show directory trees (use `-L <levels>` options to show set number of levels).
-8. The default for managing Python installs, projects and environments. See [Python](./python.md).
-9. For `wget` command, like on linux.
-10. For a newer version than that bundled with macOS.
-
-## GUI applications
-
-Install the following GUI applications with
+Install or update them all with
 
 ```sh
-brew install --cask 1password
-brew install --cask adobe-creative-cloud # (13)
-brew install --cask android-file-transfer  # (1)
-brew install --cask ankerwork  # (2)
-brew install --cask antigravity-ide
-brew install --cask blackhole-64ch  # (3)
-brew install --cask chatgpt
-brew install --cask discord
-brew install --cask docker-desktop
-brew install --cask filebot --force --no-quarantine  # (4)
-brew install --cask github
-brew install --cask google-chrome
-brew install --cask google-drive
-brew install --cask google-gemini  # (14)
-brew install --cask handbrake
-brew install --cask hyper  # (5)
-brew install --cask jetbrains-toolbox
-brew install --cask logi-options+
-brew install --cask mactex-no-gui  # (6)
-brew install --cask mimestream  # (7)
-brew install --cask mkvtoolnix  # (8)
-brew install --cask obsidian
-brew install --cask plex
-brew install --cask quicklook-video  # (9)
-brew install --cask raindropio
-brew install --cask runescape
-brew install --cask sidequest  # (10)
-brew install --cask steam
-brew install --cask surfshark
-brew install --cask tailscale-app  # (12)
-brew install --cask thebrowsercompany-dia
-brew install --cask the-unarchiver  # (15)
-brew install --cask todoist
-brew install --cask vivid  # (11)
-brew install --cask vlc
-brew install --cask whatsapp
+brew bundle install --file ~/GitHub/macOS-setup/Brewfile
 ```
 
-1. For copying files to Oculus Quest.
-2. For configuring my webcam.
-3. For capturing audio output alongside a screen recording.
-4. For batch renaming of files. Additional options required to start up properly.
-5. A nicer, modern terminal.
-6. For the MacTeX distribution of TeX Live, without the GUI applications. See [LaTeX](./latex.md).
-7. A modern, macOS-native Gmail client. Requires a subscription.
-8. For quickly adding/removing embedded audio and subtitle tracks from MKV files.
-9. For thumbnails for mkv and other file formats.
-10. For sideloading more VR content onto Oculus Quest.
-11. Unlock higher brightness range on the display. Requires a licence.
-12. For remote access to other devices, e.g., a NAS.
-13. Manager for Lightroom and other Adobe products.
-14. Desktop client for Gemini's chat interface.
-15. A more versatile tool for decompressing archives than the built-in one.
+To add a package, add it to the Brewfile rather than running `brew install`, so it's installed on every Mac. `brew bundle cleanup --file ~/GitHub/macOS-setup/Brewfile` lists anything installed that isn't in the Brewfile (add `--force` to uninstall them).
 
-Typically, the `--cask` option is used when you want to install GUI applications. Certain packages like `handbrake` can operate solely on the command line. So in that case, just doing `brew install handbrake` would install the _formula_ (the CLI-only version), where `brew install --cask handbrake` will install the GUI application that sits in my `Applications` folder.
+`brew` lines install _formulae_ (command line tools), and `cask` lines install GUI applications into the `Applications` folder. Some programs come as both, e.g., `handbrake` is the command line version and `handbrake-app` is the GUI.
 
 For any issues with opening these programs, see <https://support.apple.com/en-gb/guide/mac-help/mh40616/mac>.
 
@@ -160,21 +90,3 @@ Uninstall unused dependencies of formulae/casks with
 ```sh
 brew autoremove
 ```
-
-## Porting
-
-All the programs Homebrew has installed can be easily ported to a new machine.
-
-1. Generate a manifest of installed formulae and casks with
-
-    ```sh
-    brew bundle dump
-    ```
-
-    1. This will create a `Brewfile` in the user's home directory
-
-2. Copy the `Brewfile` to the new machine and install the contents with
-
-    ```sh
-    brew bundle install
-    ```

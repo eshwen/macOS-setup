@@ -2,15 +2,7 @@
 
 ## TeX Live
 
-TeX Live is installed with the `mactex-no-gui` cask in [Homebrew](./homebrew.md). It's the full MacTeX distribution without the GUI applications like TeXShop and LaTeXiT, which I don't need since VS Code is way better. Install the two GUI applications I do use as separate casks, so Homebrew keeps them up to date:
-
-```sh
-brew install --cask bibdesk --appdir /Applications/TeX  # (1)
-brew install --cask tex-live-utility --appdir /Applications/TeX  # (2)
-```
-
-1. For managing BibTeX references.
-2. For updating TeX Live packages.
+TeX Live is installed with the `mactex-no-gui` cask in the [Brewfile](./homebrew.md). It's the full MacTeX distribution without the GUI applications like TeXShop and LaTeXiT, which I don't need since VS Code is way better. The two GUI applications I do use, BibDesk (for managing BibTeX references) and TeX Live Utility (for updating TeX Live packages), are separate casks in the Brewfile, so Homebrew keeps them up to date. They're installed into `/Applications/TeX`.
 
 MacTeX/TeX Live installs as root (possibly to avoid large installs and conflicts for multiple users). So if avoiding TeX Live Utility to update packages, I can go via the command line with `sudo` privileges. Check for outdated packages with
 

@@ -16,7 +16,7 @@ There's also a [tmignore] tool to automatically exclude files from your `.gitign
 
 ## System sounds
 
-I don't like some of the system sound effects in Big Sur. I've uploaded [Basso] and [Glass] from Catalina. To use them as system sounds, do
+I don't like some of the system sound effects in Big Sur. I've uploaded [Basso] and [Glass] from Catalina. `bootstrap.sh` copies them to `~/Library/Sounds`. To do it by hand, run
 
 ```bash
 mkdir ~/Library/Sounds
@@ -26,6 +26,8 @@ cp Basso_Catalina.aiff Glass_Catalina.aiff ~/Library/Sounds/
 Then, in System Preferences :material-arrow-right: Sound, they should be available.
 
 ## Configuration options
+
+`bootstrap.sh` applies these settings. To change them by hand,
 
 - Enable 3-finger drag on the trackpad
     - Go to **System Preferences** :material-arrow-right: **Accessibility** :material-arrow-right: **Pointer Control**
