@@ -28,7 +28,6 @@ cask "google-chrome"
 cask "google-drive"
 cask "google-gemini" # Desktop client for Gemini's chat interface
 cask "handbrake-app"
-cask "hyper" # A nicer, modern terminal
 cask "jetbrains-toolbox"
 cask "logi-options+"
 cask "mactex-no-gui" # TeX Live, without TeXShop, LaTeXiT, etc.
@@ -49,4 +48,5 @@ cask "thebrowsercompany-dia"
 cask "todoist-app"
 cask "vivid-app" # Higher display brightness. Requires a licence
 cask "vlc"
+cask "warp" # A nicer, modern terminal with agentic capabilities and settings sync
 cask "whatsapp"
