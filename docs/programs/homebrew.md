@@ -9,7 +9,7 @@ It should keep them up to date without requiring conscious individual checks, an
 Install Homebrew with the instructions at <https://brew.sh/>.(1) This should also install the XCode Command Line Tools which is useful for software development.(2)
 { .annotate }
 
-1. You may need to manually add the Homebrew executable to your `PATH`. See [cli.md/#zshrc](./cli.md/#zshrc)
+1. The installer prints the line to add Homebrew to your `PATH`. On Apple Silicon, it's `eval "$(/opt/homebrew/bin/brew shellenv)"` in `~/.zprofile`.
 2. The manpage is at <https://docs.brew.sh/Manpage>, containing a bunch of useful commands like `autoremove` (to remove unused dependencies).
 
 ## Useful CLI utilities
