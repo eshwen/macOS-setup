@@ -180,18 +180,3 @@ All the programs Homebrew has installed can be easily ported to a new machine.
     ```sh
     brew bundle install
     ```
-
-## Bartender 5 triggers
-
-Bartender contains functionality to show a (normally-hidden) menu bar item based on a trigger. These can be on specific WiFi connections, battery percentages, or shell scripts. New triggers can be added in Bartender's settings :material-arrow-right: Triggers.
-
-### Private Internet Access trigger
-
-One thing I would like to be aware of is when my VPN Private Internet Access (PIA) is active. The most robust trigger for this case is a script, pasting the following:
-
-```shell
-PATH="$PATH:/usr/local/bin"
-[[ "$(piactl get connectionstate)" != "Connected" ]]; echo "$?"
-```
-
-Now it will show the PIA icon when the VPN is connected. An unintuitive subtlety with these shell scripts is that Bartender designates `1` as True and `0` as False - the opposite of the Unix default! This is why the operator above is `!=` instead of `==`.
