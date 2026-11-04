@@ -17,6 +17,12 @@ It goes through these steps, explaining each one and asking before running it, s
 
 It's safe to re-run, e.g., after adding packages to the Brewfile. Steps that are already done are skipped without asking. If you've already cloned the repo, run `./bootstrap.sh` from it instead.
 
+To run every step without being asked, pass `--yes`:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/eshwen/macOS-setup/main/bootstrap.sh | bash -s -- --yes
+```
+
 ## Manual steps
 
 Once it finishes,

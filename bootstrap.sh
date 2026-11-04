@@ -4,6 +4,7 @@
 #   curl -fsSL https://raw.githubusercontent.com/eshwen/macOS-setup/main/bootstrap.sh | bash
 #
 # or run ./bootstrap.sh from a clone of the repo. Set MACOS_SETUP_DIR to change where the repo is cloned.
+# Pass --yes to run every step without asking (with curl: `| bash -s -- --yes`).
 set -euo pipefail
 shopt -s nullglob nocaseglob
 
@@ -14,6 +15,7 @@ DOCS_URL="https://eshwen.github.io/macOS-setup/"
 warnings=""
 skipped=""
 sudo_pid=""
+assume_yes=false
 
 log() { printf '\n\033[1;34m==> %s\033[0m\n' "$*"; }
 
@@ -32,6 +34,9 @@ confirm() {
     local answer
     log "$1"
     printf '    %s\n' "$2"
+    if $assume_yes; then
+        return 0
+    fi
     printf 'Continue? [Y/n] '
     read -r answer </dev/tty || die "Stopped"
     if [[ -z "$answer" || "$answer" == [Yy]* ]]; then
@@ -248,8 +253,18 @@ EOF
 }
 
 main() {
-    { : </dev/tty; } 2>/dev/null || die "Can't ask for confirmation without a terminal"
-    printf 'This sets up a new Mac. It explains each step and asks before running it, so you can skip any of them.\n'
+    local arg
+    for arg in "$@"; do
+        case "$arg" in
+        -y | --yes) assume_yes=true ;;
+        *) die "Unknown option: $arg. The only option is --yes, to run every step without asking" ;;
+        esac
+    done
+
+    if ! $assume_yes; then
+        { : </dev/tty; } 2>/dev/null || die "Can't ask for confirmation without a terminal. Pass --yes to run every step"
+        printf 'This sets up a new Mac. It explains each step and asks before running it, so you can skip any of them.\n'
+    fi
     install_rosetta
     install_homebrew
     find_repo
