@@ -31,6 +31,10 @@ nav = [
 [project.extra.version]
 provider = "mike"
 
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/eshwen"
+
 [project.plugins.autorefs]
 
 [project.plugins.mike]
