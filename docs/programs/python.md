@@ -4,7 +4,7 @@ Apparently, Python won't come bundled with macOS starting with v13. And only Pyt
 
 ## uv
 
-[uv](https://docs.astral.sh/uv/) manages Python installs, virtual environments, dependencies and CLI tools in one place, replacing `pyenv`, Poetry and `pipx`. Once it's been installed with Homebrew, install a recent version of Python with
+[uv](https://docs.astral.sh/uv/) manages Python installs, virtual environments, dependencies and CLI tools in one place, so it's the default for any new project. `pyenv` and Poetry are still installed with [Homebrew](./homebrew.md) for repos that use them. Once it's been installed with Homebrew, install a recent version of Python with
 
 ```sh
 uv python install <version>

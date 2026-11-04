@@ -20,20 +20,24 @@ brew install emacs  # (1)
 brew install git  # (2)
 brew link --overwrite git  # (3)
 brew install gnupg  # (4)
-brew install tree  # (5)
-brew install uv  # (6)
-brew install wget  # (7)
-brew install zsh  # (8)
+brew install poetry  # (5)
+brew install pyenv  # (6)
+brew install tree  # (7)
+brew install uv  # (8)
+brew install wget  # (9)
+brew install zsh  # (10)
 ```
 
 1. Since it's not provided by default as of macOS Catalina. If I can't run emacs after it's been installed, do `brew reinstall --cask --no-quarantine emacs`.
 2. For a newer version than that bundled with macOS.
 3. So it's linked by default instead of the version bundled with macOS.
 4. GPG key generation utility (for signing Git commits).
-5. Show directory trees (use `-L <levels>` options to show set number of levels).
-6. For managing Python installs and projects. See [Python](./python.md).
-7. For `wget` command, like on linux.
-8. For a newer version than that bundled with macOS.
+5. For working in repos that still use Poetry. Use uv for everything else.
+6. For working in repos that still use pyenv. Use uv for everything else.
+7. Show directory trees (use `-L <levels>` options to show set number of levels).
+8. The default for managing Python installs, projects and environments. See [Python](./python.md).
+9. For `wget` command, like on linux.
+10. For a newer version than that bundled with macOS.
 
 ## GUI applications
 
