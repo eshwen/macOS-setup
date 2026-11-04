@@ -48,7 +48,7 @@ autolabeler:
   - label: 'documentation'
     files:
       - 'README.md'
-      - 'mkdocs.yml'
+      - 'zensical.toml'
       - 'docs/**'
     branch:
       - '/docs{0,1}\/.+/'
