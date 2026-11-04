@@ -50,29 +50,6 @@ uv tool install <package>
 
 or run one without installing it with `uvx <package>`.
 
-## Anaconda
-
-For completeness, below are instructions to install Anaconda with Homebrew:
-
-```sh
-brew install --cask anaconda
-conda init "$(basename "${SHELL}")"  # (1)
-<exit and reopen shell>
-conda activate
-conda config --set auto_activate_base false
-conda deactivate
-```
-
-1. If `conda` executable doesn't work, run `$(brew --prefix)/anaconda3/bin/conda`
-
-Then, to install the Anaconda Navigator (a GUI for managing conda environments and installing related tools), do
-
-```sh
-conda activate
-conda install -c anaconda anaconda-navigator -y
-conda deactivate
-```
-
 ## Dependencies
 
 See <https://github.com/eshwen/ds-python-boilerplate> for a list of common Python dependencies for data science.
