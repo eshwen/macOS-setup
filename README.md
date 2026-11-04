@@ -6,7 +6,7 @@
 [![Python]](https://www.python.org/)
 [![uv]](https://github.com/astral-sh/uv)
 [![pre-commit]](https://pre-commit.com/)
-[![Built with Material for MkDocs]](https://squidfunk.github.io/mkdocs-material/)
+[![Built with Zensical]](https://zensical.org/)
 
 [![macOS]](https://www.apple.com/macos/)
 [![Homebrew]](https://brew.sh/)
@@ -34,7 +34,7 @@ Check out the docs by clicking the badge above.
 
 [pre-commit]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
 
-[Built with Material for MkDocs]: https://img.shields.io/badge/Material_for_MkDocs-526CFE?logo=MaterialForMkDocs&logoColor=white
+[Built with Zensical]: https://img.shields.io/badge/Zensical-FFA656?logo=zensical&logoColor=black
 
 [macOS]: https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white
 
