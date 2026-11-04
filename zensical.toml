@@ -51,27 +51,28 @@ features = [
   "content.code.annotate",
 ]
 
+# Palette toggle for automatic mode
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
-primary = "light blue"
-accent = "orange"
-toggle.icon = "material/brightness-auto"
+toggle.icon = "lucide/sun-moon"
 toggle.name = "Switch to light mode"
 
+# Palette toggle for light mode
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
-primary = "light blue"
-accent = "orange"
-toggle.icon = "material/brightness-7"
+primary = "deep purple"
+accent = "green"
+toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
+# Palette toggle for dark mode
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
-primary = "light blue"
-accent = "orange"
-toggle.icon = "material/brightness-4"
+primary = "purple"
+accent = "green"
+toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
 [project.markdown_extensions]
