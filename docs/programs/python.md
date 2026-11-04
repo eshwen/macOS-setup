@@ -2,31 +2,53 @@
 
 Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey.
 
-## pyenv
+## uv
 
-While Anaconda is a good environment manager, `pyenv` is the simplest and most lightweight option for pure Python. Once `pyenv` has been installed with Homebrew, install a recent version of Python with
-
-```sh
-pyenv install <version>
-```
-
-Multiple installations are supported, so I can have separate Python 2 and Python 3 environments, or even separate Python 3.X ones. Each is bundled with `pip` for external package dependency management. The active environment can be found with
+[uv](https://docs.astral.sh/uv/) manages Python installs, virtual environments, dependencies and CLI tools in one place, replacing `pyenv`, Poetry and `pipx`. Once it's been installed with Homebrew, install a recent version of Python with
 
 ```sh
-pyenv local
+uv python install <version>
 ```
 
-and can be switched to any other installation (applicable to the active directory) with
+Multiple installations are supported. List the installed and available versions with
 
 ```sh
-pyenv local <version>
+uv python list
 ```
 
-Change the global default Python version with
+Pin the version for the current project (written to `.python-version`) with
 
-```shell
-pyenv global <version>
+```sh
+uv python pin <version>
 ```
+
+Make a version the default `python` on the `PATH` with
+
+```sh
+uv python install <version> --default
+```
+
+### Projects
+
+Start a new project, add dependencies, and run code in its environment with
+
+```sh
+uv init
+uv add <package>
+uv run <command>
+```
+
+`uv sync` installs everything in `uv.lock` into `.venv`, e.g., after cloning a repo.
+
+### Tools
+
+Install Python CLI tools into their own isolated environments with
+
+```sh
+uv tool install <package>
+```
+
+or run one without installing it with `uvx <package>`.
 
 ## Anaconda
 
@@ -57,18 +79,12 @@ See <https://github.com/eshwen/ds-python-boilerplate> for a list of common Pytho
 
 ## Tensorflow
 
-If `pip install tensorflow` doesn't work, it may because it does not yet run natively on Apple Silicon. Run the following commands to get a usable installation:
+Tensorflow runs natively on Apple Silicon, so it can be added like any other dependency:
 
 ```sh
-pyenv install miniforge3
-pyenv local miniforge3
-conda install -c apple tensorflow-deps -y
-
-pip install -U pip
-pip install tensorflow-macos
-pip install tensorflow-metal  # Metal plugin for GPU acceleration
+uv add tensorflow
 ```
 
-Then, before using Tensorflow, do either `pyenv local miniforge3` to activate the environment it's installed in.
+For GPU acceleration, also add Apple's Metal plugin with `uv add tensorflow-metal`. It tends to lag behind Tensorflow releases, so check which Tensorflow and Python versions it supports first.
 
-See also: https://developer.apple.com/metal/tensorflow-plugin/
+See also: <https://developer.apple.com/metal/tensorflow-plugin/>
