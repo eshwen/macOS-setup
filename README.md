@@ -3,7 +3,7 @@
 [![Documentation]](https://eshwen.github.io/macOS-setup/index.html)
 [![Build]](https://github.com/eshwen/macOS-setup/actions/workflows/build.yaml)
 
-![Python]
+[![Python]](https://www.python.org/)
 [![uv]](https://github.com/astral-sh/uv)
 [![pre-commit]](https://pre-commit.com/)
 [![Built with Material for MkDocs]](https://squidfunk.github.io/mkdocs-material/)
