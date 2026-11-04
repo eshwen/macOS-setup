@@ -1,3 +1,0 @@
-# Get Option-leftarrow and Option-rightarrow key bindings for quickly moving left and right
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
