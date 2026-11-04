@@ -8,7 +8,7 @@
 [![pre-commit]](https://pre-commit.com/)
 [![Built with Material for MkDocs]](https://squidfunk.github.io/mkdocs-material/)
 
-![macOS]
+[![macOS]](https://www.apple.com/macos/)
 [![Homebrew]](https://brew.sh/)
 [![Oh My Zsh]](https://ohmyz.sh/)
 [![Warp]](https://www.warp.dev/)
