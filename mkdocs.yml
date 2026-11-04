@@ -25,16 +25,15 @@ nav:
       - mac_utilities/mac-utilities.md
 
 plugins:
-  - search:
-      lang: en
+  - search
   - autorefs
-  - section-index
   - mike:
       alias_type: symlink
       canonical_version: latest
 
 theme:
   name: material
+  variant: classic
   features:
     - navigation.tabs
     - navigation.tracking
@@ -69,6 +68,10 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+watch:
+  - README.md
+  - Brewfile
+
 extra_css:
   - css/code_select.css
 
@@ -89,7 +92,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
   - pymdownx.details
   - admonition
