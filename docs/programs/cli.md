@@ -2,10 +2,10 @@
 
 ## Rosetta 2
 
-Rosetta 2 is Apple's utility to translate Intel-based (x86) apps, so they're Apple Silicon-compatible. It's no longer bundled with macOS as of Monterey. If I try to open an x86 app, I'll be prompted to install it. Otherwise, I can type in the Terminal
+Rosetta 2 is Apple's utility to translate Intel-based (x86) apps, so they're Apple Silicon-compatible. It's no longer bundled with macOS as of Monterey. `bootstrap.sh` installs it, or I can type in the Terminal
 
 ```sh
-softwareupdate --install-rosetta
+softwareupdate --install-rosetta --agree-to-license
 ```
 
 ## Shell
@@ -32,19 +32,23 @@ If changing the shell, log out and log back in to ensure it takes effect.
 
 ### Extensions
 
+`bootstrap.sh` installs these, but they still need turning on in `~/.zshrc`:
+
 - [Oh My Zsh](https://ohmyz.sh/)
 - [zsh-autoswitch-virtualenv](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
-    - Follow the specific instructions to integrate with Oh My Zsh
+    - Add `autoswitch_virtualenv` to `plugins`
 - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
-    - Follow the specific instructions to integrate with Oh My Zsh
-- zsh-syntax-highlighting
-    - With `brew install zsh-syntax-highlighting`
+    - Set `ZSH_THEME="spaceship"`
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+    - Installed by Homebrew. Add `source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh` to the end of `~/.zshrc`
 
 ### Settings for Terminal
 
 Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
 
-1. Open the Terminal, and go to **Preferences** :material-arrow-right: **Profiles**
+`bootstrap.sh` imports it as the **Ocean_Esh** profile and makes it the default. To do it by hand,
+
+1. Open the Terminal, and go to **Settings** :material-arrow-right: **Profiles**
 2. Hit the three dots in the bottom left corner and click **Import...**
 3. Select the terminal preferences file and set it as the default
 

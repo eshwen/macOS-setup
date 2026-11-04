@@ -1,13 +1,33 @@
 # Installation
 
-1. Make a directory within the home folder called `GitHub` to store repos:
+Run the bootstrap script in the Terminal:
 
-    ```sh
-    mkdir $HOME/GitHub
-    ```
+```sh
+curl -fsSL https://raw.githubusercontent.com/eshwen/macOS-setup/main/bootstrap.sh | bash
+```
 
-2. Download [GitHub Desktop], then open it and sign in
+It goes through these steps, explaining each one and asking before running it, so you can skip any of them. It asks for your password the first time a step needs it:
 
-3. On this page, hit the **Code** button, followed by **Open with GitHub Desktop**. If prompted for a directory, store the repo in `/Users/<username>/GitHub/macOS-setup`
+1. Installs Rosetta 2 (on Apple Silicon), Homebrew and the Xcode Command Line Tools
+2. Clones this repo into `~/GitHub/macOS-setup` (set `MACOS_SETUP_DIR` to change this)
+3. Installs everything in the [Brewfile](../programs/homebrew.md)
+4. Copies the [fonts](../programs/programs.md#fonts) and [system sounds](../mac_utilities/mac-utilities.md#system-sounds), and installs [Garamond Expert](../programs/latex.md#garamond-expert) for LaTeX
+5. Applies the [trackpad and Finder settings](../mac_utilities/mac-utilities.md#configuration-options), and sets the [Terminal profile](../programs/cli.md#settings-for-terminal)
+6. Installs [Oh My Zsh and its extensions](../programs/cli.md#extensions)
 
-[GitHub Desktop]: https://desktop.github.com/
+It's safe to re-run, e.g., after adding packages to the Brewfile. Steps that are already done are skipped without asking. If you've already cloned the repo, run `./bootstrap.sh` from it instead.
+
+To run every step without being asked, pass `--yes`:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/eshwen/macOS-setup/main/bootstrap.sh | bash -s -- --yes
+```
+
+## Manual steps
+
+Once it finishes,
+
+1. Configure the [shell extensions](../programs/cli.md#extensions) in `~/.zshrc`
+2. Log out and back in so the trackpad settings take effect
+3. Sign in to apps, and install the [programs not available on Homebrew](../programs/programs.md#non-homebrew)
+4. Set up [verified Git commits](../programs/cli.md#verified-git-commits)

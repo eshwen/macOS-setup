@@ -4,7 +4,7 @@ Here you can find a list of programs that may be useful for Mac users. The list 
 
 ## Fonts
 
-There are some nice fonts I've found over the years in the [fonts] directory. To install them to the system's Font Book, just highlight them all in the Finder and double click.
+There are some nice fonts I've found over the years in the [fonts] directory. `bootstrap.sh` copies them to `~/Library/Fonts`. To install them by hand, highlight them all in the Finder and double click.
 
 [fonts]: https://github.com/eshwen/macOS-setup/tree/main/fonts
 
