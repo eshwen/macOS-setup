@@ -92,6 +92,25 @@ install_fonts_and_sounds() {
     copy_missing "$HOME/Library/Sounds" "$REPO_DIR"/*.aiff
 }
 
+install_garamond() {
+    local tmp texbin=/Library/TeX/texbin
+    local root_path="$texbin:/usr/bin:/bin:/usr/sbin:/sbin"
+    [[ -x "$texbin/tlmgr" ]] || return 0
+    "$texbin/kpsewhich" garamondx.sty >/dev/null && return 0
+
+    log "Installing Garamond Expert and other non-free TeX fonts"
+    tmp="$(mktemp -d)"
+    # texbin is only added to PATH in new shells. Keep root's PATH to system directories
+    if ! {
+        curl -fsSL -o "$tmp/install-getnonfreefonts" https://www.tug.org/fonts/getnonfreefonts/install-getnonfreefonts &&
+            sudo env PATH="$root_path" texlua "$tmp/install-getnonfreefonts" &&
+            sudo env PATH="$root_path" getnonfreefonts --sys -a
+    }; then
+        warn "Couldn't install the non-free TeX fonts. See ${DOCS_URL}programs/latex/#garamond-expert"
+    fi
+    rm -rf "$tmp"
+}
+
 configure_trackpad() {
     local domain
     # Matches what System Settings writes when three-finger drag is turned on: three-finger swipes move to four fingers
@@ -192,6 +211,7 @@ main() {
     find_repo
     install_packages
     install_fonts_and_sounds
+    install_garamond
     configure_macos
     install_oh_my_zsh
     print_summary
