@@ -13,6 +13,7 @@ DOCS_URL="https://eshwen.github.io/macOS-setup/"
 
 warnings=""
 skipped=""
+sudo_pid=""
 
 log() { printf '\n\033[1;34m==> %s\033[0m\n' "$*"; }
 
@@ -40,8 +41,10 @@ confirm() {
     return 1
 }
 
-keep_sudo_alive() {
-    log "Requesting administrator access"
+# Asks for the password the first time a step needs it, then keeps sudo's timestamp fresh for the rest of the run
+ensure_sudo() {
+    [[ -n "$sudo_pid" ]] && return 0
+    printf 'This step needs administrator access.\n'
     sudo -v
     while true; do
         sudo -n true
@@ -57,6 +60,7 @@ install_rosetta() {
     /usr/bin/arch -x86_64 /usr/bin/true 2>/dev/null && return 0
     confirm "Install Rosetta 2" "Lets Apple Silicon Macs run Intel apps, which some apps in the Brewfile still are." ||
         return 0
+    ensure_sudo
     softwareupdate --install-rosetta --agree-to-license
 }
 
@@ -67,6 +71,7 @@ install_homebrew() {
     if [[ ! -x "$brew_bin" ]]; then
         confirm "Install Homebrew" "Also installs the Xcode Command Line Tools, which include git. Every later step needs it." ||
             die "Homebrew is needed for every later step"
+        ensure_sudo
         NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
     eval "$("$brew_bin" shellenv)"
@@ -102,6 +107,7 @@ install_packages() {
     confirm "Install Homebrew packages" \
         "Installs or upgrades the $count command line tools and apps in the Brewfile. MacTeX alone is about 5 GB." ||
         return 0
+    ensure_sudo
     brew bundle install --file "$REPO_DIR/Brewfile" ||
         warn "Some Homebrew packages failed. Retry with: brew bundle install --file $REPO_DIR/Brewfile"
 }
@@ -132,6 +138,7 @@ install_garamond() {
     confirm "Install Garamond Expert for LaTeX" \
         "Downloads TUG's getnonfreefonts and runs it with sudo to add Garamond Expert and other non-free fonts to TeX Live." ||
         return 0
+    ensure_sudo
     tmp="$(mktemp -d)"
     # texbin is only added to PATH in new shells. Keep root's PATH to system directories
     if ! {
@@ -243,7 +250,6 @@ EOF
 main() {
     { : </dev/tty; } 2>/dev/null || die "Can't ask for confirmation without a terminal"
     printf 'This sets up a new Mac. It explains each step and asks before running it, so you can skip any of them.\n'
-    keep_sudo_alive
     install_rosetta
     install_homebrew
     find_repo

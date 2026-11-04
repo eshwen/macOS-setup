@@ -6,7 +6,7 @@ Run the bootstrap script in the Terminal:
 curl -fsSL https://raw.githubusercontent.com/eshwen/macOS-setup/main/bootstrap.sh | bash
 ```
 
-It asks for your password once. Then it goes through these steps, explaining each one and asking before running it, so you can skip any of them:
+It goes through these steps, explaining each one and asking before running it, so you can skip any of them. It asks for your password the first time a step needs it:
 
 1. Installs Rosetta 2 (on Apple Silicon), Homebrew and the Xcode Command Line Tools
 2. Clones this repo into `~/GitHub/macOS-setup` (set `MACOS_SETUP_DIR` to change this)
