@@ -6,7 +6,7 @@ Run the bootstrap script in the Terminal:
 curl -fsSL https://raw.githubusercontent.com/eshwen/macOS-setup/main/bootstrap.sh | bash
 ```
 
-It asks for your password once, then
+It asks for your password once. Then it goes through these steps, explaining each one and asking before running it, so you can skip any of them:
 
 1. Installs Rosetta 2 (on Apple Silicon), Homebrew and the Xcode Command Line Tools
 2. Clones this repo into `~/GitHub/macOS-setup` (set `MACOS_SETUP_DIR` to change this)
@@ -15,7 +15,7 @@ It asks for your password once, then
 5. Applies the [trackpad and Finder settings](../mac_utilities/mac-utilities.md#configuration-options), and sets the [Terminal profile](../programs/cli.md#settings-for-terminal)
 6. Installs [Oh My Zsh and its extensions](../programs/cli.md#extensions)
 
-It's safe to re-run, e.g., after adding packages to the Brewfile. Each step skips anything that's already done. If you've already cloned the repo, run `./bootstrap.sh` from it instead.
+It's safe to re-run, e.g., after adding packages to the Brewfile. Steps that are already done are skipped without asking. If you've already cloned the repo, run `./bootstrap.sh` from it instead.
 
 ## Manual steps
 
