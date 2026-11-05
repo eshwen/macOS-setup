@@ -47,6 +47,7 @@ features = [
   "navigation.tabs",
   "navigation.tracking",
   "navigation.sections",
+  "content.action.edit",
   "content.code.copy",
   "content.code.annotate",
 ]
