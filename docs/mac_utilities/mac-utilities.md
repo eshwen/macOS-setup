@@ -1,3 +1,7 @@
+---
+icon: lucide/wrench
+---
+
 # Mac utilities
 
 ## Time Machine

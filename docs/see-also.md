@@ -1,3 +1,7 @@
+---
+icon: lucide/link
+---
+
 # See Also
 
 - Adding ssh keys to GitHub: <https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
