@@ -73,7 +73,7 @@ scheme = "slate"
 primary = "purple"
 accent = "green"
 toggle.icon = "lucide/moon"
-toggle.name = "Switch to light mode"
+toggle.name = "Switch to system preference"
 
 [project.markdown_extensions]
 toc.permalink = "⚓︎"
