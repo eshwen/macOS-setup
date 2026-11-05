@@ -1,3 +1,7 @@
+---
+icon: lucide/square-code
+---
+
 # IDEs
 
 ## VS Code

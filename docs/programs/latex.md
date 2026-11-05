@@ -1,3 +1,7 @@
+---
+icon: lucide/sigma
+---
+
 # LaTeX
 
 ## TeX Live

@@ -1,3 +1,7 @@
+---
+icon: lucide/rocket
+---
+
 # Installation
 
 Run the bootstrap script in the Terminal:

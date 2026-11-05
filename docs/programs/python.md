@@ -1,3 +1,7 @@
+---
+icon: lucide/code-xml
+---
+
 # Python
 
 Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey.

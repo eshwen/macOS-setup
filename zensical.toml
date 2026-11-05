@@ -5,7 +5,7 @@ repo_url = "https://github.com/eshwen/macOS-setup"
 repo_name = "eshwen/macOS-setup"
 edit_uri = "blob/main/docs/"
 watch = ["README.md", "Brewfile"]
-extra_css = ["css/code_select.css"]
+extra_css = ["css/extra.css", "css/code_select.css"]
 
 nav = [
   { "Home" = [
@@ -47,6 +47,7 @@ features = [
   "navigation.tabs",
   "navigation.tracking",
   "navigation.sections",
+  "content.action.edit",
   "content.code.copy",
   "content.code.annotate",
 ]

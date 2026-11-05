@@ -1,3 +1,7 @@
+---
+icon: lucide/layout-grid
+---
+
 # Programs
 
 Here you can find a list of programs that may be useful for Mac users. The list is not exhaustive, but it's a good starting point for setting up a new machine.

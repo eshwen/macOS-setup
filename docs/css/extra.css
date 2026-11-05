@@ -1,0 +1,95 @@
+/*
+ * Scroll-driven entrance animations. Browsers without animation-timeline just show the content.
+ */
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        .md-typeset > :is(.admonition, details) {
+            animation: fade-up linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 60%;
+        }
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+}
+
+/*
+ * Cross-page view transitions: the content fades and rises while the active nav pill glides to its new item.
+ * The header and tabs get their own layers so outgoing content can't paint over them.
+ */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+
+    .md-header { view-transition-name: header; }
+    .md-tabs { view-transition-name: tabs; }
+    .md-content { view-transition-name: content; }
+    .md-nav--primary .md-nav__item--active > a.md-nav__link--active { view-transition-name: nav-active; }
+
+    ::view-transition-old(content) {
+        animation: 120ms ease-in both fade-out;
+    }
+
+    ::view-transition-new(content) {
+        animation: 240ms 120ms cubic-bezier(0.2, 0, 0, 1) both fade-up; /* Starts as the old content finishes */
+    }
+
+    ::view-transition-group(nav-active) {
+        animation-duration: 300ms;
+        animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    ::view-transition-old(nav-active) {
+        animation-duration: 100ms; /* Hand over to the new label early, so the two don't overlap mid-glide */
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+/*
+ * Collapsible admonitions animate their height when toggled, and content tabs fade in when selected. Browsers without
+ * ::details-content or interpolate-size toggle instantly.
+ */
+@media screen and (prefers-reduced-motion: no-preference) {
+    @supports (interpolate-size: allow-keywords) and selector(::details-content) {
+        .md-typeset details {
+            interpolate-size: allow-keywords;
+        }
+
+        .md-typeset details::details-content {
+            block-size: 0;
+            overflow-y: clip;
+            opacity: 0;
+            transition:
+                block-size 250ms cubic-bezier(0.2, 0, 0, 1),
+                opacity 200ms ease-out,
+                content-visibility 250ms allow-discrete;
+        }
+
+        .md-typeset details[open]::details-content {
+            block-size: auto;
+            opacity: 1;
+        }
+    }
+
+    .md-typeset .tabbed-block {
+        animation: 200ms cubic-bezier(0.2, 0, 0, 1) tab-in; /* Restarts whenever a tab is shown */
+    }
+}
+
+@keyframes tab-in {
+    from {
+        opacity: 0;
+        transform: translateY(0.25rem);
+    }
+}

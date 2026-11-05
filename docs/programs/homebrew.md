@@ -1,3 +1,7 @@
+---
+icon: lucide/beer
+---
+
 # Homebrew
 
 Homebrew :simple-homebrew: is an excellent, open source package manager for macOS. It's full of useful GUI programs as well as command line utilities that can be easily installed.

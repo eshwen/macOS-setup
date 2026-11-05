@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # Command Line Interface (CLI)
 
 ## Rosetta 2
