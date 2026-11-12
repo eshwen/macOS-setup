@@ -26,7 +26,7 @@ softwareupdate --install-rosetta --agree-to-license
 - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
     - `omz theme set spaceship`
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-    - `omz plugin enable zsh-syntax-highlighting`
+    - Bundled with Oh My Zsh. `omz plugin enable zsh-syntax-highlighting`
 
 ### Settings for Terminal
 
