@@ -11,6 +11,9 @@ shopt -s nullglob nocaseglob
 REPO_URL="https://github.com/eshwen/macOS-setup.git"
 REPO_DIR="${MACOS_SETUP_DIR:-$HOME/GitHub/macOS-setup}"
 DOCS_URL="https://eshwen.github.io/macOS-setup/"
+OMZ_DIR="$HOME/.oh-my-zsh"
+SPACESHIP_DIR="$OMZ_DIR/custom/themes/spaceship-prompt"
+AUTOSWITCH_DIR="$OMZ_DIR/custom/plugins/autoswitch_virtualenv"
 
 warnings=""
 skipped=""
@@ -219,19 +222,17 @@ clone_if_missing() {
 }
 
 install_oh_my_zsh() {
-    local omz="$HOME/.oh-my-zsh"
-    local theme="$omz/custom/themes/spaceship-prompt" plugin="$omz/custom/plugins/autoswitch_virtualenv"
-    [[ -d "$omz" && -d "$theme" && -d "$plugin" ]] && return 0
+    [[ -d "$OMZ_DIR" && -d "$SPACESHIP_DIR" && -d "$AUTOSWITCH_DIR" ]] && return 0
     confirm "Install Oh My Zsh" \
         "Installs Oh My Zsh (keeping any ~/.zshrc), the Spaceship theme and the autoswitch-virtualenv plugin." ||
         return 0
 
-    if [[ ! -d "$omz" ]]; then
+    if [[ ! -d "$OMZ_DIR" ]]; then
         RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     fi
-    clone_if_missing https://github.com/spaceship-prompt/spaceship-prompt.git "$theme"
-    ln -sf "$theme/spaceship.zsh-theme" "$omz/custom/themes/spaceship.zsh-theme"
-    clone_if_missing https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git "$plugin"
+    clone_if_missing https://github.com/spaceship-prompt/spaceship-prompt.git "$SPACESHIP_DIR"
+    ln -sf "$SPACESHIP_DIR/spaceship.zsh-theme" "$OMZ_DIR/custom/themes/spaceship.zsh-theme"
+    clone_if_missing https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git "$AUTOSWITCH_DIR"
 }
 
 # omz is a zsh function, so this loads ~/.zshrc in zsh to use it. Exits 3 if ~/.zshrc doesn't load Oh My Zsh
@@ -253,7 +254,11 @@ run_omz() {
 
 configure_oh_my_zsh() {
     local result=0
-    [[ -d "$HOME/.oh-my-zsh" ]] || return 0
+    [[ -d "$OMZ_DIR" ]] || return 0
+    if [[ ! -d "$SPACESHIP_DIR" || ! -d "$AUTOSWITCH_DIR" ]]; then
+        warn "Spaceship or autoswitch-virtualenv isn't installed, so the Oh My Zsh theme and plugins weren't turned on"
+        return 0
+    fi
     run_omz check || result=$?
     case "$result" in
     0) return 0 ;;
