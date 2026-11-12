@@ -20,6 +20,7 @@ nav = [
     { "Homebrew" = "programs/homebrew.md" },
     { "CLI" = "programs/cli.md" },
     { "Python" = "programs/python.md" },
+    { "IDEs" = "programs/ides.md" },
     { "LaTeX" = "programs/latex.md" },
   ] },
   { "Mac Utilities" = [
