@@ -9,6 +9,7 @@ brew "uv" # Default for Python installs, projects and environments
 brew "wget"
 brew "zsh" # Newer than the version bundled with macOS
 cask "antigravity-cli"
+cask "claude-code"
 
 # GUI applications
 cask "1password"
@@ -19,6 +20,7 @@ cask "antigravity-ide"
 cask "bibdesk", args: { appdir: "/Applications/TeX" } # Managing BibTeX references
 cask "blackhole-64ch" # Capturing audio output alongside a screen recording
 cask "chatgpt"
+cask "claude"
 cask "discord"
 cask "docker-desktop"
 cask "filebot" # Batch renaming. If it won't open, run `xattr -dr com.apple.quarantine /Applications/FileBot.app`
