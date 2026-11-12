@@ -17,7 +17,7 @@ It goes through these steps, explaining each one and asking before running it, s
 3. Installs everything in the [Brewfile](../programs/homebrew.md)
 4. Copies the [fonts](../programs/programs.md#fonts) and [system sounds](../mac_utilities/mac-utilities.md#system-sounds), and installs [Garamond Expert](../programs/latex.md#garamond-expert) for LaTeX
 5. Applies the [trackpad and Finder settings](../mac_utilities/mac-utilities.md#configuration-options), and sets the [Terminal profile](../programs/cli.md#settings-for-terminal)
-6. Installs [Oh My Zsh and its extensions](../programs/cli.md#extensions)
+6. Installs [Oh My Zsh and its extensions](../programs/cli.md#extensions), and turns them on
 
 It's safe to re-run, e.g., after adding packages to the Brewfile. Steps that are already done are skipped without asking. If you've already cloned the repo, run `./bootstrap.sh` from it instead.
 
@@ -31,7 +31,6 @@ curl -fsSL https://raw.githubusercontent.com/eshwen/macOS-setup/main/bootstrap.s
 
 Once it finishes,
 
-1. Configure the [shell extensions](../programs/cli.md#extensions) in `~/.zshrc`
-2. Log out and back in so the trackpad settings take effect
-3. Sign in to apps, and install the [programs not available on Homebrew](../programs/programs.md#non-homebrew)
-4. Set up [verified Git commits](../programs/cli.md#verified-git-commits)
+1. Log out and back in so the trackpad settings take effect
+2. Sign in to apps, and install the [programs not available on Homebrew](../programs/programs.md#non-homebrew)
+3. Set up [verified Git commits](../programs/cli.md#verified-git-commits)

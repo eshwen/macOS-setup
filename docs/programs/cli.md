@@ -16,35 +16,21 @@ softwareupdate --install-rosetta --agree-to-license
 
 `zsh` is the default shell in macOS as of Catalina.
 
-### Changing shells
-
-To change shells, do
-
-```sh
-chsh -s <executable_path>
-```
-
-where `<executable_path>` is the path to the shell executable. For example, to change to `bash`, do
-
-```sh
-chsh -s /bin/bash
-```
-
-If installing a new shell with Homebrew (see above), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.
-
-If changing the shell, log out and log back in to ensure it takes effect.
-
 ### Extensions
 
-`bootstrap.sh` installs these, but they still need turning on in `~/.zshrc`:
+`bootstrap.sh` installs these and turns them on with `omz`, which edits `~/.zshrc` for you:
 
 - [Oh My Zsh](https://ohmyz.sh/)
 - [zsh-autoswitch-virtualenv](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
-    - Add `autoswitch_virtualenv` to `plugins`
+    - `omz plugin enable autoswitch_virtualenv`
 - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
-    - Set `ZSH_THEME="spaceship"`
+    - `omz theme set spaceship`
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-    - Installed by Homebrew. Add `source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh` to the end of `~/.zshrc`
+    - Bundled with Oh My Zsh. `omz plugin enable zsh-syntax-highlighting`
+
+!!! note
+
+    `zsh-autoswitch-virtualenv` and `spaceship-prompt` aren't bundled with Oh My Zsh. Install them into `$ZSH_CUSTOM` first, following the Oh My Zsh instructions in each repo (`bootstrap.sh` does this). Until then, `omz` can't find them, so `omz plugin enable` and `omz theme set` fail.
 
 ### Settings for Terminal
 
