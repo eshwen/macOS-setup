@@ -16,24 +16,6 @@ softwareupdate --install-rosetta --agree-to-license
 
 `zsh` is the default shell in macOS as of Catalina.
 
-### Changing shells
-
-To change shells, do
-
-```sh
-chsh -s <executable_path>
-```
-
-where `<executable_path>` is the path to the shell executable. For example, to change to `bash`, do
-
-```sh
-chsh -s /bin/bash
-```
-
-If installing a new shell with Homebrew (see above), the executable paths should automatically symlink. So finding the exact path shouldn't be necessary.
-
-If changing the shell, log out and log back in to ensure it takes effect.
-
 ### Extensions
 
 `bootstrap.sh` installs these and turns them on with `omz`, which edits `~/.zshrc` for you:
