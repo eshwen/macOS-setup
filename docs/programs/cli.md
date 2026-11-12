@@ -32,16 +32,6 @@ softwareupdate --install-rosetta --agree-to-license
 
     `zsh-autoswitch-virtualenv` and `spaceship-prompt` aren't bundled with Oh My Zsh. Install them into `$ZSH_CUSTOM` first, following the Oh My Zsh instructions in each repo (`bootstrap.sh` does this). Until then, `omz` can't find them, so `omz plugin enable` and `omz theme set` fail.
 
-### Settings for Terminal
-
-Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
-
-`bootstrap.sh` imports it as the **Ocean_Esh** profile and makes it the default. To do it by hand,
-
-1. Open the Terminal, and go to **Settings** :material-arrow-right: **Profiles**
-2. Hit the three dots in the bottom left corner and click **Import...**
-3. Select the terminal preferences file and set it as the default
-
 ## Verified Git commits
 
 For that sweet **Verified** mark next to commits on GitHub, the simplest method is to generate a GPG key and associate it with your account. Start with
@@ -105,5 +95,3 @@ Then copy that public key we generated earlier (in its entirety), and add it to 
 4. Hit **Add GPG key**
 
 This should apply to GitHub Desktop as well, not just commits on the CLI. Just ensure you're using the same email address for your commits as entered when creating the key. Double check in Preferences :material-arrow-right: Git :material-arrow-right: Email.
-
-[Ocean_Esh.terminal]: https://github.com/eshwen/macOS-setup/blob/main/Ocean_Esh.terminal

@@ -102,7 +102,7 @@ find_repo() {
         fi
     else
         confirm "Clone macOS-setup into $REPO_DIR" \
-            "Later steps use its Brewfile, fonts, sounds and Terminal profile. Set MACOS_SETUP_DIR to clone it elsewhere." ||
+            "Later steps use its Brewfile, fonts and sounds. Set MACOS_SETUP_DIR to clone it elsewhere." ||
             die "The repo is needed for the remaining steps"
         mkdir -p "$(dirname "$REPO_DIR")"
         git clone "$REPO_URL" "$REPO_DIR"
@@ -199,24 +199,6 @@ configure_finder() {
     killall Finder 2>/dev/null || true
 }
 
-configure_terminal() {
-    local plist profile=Ocean_Esh buddy=/usr/libexec/PlistBuddy
-    confirm "Set the Terminal profile" \
-        "Imports Ocean_Esh.terminal as the $profile profile and makes it the default for new windows." || return 0
-    # The file's own name is "Ocean", which clashes with a built-in profile, so import it under a unique name
-    plist="$(mktemp)"
-    defaults export com.apple.Terminal "$plist"
-    $buddy -c "Delete ':Window Settings:$profile'" "$plist" 2>/dev/null || true
-    $buddy -c "Add ':Window Settings:$profile' dict" "$plist" 2>/dev/null ||
-        $buddy -c "Add ':Window Settings' dict" -c "Add ':Window Settings:$profile' dict" "$plist"
-    $buddy -c "Merge '$REPO_DIR/Ocean_Esh.terminal' ':Window Settings:$profile'" "$plist"
-    $buddy -c "Set ':Window Settings:$profile:name' $profile" "$plist"
-    defaults import com.apple.Terminal "$plist"
-    rm "$plist"
-    defaults write com.apple.Terminal "Default Window Settings" -string "$profile"
-    defaults write com.apple.Terminal "Startup Window Settings" -string "$profile"
-}
-
 clone_if_missing() {
     [[ -d "$2" ]] || git clone --depth 1 "$1" "$2"
 }
@@ -310,7 +292,6 @@ main() {
     install_garamond
     configure_trackpad
     configure_finder
-    configure_terminal
     install_oh_my_zsh
     configure_oh_my_zsh
     print_summary
