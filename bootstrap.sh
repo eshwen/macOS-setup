@@ -245,8 +245,7 @@ print_summary() {
     cat <<EOF
 
 Still to do by hand:
-  - In ~/.zshrc, set ZSH_THEME="spaceship", add autoswitch_virtualenv to plugins, and source
-    \$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  - In ~/.zshrc, set ZSH_THEME="spaceship", and add autoswitch_virtualenv and zsh-syntax-highlighting to plugins
   - Log out and back in so the trackpad settings take effect
   - Sign in to apps, and follow $DOCS_URL for anything not installed by Homebrew
 EOF

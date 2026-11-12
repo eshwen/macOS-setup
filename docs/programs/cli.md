@@ -44,7 +44,7 @@ If changing the shell, log out and log back in to ensure it takes effect.
 - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
     - Set `ZSH_THEME="spaceship"`
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-    - Installed by Homebrew. Add `source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh` to the end of `~/.zshrc`
+    - Bundled with Oh My Zsh. Add `zsh-syntax-highlighting` to `plugins`
 
 ### Settings for Terminal
 

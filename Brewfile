@@ -8,7 +8,6 @@ brew "tree"
 brew "uv" # Default for Python installs, projects and environments
 brew "wget"
 brew "zsh" # Newer than the version bundled with macOS
-brew "zsh-syntax-highlighting"
 cask "antigravity-cli"
 
 # GUI applications
