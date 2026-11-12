@@ -234,6 +234,40 @@ install_oh_my_zsh() {
     clone_if_missing https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git "$plugin"
 }
 
+# omz is a zsh function, so this loads ~/.zshrc in zsh to use it. Exits 3 if ~/.zshrc doesn't load Oh My Zsh
+run_omz() {
+    # shellcheck disable=SC2016 # Expanded by zsh, not bash
+    THEME=spaceship PLUGINS="autoswitch_virtualenv zsh-syntax-highlighting" zsh -c '
+        source ~/.zshrc >/dev/null 2>&1
+        (( $+functions[omz] )) || exit 3
+        wanted=(${=PLUGINS})
+        missing=(${wanted:|plugins})
+        if [[ $1 == check ]]; then
+            [[ $ZSH_THEME == $THEME && ${#missing} -eq 0 ]]
+            exit
+        fi
+        [[ $ZSH_THEME == $THEME ]] || omz theme set $THEME || exit 1
+        (( ${#missing} == 0 )) || omz plugin enable $missing
+    ' zsh "$1"
+}
+
+configure_oh_my_zsh() {
+    local result=0
+    [[ -d "$HOME/.oh-my-zsh" ]] || return 0
+    run_omz check || result=$?
+    case "$result" in
+    0) return 0 ;;
+    3)
+        warn "Your .zshrc doesn't load Oh My Zsh, so its theme and plugins weren't turned on"
+        return 0
+        ;;
+    esac
+    confirm "Turn on the Oh My Zsh theme and plugins" \
+        "Sets the Spaceship theme, and enables autoswitch_virtualenv and zsh-syntax-highlighting. omz backs up ~/.zshrc first." ||
+        return 0
+    run_omz apply || warn "Couldn't turn on the Oh My Zsh theme and plugins. See ${DOCS_URL}programs/cli/#extensions"
+}
+
 print_summary() {
     log "Done"
     if [[ -n "$warnings" ]]; then
@@ -245,7 +279,6 @@ print_summary() {
     cat <<EOF
 
 Still to do by hand:
-  - In ~/.zshrc, set ZSH_THEME="spaceship", and add autoswitch_virtualenv and zsh-syntax-highlighting to plugins
   - Log out and back in so the trackpad settings take effect
   - Sign in to apps, and follow $DOCS_URL for anything not installed by Homebrew
 EOF
@@ -274,6 +307,7 @@ main() {
     configure_finder
     configure_terminal
     install_oh_my_zsh
+    configure_oh_my_zsh
     print_summary
 }
 

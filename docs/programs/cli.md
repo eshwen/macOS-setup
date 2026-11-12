@@ -36,15 +36,15 @@ If changing the shell, log out and log back in to ensure it takes effect.
 
 ### Extensions
 
-`bootstrap.sh` installs these, but they still need turning on in `~/.zshrc`:
+`bootstrap.sh` installs these and turns them on with `omz`, which edits `~/.zshrc` for you:
 
 - [Oh My Zsh](https://ohmyz.sh/)
 - [zsh-autoswitch-virtualenv](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
-    - Add `autoswitch_virtualenv` to `plugins`
+    - `omz plugin enable autoswitch_virtualenv`
 - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
-    - Set `ZSH_THEME="spaceship"`
+    - `omz theme set spaceship`
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-    - Bundled with Oh My Zsh. Add `zsh-syntax-highlighting` to `plugins`
+    - Bundled with Oh My Zsh. `omz plugin enable zsh-syntax-highlighting`
 
 ### Settings for Terminal
 
