@@ -19,7 +19,6 @@ cask "ankerwork" # Webcam configuration
 cask "antigravity-ide"
 cask "bibdesk", args: { appdir: "/Applications/TeX" } # Managing BibTeX references
 cask "blackhole-64ch" # Capturing audio output alongside a screen recording
-cask "chatgpt"
 cask "claude"
 cask "discord"
 cask "docker-desktop"
