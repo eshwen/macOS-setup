@@ -28,6 +28,10 @@ softwareupdate --install-rosetta --agree-to-license
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
     - Bundled with Oh My Zsh. `omz plugin enable zsh-syntax-highlighting`
 
+!!! note
+
+    `zsh-autoswitch-virtualenv` and `spaceship-prompt` aren't bundled with Oh My Zsh. Install them into `$ZSH_CUSTOM` first, following the Oh My Zsh instructions in each repo (`bootstrap.sh` does this). Until then, `omz` can't find them, so `omz plugin enable` and `omz theme set` fail.
+
 ### Settings for Terminal
 
 Terminal settings/preferences (personal choice): [Ocean_Esh.terminal]
