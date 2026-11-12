@@ -4,7 +4,7 @@ icon: lucide/code-xml
 
 # Python
 
-Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey.
+Python is not bundled with macOS as of v13.
 
 ## uv
 
@@ -18,18 +18,6 @@ Multiple installations are supported. List the installed and available versions 
 
 ```sh
 uv python list
-```
-
-Pin the version for the current project (written to `.python-version`) with
-
-```sh
-uv python pin <version>
-```
-
-Make a version the default `python` on the `PATH` with
-
-```sh
-uv python install <version> --default
 ```
 
 ### Projects
