@@ -42,14 +42,9 @@ Upgrade Homebrew packages with
 
 ```sh
 brew upgrade
-brew upgrade --cask
 ```
 
-Casks with auto-update utilities (like a lot of GUI applications) won't be updated when the above commands are run; the built-in updaters will maintain them in those cases. To force them to update with Homebrew, run
-
-```sh
-brew upgrade --greedy
-```
+Casks with auto-update utilities (like a lot of GUI applications) may also be updated here.
 
 ## Viewing
 
