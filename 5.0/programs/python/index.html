@@ -1092,7 +1092,7 @@
 
 
 <h1 id="python">Python<a class="headerlink" href="#python" title="Permanent link">⚓︎</a></h1>
-<p>Apparently, Python won't come bundled with macOS starting with v13. And only Python 2 seems to be bundled with versions as recent as Monterey.</p>
+<p>Python is not bundled with macOS as of v13.</p>
 <h2 id="uv">uv<a class="headerlink" href="#uv" title="Permanent link">⚓︎</a></h2>
 <p><a href="https://docs.astral.sh/uv/">uv</a> manages Python installs, virtual environments, dependencies and CLI tools in one place, so it's the default for any new project. <code>pyenv</code> and Poetry are still installed with <a href=".././homebrew/">Homebrew</a> for repos that use them. Once it's been installed with Homebrew, install a recent version of Python with</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span>&lt;version&gt;
@@ -1100,22 +1100,16 @@
 <p>Multiple installations are supported. List the installed and available versions with</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>python<span class="w"> </span>list
 </code></pre></div>
-<p>Pin the version for the current project (written to <code>.python-version</code>) with</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>python<span class="w"> </span>pin<span class="w"> </span>&lt;version&gt;
-</code></pre></div>
-<p>Make a version the default <code>python</code> on the <code>PATH</code> with</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--default
-</code></pre></div>
 <h3 id="projects">Projects<a class="headerlink" href="#projects" title="Permanent link">⚓︎</a></h3>
 <p>Start a new project, add dependencies, and run code in its environment with</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>init
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a>uv<span class="w"> </span>add<span class="w"> </span>&lt;package&gt;
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a>uv<span class="w"> </span>run<span class="w"> </span>&lt;command&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>init
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>uv<span class="w"> </span>add<span class="w"> </span>&lt;package&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos="3 "></span></a>uv<span class="w"> </span>run<span class="w"> </span>&lt;command&gt;
 </code></pre></div>
 <p><code>uv sync</code> installs everything in <code>uv.lock</code> into <code>.venv</code>, e.g., after cloning a repo.</p>
 <h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">⚓︎</a></h3>
 <p>Install Python CLI tools into their own isolated environments with</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>&lt;package&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>&lt;package&gt;
 </code></pre></div>
 <p>or run one without installing it with <code>uvx &lt;package&gt;</code>.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">⚓︎</a></h2>
