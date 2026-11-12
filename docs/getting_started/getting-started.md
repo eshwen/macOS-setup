@@ -16,7 +16,7 @@ It goes through these steps, explaining each one and asking before running it, s
 2. Clones this repo into `~/GitHub/macOS-setup` (set `MACOS_SETUP_DIR` to change this)
 3. Installs everything in the [Brewfile](../programs/homebrew.md)
 4. Copies the [fonts](../programs/programs.md#fonts) and [system sounds](../mac_utilities/mac-utilities.md#system-sounds), and installs [Garamond Expert](../programs/latex.md#garamond-expert) for LaTeX
-5. Applies the [trackpad and Finder settings](../mac_utilities/mac-utilities.md#configuration-options), and sets the [Terminal profile](../programs/cli.md#settings-for-terminal)
+5. Applies the [trackpad and Finder settings](../mac_utilities/mac-utilities.md#configuration-options)
 6. Installs [Oh My Zsh and its extensions](../programs/cli.md#extensions), and turns them on
 
 It's safe to re-run, e.g., after adding packages to the Brewfile. Steps that are already done are skipped without asking. If you've already cloned the repo, run `./bootstrap.sh` from it instead.
