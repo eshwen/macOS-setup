@@ -8,7 +8,7 @@ icon: lucide/square-code
 
 Plugins I install on top of the ones bundled with PyCharm:
 
-- Anime Memes
+- [Anime Memes]
 - Atom Material Icons
 - Big Data Tools
 - Claude Code
@@ -23,3 +23,5 @@ Plugins I install on top of the ones bundled with PyCharm:
 - Rainbow Brackets
 - Terraform and HCL
 - TeXiFy-IDEA
+
+[Anime Memes]: https://github.com/ani-memes/AMII
