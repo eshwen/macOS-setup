@@ -92,3 +92,5 @@ pymdownx.tabbed.alternate_style = true
 pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
 pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
 pymdownx.details = {}
+"pymdownx.blocks.caption" = {}
+pymdownx.tilde = {}
