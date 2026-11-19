@@ -24,6 +24,7 @@ categories:
     labels:
       - 'dependencies'
       - 'github_actions'
+      - 'pre_commit'
 
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
@@ -62,11 +63,13 @@ autolabeler:
       - '/feature\/.+/'
   - label: 'github_actions'
     files:
-      - '.github/workflows/*.yml'
-      - '.github/actions/**'
+      - '.github/**'
   - label: 'dependencies'
     files:
       - 'uv.lock'
+  - label: 'pre_commit'
+    files:
+      - '.pre-commit-config.yaml'
   - label: 'testing'
     files:
       - 'tests/**'
