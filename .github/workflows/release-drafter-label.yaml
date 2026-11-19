@@ -1,10 +1,6 @@
-name: Release Drafter
+name: Auto label
 
 on:
-  push:
-    branches:
-      - main
-  # pull_request event is required only for autolabeler
   pull_request:
     types:
       - opened
@@ -15,14 +11,13 @@ permissions:
   contents: read
 
 jobs:
-  update_release_draft:
+  auto_label:
     permissions:
-      contents: write
       pull-requests: write
     runs-on: ubuntu-latest
 
     steps:
-      - uses: release-drafter/release-drafter@v6
+      - uses: release-drafter/release-drafter/autolabeler@v7
         with:
           config-name: release-drafter-config.yml
         env:

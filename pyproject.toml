@@ -4,7 +4,7 @@ version = "2.2.0"
 description = "Files and scripts useful for macOS. Helps keep synchronisation between my different Mac computers and offers a backup."
 authors = [{ name = "Eshwen Bhal, PhD",  email = "milanman.eshb@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.14,<3.15"
 dependencies = []
 
 
