@@ -16,12 +16,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: 'write'
-      actions: 'write'
+      contents: 'read'
 
     steps:
       - uses: actions/checkout@v7
       - uses: eshwen/adrenaline/uv/builder@v0.10.0
         with:
-          python-version: '3.14'
           install-dev-deps: true
