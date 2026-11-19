@@ -13,7 +13,7 @@ dev = [
     "mike @ git+https://github.com/squidfunk/mike.git@2.2.0+zensical-0.1.0",
     "pre-commit>=4.0.0,<5",
     "pymdown-extensions~=11.0.1",
-    "zensical>=0.0.74,<0.1",
+    "zensical>=0.1,<0.2",
 ]
 
 
